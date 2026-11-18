@@ -1,35 +1,35 @@
 {
-  "balance": 19.002827427802558,
+  "balance": 18.923259375977214,
   "positions": [
     {
       "symbol": "SPCXUSDT",
       "side": "LONG",
-      "entry": 142.95,
-      "stop": 141.5205,
-      "target": 145.809,
-      "quantity": 0.13921377075171776,
-      "entry_fee": 0.01194036511737483,
-      "entry_time": 1794992400000
+      "entry": 143.45,
+      "stop": 142.01549999999997,
+      "target": 146.319,
+      "quantity": 0.13215309974210593,
+      "entry_fee": 0.011374417294803055,
+      "entry_time": 1795010400000
     },
     {
-      "symbol": "SKHYUSDT",
-      "side": "LONG",
-      "entry": 127.0,
-      "stop": 125.73,
-      "target": 129.54,
-      "quantity": 0.1514321519677457,
-      "entry_fee": 0.011539129979942222,
-      "entry_time": 1794999600000
-    },
-    {
-      "symbol": "SNXXUSDT",
+      "symbol": "TQQQUSDT",
       "side": "SHORT",
-      "entry": 2.995,
-      "stop": 3.02495,
-      "target": 2.9351000000000003,
-      "quantity": 6.348659756054838,
-      "entry_fee": 0.011408541581630544,
-      "entry_time": 1795006800000
+      "entry": 52.81,
+      "stop": 53.338100000000004,
+      "target": 51.7538,
+      "quantity": 0.35875757888109083,
+      "entry_fee": 0.011367592644426244,
+      "entry_time": 1795010400000
+    },
+    {
+      "symbol": "QQQUSDT",
+      "side": "SHORT",
+      "entry": 662.04,
+      "stop": 668.6604,
+      "target": 648.7991999999999,
+      "quantity": 0.028600417116890223,
+      "entry_fee": 0.0113607720888396,
+      "entry_time": 1795010400000
     }
   ],
   "history": [
@@ -102,6 +102,36 @@
       "reason": "STOP LOSS",
       "entry_time": 1794999600000,
       "exit_time": 1795003200000
+    },
+    {
+      "symbol": "SNXXUSDT",
+      "side": "SHORT",
+      "entry": 2.995,
+      "exit": 2.9351000000000003,
+      "net_pnl": 0.3691,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795006800000,
+      "exit_time": 1795010400000
+    },
+    {
+      "symbol": "SKHYUSDT",
+      "side": "LONG",
+      "entry": 127.0,
+      "exit": 125.73,
+      "net_pnl": -0.20374,
+      "reason": "STOP LOSS",
+      "entry_time": 1794999600000,
+      "exit_time": 1795010400000
+    },
+    {
+      "symbol": "SPCXUSDT",
+      "side": "LONG",
+      "entry": 142.95,
+      "exit": 141.5205,
+      "net_pnl": -0.21083,
+      "reason": "STOP LOSS",
+      "entry_time": 1794992400000,
+      "exit_time": 1795010400000
     }
   ],
   "last_signal": {
@@ -109,7 +139,9 @@
     "ZECUSDT": 1794999600000,
     "SKHYUSDT": 1794999600000,
     "BREVUSDT": 1794988800000,
-    "SPCXUSDT": 1794992400000,
-    "SNXXUSDT": 1795006800000
+    "SPCXUSDT": 1795010400000,
+    "SNXXUSDT": 1795006800000,
+    "TQQQUSDT": 1795010400000,
+    "QQQUSDT": 1795010400000
   }
 }
