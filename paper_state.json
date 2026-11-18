@@ -1,5 +1,5 @@
 {
-  "balance": 19.47936299684582,
+  "balance": 19.044536959952946,
   "positions": [
     {
       "symbol": "QQQUSDT",
@@ -12,24 +12,24 @@
       "entry_time": 1795010400000
     },
     {
-      "symbol": "DRAMUSDT",
-      "side": "SHORT",
-      "entry": 39.08,
-      "stop": 39.4708,
-      "target": 38.2984,
-      "quantity": 0.49514722729726185,
-      "entry_fee": 0.011610212185666194,
-      "entry_time": 1795021200000
-    },
-    {
       "symbol": "TQQQUSDT",
       "side": "SHORT",
-      "entry": 52.51,
-      "stop": 53.0351,
-      "target": 51.459799999999994,
-      "quantity": 0.37118753821033335,
-      "entry_fee": 0.01169463457885476,
-      "entry_time": 1795035600000
+      "entry": 52.43,
+      "stop": 52.9543,
+      "target": 51.3814,
+      "quantity": 0.36367367897904823,
+      "entry_fee": 0.011440446593322898,
+      "entry_time": 1795039200000
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": "SHORT",
+      "entry": 0.10991,
+      "stop": 0.1110091,
+      "target": 0.1077118,
+      "quantity": 173.37795052568663,
+      "entry_fee": 0.011433582325366929,
+      "entry_time": 1795039200000
     }
   ],
   "history": [
@@ -212,6 +212,26 @@
       "reason": "TAKE PROFIT",
       "entry_time": 1795024800000,
       "exit_time": 1795035600000
+    },
+    {
+      "symbol": "DRAMUSDT",
+      "side": "SHORT",
+      "entry": 39.08,
+      "exit": 39.4708,
+      "net_pnl": -0.20523,
+      "reason": "STOP LOSS",
+      "entry_time": 1795021200000,
+      "exit_time": 1795042800000
+    },
+    {
+      "symbol": "TQQQUSDT",
+      "side": "SHORT",
+      "entry": 52.51,
+      "exit": 53.0351,
+      "net_pnl": -0.20672,
+      "reason": "STOP LOSS",
+      "entry_time": 1795035600000,
+      "exit_time": 1795042800000
     }
   ],
   "last_signal": {
@@ -221,9 +241,10 @@
     "BREVUSDT": 1794988800000,
     "SPCXUSDT": 1795010400000,
     "SNXXUSDT": 1795006800000,
-    "TQQQUSDT": 1795035600000,
+    "TQQQUSDT": 1795039200000,
     "QQQUSDT": 1795010400000,
     "DRAMUSDT": 1795021200000,
-    "HYPEUSDT": 1795024800000
+    "HYPEUSDT": 1795024800000,
+    "ENAUSDT": 1795039200000
   }
 }
