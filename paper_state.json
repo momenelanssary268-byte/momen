@@ -1,5 +1,5 @@
 {
-  "balance": 19.338743430591265,
+  "balance": 19.119683510643597,
   "positions": [
     {
       "symbol": "QQQUSDT",
@@ -12,16 +12,6 @@
       "entry_time": 1795010400000
     },
     {
-      "symbol": "TQQQUSDT",
-      "side": "SHORT",
-      "entry": 52.41,
-      "stop": 52.934099999999994,
-      "target": 51.361799999999995,
-      "quantity": 0.3734412457092037,
-      "entry_fee": 0.011743233412571618,
-      "entry_time": 1795021200000
-    },
-    {
       "symbol": "DRAMUSDT",
       "side": "SHORT",
       "entry": 39.08,
@@ -30,6 +20,16 @@
       "quantity": 0.49514722729726185,
       "entry_fee": 0.011610212185666194,
       "entry_time": 1795021200000
+    },
+    {
+      "symbol": "HYPEUSDT",
+      "side": "SHORT",
+      "entry": 67.539,
+      "stop": 68.21439000000001,
+      "target": 66.18822,
+      "quantity": 0.28326096341326007,
+      "entry_fee": 0.011478697324780903,
+      "entry_time": 1795024800000
     }
   ],
   "history": [
@@ -192,6 +192,16 @@
       "reason": "STOP LOSS",
       "entry_time": 1795017600000,
       "exit_time": 1795021200000
+    },
+    {
+      "symbol": "TQQQUSDT",
+      "side": "SHORT",
+      "entry": 52.41,
+      "exit": 52.934099999999994,
+      "net_pnl": -0.20758,
+      "reason": "STOP LOSS",
+      "entry_time": 1795021200000,
+      "exit_time": 1795024800000
     }
   ],
   "last_signal": {
@@ -203,6 +213,7 @@
     "SNXXUSDT": 1795006800000,
     "TQQQUSDT": 1795021200000,
     "QQQUSDT": 1795010400000,
-    "DRAMUSDT": 1795021200000
+    "DRAMUSDT": 1795021200000,
+    "HYPEUSDT": 1795024800000
   }
 }
