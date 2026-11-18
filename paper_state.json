@@ -1,5 +1,5 @@
 {
-  "balance": 19.888668163840542,
+  "balance": 19.66362372414856,
   "positions": [
     {
       "symbol": "SKHYUSDT",
@@ -12,16 +12,6 @@
       "entry_time": 1794988800000
     },
     {
-      "symbol": "ZECUSDT",
-      "side": "LONG",
-      "entry": 950.04,
-      "stop": 940.5396,
-      "target": 969.0408,
-      "quantity": 0.02118678936331371,
-      "entry_fee": 0.012076978420033533,
-      "entry_time": 1794992400000
-    },
-    {
       "symbol": "SPCXUSDT",
       "side": "LONG",
       "entry": 142.95,
@@ -30,6 +20,16 @@
       "quantity": 0.13921377075171776,
       "entry_fee": 0.01194036511737483,
       "entry_time": 1794992400000
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": "LONG",
+      "entry": 939.09,
+      "stop": 929.6991,
+      "target": 957.8718,
+      "quantity": 0.020951590349740184,
+      "entry_fee": 0.011805257388922505,
+      "entry_time": 1794996000000
     }
   ],
   "history": [
@@ -62,11 +62,21 @@
       "reason": "STOP LOSS",
       "entry_time": 1794988800000,
       "exit_time": 1794992400000
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": "LONG",
+      "entry": 950.04,
+      "exit": 940.5396,
+      "net_pnl": -0.21324,
+      "reason": "STOP LOSS",
+      "entry_time": 1794992400000,
+      "exit_time": 1794996000000
     }
   ],
   "last_signal": {
     "SOXSUSDT": 1794988800000,
-    "ZECUSDT": 1794992400000,
+    "ZECUSDT": 1794996000000,
     "SKHYUSDT": 1794988800000,
     "BREVUSDT": 1794988800000,
     "SPCXUSDT": 1794992400000
