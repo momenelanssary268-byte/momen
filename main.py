@@ -1,145 +1,124 @@
 
-import json
-import urllib.request
-import urllib.parse
+import requests
+import pandas as pd
 import time
 
-# =================================
-# MOMEN AI TRADER - VERSION 1.0
-# Public market analysis - Bitget
-# =================================
-
 BASE_URL = "https://api.bitget.com"
-
-COINS = [
-    "BTCUSDT",
-    "ETHUSDT",
-    "SOLUSDT"
-]
-
+START_BALANCE = 20.0
+RISK_PERCENT = 0.01
 TIMEFRAME = "1H"
+MAX_COINS = 30
 
+def get_symbols():
+    url = BASE_URL + "/api/v2/mix/market/tickers"
+    params = {"productType": "USDT-FUTURES"}
+    data = requests.get(url, params=params, timeout=15).json()
+    symbols = data.get("data", [])
+    return [
+        item["symbol"] for item in symbols
+        if item.get("symbol", "").endswith("USDT")
+    ][:MAX_COINS]
 
-def get_market_data(symbol):
+def get_candles(symbol):
+    url = BASE_URL + "/api/v2/mix/market/candles"
     params = {
-        "productType": "USDT-FUTURES",
         "symbol": symbol,
         "granularity": TIMEFRAME,
-        "limit": "100"
+        "limit": "100",
+        "productType": "USDT-FUTURES"
     }
+    response = requests.get(url, params=params, timeout=15).json()
+    rows = response.get("data", [])
 
-    url = BASE_URL + "/api/v2/mix/market/candles?"
-    url += urllib.parse.urlencode(params)
+    if not rows:
+        return None
 
-    request = urllib.request.Request(
-        url,
-        headers={"User-Agent": "Momen-AI-Trader"}
+    df = pd.DataFrame(
+        rows,
+        columns=["time", "open", "high", "low", "close", "volume", "quote"]
     )
+    df["close"] = pd.to_numeric(df["close"])
+    return df.sort_values("time").reset_index(drop=True)
 
-    with urllib.request.urlopen(request, timeout=15) as response:
-        result = json.loads(response.read().decode())
+def analyze(symbol):
+    try:
+        df = get_candles(symbol)
+        if df is None or len(df) < 55:
+            return None
 
-    if result.get("code") != "00000":
-        raise Exception(result.get("msg", "API error"))
+        close = df["close"]
+        ema20 = close.ewm(span=20).mean()
+        ema50 = close.ewm(span=50).mean()
 
-    candles = result.get("data", [])
+        delta = close.diff()
+        gain = delta.clip(lower=0).rolling(14).mean()
+        loss = -delta.clip(upper=0).rolling(14).mean()
+        rs = gain / loss.replace(0, 1e-10)
+        rsi = 100 - (100 / (1 + rs))
 
-    candles.sort(key=lambda candle: int(candle[0]))
+        price = float(close.iloc[-1])
+        fast = float(ema20.iloc[-1])
+        slow = float(ema50.iloc[-1])
+        current_rsi = float(rsi.iloc[-1])
 
-    return [float(candle[4]) for candle in candles]
+        if fast > slow and 50 < current_rsi < 68:
+            direction = "LONG"
+        elif fast < slow and 32 < current_rsi < 50:
+            direction = "SHORT"
+        else:
+            return None
 
+        stop_distance = 0.01
+        stop = price * (1 - stop_distance) if direction == "LONG" else price * (1 + stop_distance)
+        target = price * (1 + 0.02) if direction == "LONG" else price * (1 - 0.02)
 
-def calculate_ema(prices, period):
-    multiplier = 2 / (period + 1)
-    ema = prices[0]
+        risk_amount = START_BALANCE * RISK_PERCENT
+        position_size = risk_amount / abs(price - stop)
 
-    for price in prices[1:]:
-        ema = (price * multiplier) + (
-            ema * (1 - multiplier)
-        )
+        return {
+            "symbol": symbol,
+            "direction": direction,
+            "price": price,
+            "stop": stop,
+            "target": target,
+            "quantity": position_size,
+            "risk": risk_amount,
+            "rsi": current_rsi
+        }
 
-    return ema
-
-
-def calculate_rsi(prices, period=14):
-    changes = [
-        prices[i] - prices[i - 1]
-        for i in range(1, len(prices))
-    ]
-
-    recent = changes[-period:]
-
-    gains = [max(change, 0) for change in recent]
-    losses = [max(-change, 0) for change in recent]
-
-    avg_gain = sum(gains) / period
-    avg_loss = sum(losses) / period
-
-    if avg_loss == 0:
-        return 100 if avg_gain > 0 else 50
-
-    rs = avg_gain / avg_loss
-
-    return 100 - (100 / (1 + rs))
-
-
-def analyze_coin(symbol):
-    prices = get_market_data(symbol)
-
-    if len(prices) < 60:
-        raise Exception("Not enough market data")
-
-    ema20 = calculate_ema(prices[-60:], 20)
-    ema50 = calculate_ema(prices[-60:], 50)
-
-    rsi = calculate_rsi(prices)
-
-    current_price = prices[-1]
-
-    if current_price > ema20 > ema50 and 50 < rsi < 70:
-        signal = "LONG"
-
-    elif current_price < ema20 < ema50 and 30 < rsi < 50:
-        signal = "SHORT"
-
-    else:
-        signal = "WAIT"
-
-    return {
-        "coin": symbol,
-        "price": round(current_price, 6),
-        "EMA20": round(ema20, 6),
-        "EMA50": round(ema50, 6),
-        "RSI": round(rsi, 2),
-        "signal": signal
-    }
-
+    except Exception as error:
+        print(f"Error {symbol}: {error}")
+        return None
 
 def main():
-    print("=" * 40)
-    print("       MOMEN AI TRADER")
-    print("       MARKET ANALYZER 1.0")
-    print("=" * 40)
+    print("===== MOMEN AI TRADER V2 =====")
+    print("Mode: PAPER TRADING - NO REAL ORDERS")
+    print(f"Virtual balance: ${START_BALANCE:.2f}")
+    print("Scanning market...\n")
 
-    for coin in COINS:
-        try:
-            result = analyze_coin(coin)
+    symbols = get_symbols()
+    print(f"Watching {len(symbols)} symbols\n")
 
-            print("\nCoin:", result["coin"])
-            print("Price:", result["price"])
-            print("EMA20:", result["EMA20"])
-            print("EMA50:", result["EMA50"])
-            print("RSI:", result["RSI"])
-            print("SIGNAL:", result["signal"])
+    opportunities = 0
 
-            print("-" * 30)
+    for symbol in symbols:
+        result = analyze(symbol)
+        if result:
+            opportunities += 1
+            print("-" * 35)
+            print(f"COIN: {result['symbol']}")
+            print(f"SIGNAL: {result['direction']}")
+            print(f"PRICE: {result['price']:.8f}")
+            print(f"STOP LOSS: {result['stop']:.8f}")
+            print(f"TAKE PROFIT: {result['target']:.8f}")
+            print(f"POSITION SIZE: {result['quantity']:.6f}")
+            print(f"RISK: ${result['risk']:.2f}")
+            print(f"RSI: {result['rsi']:.2f}")
+        time.sleep(0.2)
 
-        except Exception as error:
-            print("\n", coin, "ERROR:", str(error))
-
-    print("\nAnalysis completed.")
-    print("No real trades were executed.")
-
+    print("\n===== SCAN COMPLETE =====")
+    print(f"Qualified opportunities: {opportunities}")
+    print("No real trades were placed.")
 
 if __name__ == "__main__":
     main()
