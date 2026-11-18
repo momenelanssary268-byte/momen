@@ -1,16 +1,6 @@
 {
-  "balance": 20.340050238722586,
+  "balance": 19.888668163840542,
   "positions": [
-    {
-      "symbol": "ZECUSDT",
-      "side": "LONG",
-      "entry": 946.93,
-      "stop": 937.4607,
-      "target": 965.8686,
-      "quantity": 0.02110821285628299,
-      "entry_fee": 0.011992800000000029,
-      "entry_time": 1794988800000
-    },
     {
       "symbol": "SKHYUSDT",
       "side": "LONG",
@@ -22,14 +12,24 @@
       "entry_time": 1794988800000
     },
     {
-      "symbol": "BREVUSDT",
+      "symbol": "ZECUSDT",
       "side": "LONG",
-      "entry": 0.09984,
-      "stop": 0.0988416,
-      "target": 0.1018368,
-      "quantity": 203.84877399519297,
-      "entry_fee": 0.012211356957408038,
-      "entry_time": 1794988800000
+      "entry": 950.04,
+      "stop": 940.5396,
+      "target": 969.0408,
+      "quantity": 0.02118678936331371,
+      "entry_fee": 0.012076978420033533,
+      "entry_time": 1794992400000
+    },
+    {
+      "symbol": "SPCXUSDT",
+      "side": "LONG",
+      "entry": 142.95,
+      "stop": 141.5205,
+      "target": 145.809,
+      "quantity": 0.13921377075171776,
+      "entry_fee": 0.01194036511737483,
+      "entry_time": 1794992400000
     }
   ],
   "history": [
@@ -42,12 +42,33 @@
       "reason": "TAKE PROFIT",
       "entry_time": 1794988800000,
       "exit_time": 1794992400000
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": "LONG",
+      "entry": 946.93,
+      "exit": 937.4607,
+      "net_pnl": -0.21175,
+      "reason": "STOP LOSS",
+      "entry_time": 1794988800000,
+      "exit_time": 1794996000000
+    },
+    {
+      "symbol": "BREVUSDT",
+      "side": "LONG",
+      "entry": 0.09984,
+      "exit": 0.0988416,
+      "net_pnl": -0.21561,
+      "reason": "STOP LOSS",
+      "entry_time": 1794988800000,
+      "exit_time": 1794992400000
     }
   ],
   "last_signal": {
     "SOXSUSDT": 1794988800000,
-    "ZECUSDT": 1794988800000,
+    "ZECUSDT": 1794992400000,
     "SKHYUSDT": 1794988800000,
-    "BREVUSDT": 1794988800000
+    "BREVUSDT": 1794988800000,
+    "SPCXUSDT": 1794992400000
   }
 }
