@@ -1,16 +1,6 @@
 {
-  "balance": 19.96402159568,
+  "balance": 20.340050238722586,
   "positions": [
-    {
-      "symbol": "SOXSUSDT",
-      "side": "SHORT",
-      "entry": 54.749,
-      "stop": 55.296490000000006,
-      "target": 53.65402,
-      "quantity": 0.3653034758625706,
-      "entry_fee": 0.011999999999999926,
-      "entry_time": 1794988800000
-    },
     {
       "symbol": "ZECUSDT",
       "side": "LONG",
@@ -30,12 +20,34 @@
       "quantity": 0.15684679020100478,
       "entry_fee": 0.01198560431999998,
       "entry_time": 1794988800000
+    },
+    {
+      "symbol": "BREVUSDT",
+      "side": "LONG",
+      "entry": 0.09984,
+      "stop": 0.0988416,
+      "target": 0.1018368,
+      "quantity": 203.84877399519297,
+      "entry_fee": 0.012211356957408038,
+      "entry_time": 1794988800000
     }
   ],
-  "history": [],
+  "history": [
+    {
+      "symbol": "SOXSUSDT",
+      "side": "SHORT",
+      "entry": 54.749,
+      "exit": 53.65402,
+      "net_pnl": 0.38824,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1794988800000,
+      "exit_time": 1794992400000
+    }
+  ],
   "last_signal": {
     "SOXSUSDT": 1794988800000,
     "ZECUSDT": 1794988800000,
-    "SKHYUSDT": 1794988800000
+    "SKHYUSDT": 1794988800000,
+    "BREVUSDT": 1794988800000
   }
 }
