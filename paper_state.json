@@ -1,26 +1,6 @@
 {
-  "balance": 18.923259375977214,
+  "balance": 19.635001003536587,
   "positions": [
-    {
-      "symbol": "SPCXUSDT",
-      "side": "LONG",
-      "entry": 143.45,
-      "stop": 142.01549999999997,
-      "target": 146.319,
-      "quantity": 0.13215309974210593,
-      "entry_fee": 0.011374417294803055,
-      "entry_time": 1795010400000
-    },
-    {
-      "symbol": "TQQQUSDT",
-      "side": "SHORT",
-      "entry": 52.81,
-      "stop": 53.338100000000004,
-      "target": 51.7538,
-      "quantity": 0.35875757888109083,
-      "entry_fee": 0.011367592644426244,
-      "entry_time": 1795010400000
-    },
     {
       "symbol": "QQQUSDT",
       "side": "SHORT",
@@ -30,6 +10,26 @@
       "quantity": 0.028600417116890223,
       "entry_fee": 0.0113607720888396,
       "entry_time": 1795010400000
+    },
+    {
+      "symbol": "TQQQUSDT",
+      "side": "SHORT",
+      "entry": 52.26,
+      "stop": 52.782599999999995,
+      "target": 51.2148,
+      "quantity": 0.37616885242096054,
+      "entry_fee": 0.011795150536511638,
+      "entry_time": 1795014000000
+    },
+    {
+      "symbol": "DRAMUSDT",
+      "side": "SHORT",
+      "entry": 39.01,
+      "stop": 39.400099999999995,
+      "target": 38.2298,
+      "quantity": 0.5036346853879247,
+      "entry_fee": 0.011788073446189764,
+      "entry_time": 1795014000000
     }
   ],
   "history": [
@@ -132,6 +132,26 @@
       "reason": "STOP LOSS",
       "entry_time": 1794992400000,
       "exit_time": 1795010400000
+    },
+    {
+      "symbol": "SPCXUSDT",
+      "side": "LONG",
+      "entry": 143.45,
+      "exit": 146.319,
+      "net_pnl": 0.36755,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795010400000,
+      "exit_time": 1795014000000
+    },
+    {
+      "symbol": "TQQQUSDT",
+      "side": "SHORT",
+      "entry": 52.81,
+      "exit": 51.7538,
+      "net_pnl": 0.36778,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795010400000,
+      "exit_time": 1795014000000
     }
   ],
   "last_signal": {
@@ -141,7 +161,8 @@
     "BREVUSDT": 1794988800000,
     "SPCXUSDT": 1795010400000,
     "SNXXUSDT": 1795006800000,
-    "TQQQUSDT": 1795010400000,
-    "QQQUSDT": 1795010400000
+    "TQQQUSDT": 1795014000000,
+    "QQQUSDT": 1795010400000,
+    "DRAMUSDT": 1795014000000
   }
 }
