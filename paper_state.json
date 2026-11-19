@@ -1,5 +1,5 @@
 {
-  "balance": 17.916652218393875,
+  "balance": 17.71609321346117,
   "positions": [
     {
       "symbol": "ENAUSDT",
@@ -24,12 +24,12 @@
     {
       "symbol": "SOLUSDT",
       "side": "LONG",
-      "entry": 74.898,
-      "stop": 74.14902,
-      "target": 76.39596,
-      "quantity": 0.23935764190755368,
-      "entry_fee": 0.010756445198155171,
-      "entry_time": 1795096800000
+      "entry": 73.506,
+      "stop": 72.77094,
+      "target": 74.97612,
+      "quantity": 0.24116030325431498,
+      "entry_fee": 0.010636037550607005,
+      "entry_time": 1795100400000
     }
   ],
   "history": [
@@ -312,6 +312,16 @@
       "reason": "STOP LOSS",
       "entry_time": 1795082400000,
       "exit_time": 1795100400000
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": "LONG",
+      "entry": 74.898,
+      "exit": 74.14902,
+      "net_pnl": -0.18992,
+      "reason": "STOP LOSS",
+      "entry_time": 1795096800000,
+      "exit_time": 1795100400000
     }
   ],
   "last_signal": {
@@ -328,6 +338,6 @@
     "ENAUSDT": 1795042800000,
     "BZUSDT": 1795050000000,
     "EVAAUSDT": 1795075200000,
-    "SOLUSDT": 1795096800000
+    "SOLUSDT": 1795100400000
   }
 }
