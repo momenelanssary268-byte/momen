@@ -1,5 +1,5 @@
 {
-  "balance": 17.846903302879852,
+  "balance": 17.647125067307414,
   "positions": [
     {
       "symbol": "ENAUSDT",
@@ -22,14 +22,14 @@
       "entry_time": 1795050000000
     },
     {
-      "symbol": "XRPUSDT",
-      "side": "LONG",
-      "entry": 0.9689,
-      "stop": 0.9592109999999999,
-      "target": 0.988278,
-      "quantity": 18.430816259267115,
-      "entry_fee": 0.010714570724162343,
-      "entry_time": 1795107600000
+      "symbol": "SNDKUSDT",
+      "side": "SHORT",
+      "entry": 766.73,
+      "stop": 774.3973,
+      "target": 751.3954,
+      "quantity": 0.02302990583272729,
+      "entry_fee": 0.010594631819476197,
+      "entry_time": 1795114800000
     }
   ],
   "history": [
@@ -342,6 +342,16 @@
       "reason": "TAKE PROFIT",
       "entry_time": 1795104000000,
       "exit_time": 1795111200000
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "entry": 0.9689,
+      "exit": 0.9592109999999999,
+      "net_pnl": -0.18918,
+      "reason": "STOP LOSS",
+      "entry_time": 1795107600000,
+      "exit_time": 1795118400000
     }
   ],
   "last_signal": {
@@ -359,6 +369,7 @@
     "BZUSDT": 1795050000000,
     "EVAAUSDT": 1795075200000,
     "SOLUSDT": 1795104000000,
-    "XRPUSDT": 1795107600000
+    "XRPUSDT": 1795107600000,
+    "SNDKUSDT": 1795114800000
   }
 }
