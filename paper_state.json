@@ -1,5 +1,5 @@
 {
-  "balance": 19.65844856108722,
+  "balance": 19.438155986511678,
   "positions": [
     {
       "symbol": "ENAUSDT",
@@ -24,12 +24,12 @@
     {
       "symbol": "ANTUSDT",
       "side": "SHORT",
-      "entry": 87.33,
-      "stop": 88.2033,
-      "target": 85.5834,
-      "quantity": 0.22524047534082353,
-      "entry_fee": 0.01180215042690847,
-      "entry_time": 1795197600000
+      "entry": 86.78,
+      "stop": 87.6478,
+      "target": 85.0444,
+      "quantity": 0.22412797743766819,
+      "entry_fee": 0.011669895529224506,
+      "entry_time": 1795201200000
     }
   ],
   "history": [
@@ -442,6 +442,16 @@
       "reason": "TAKE PROFIT",
       "entry_time": 1795186800000,
       "exit_time": 1795197600000
+    },
+    {
+      "symbol": "ANTUSDT",
+      "side": "SHORT",
+      "entry": 87.33,
+      "exit": 88.2033,
+      "net_pnl": -0.20862,
+      "reason": "STOP LOSS",
+      "entry_time": 1795197600000,
+      "exit_time": 1795201200000
     }
   ],
   "last_signal": {
@@ -463,6 +473,6 @@
     "SNDKUSDT": 1795114800000,
     "OPENAIUSDT": 1795118400000,
     "BTCUSDT": 1795186800000,
-    "ANTUSDT": 1795197600000
+    "ANTUSDT": 1795201200000
   }
 }
