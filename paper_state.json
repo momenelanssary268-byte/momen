@@ -1,5 +1,5 @@
 {
-  "balance": 19.22033201052683,
+  "balance": 19.57379062973326,
   "positions": [
     {
       "symbol": "ENAUSDT",
@@ -10,16 +10,6 @@
       "quantity": 164.64236952979877,
       "entry_fee": 0.011050137273361975,
       "entry_time": 1795042800000
-    },
-    {
-      "symbol": "BZUSDT",
-      "side": "SHORT",
-      "entry": 90.07,
-      "stop": 90.9707,
-      "target": 88.26859999999999,
-      "quantity": 0.2021566960880553,
-      "entry_fee": 0.010924952169990685,
-      "entry_time": 1795050000000
     },
     {
       "symbol": "ANTUSDT",
@@ -462,6 +452,16 @@
       "reason": "STOP LOSS",
       "entry_time": 1795201200000,
       "exit_time": 1795204800000
+    },
+    {
+      "symbol": "BZUSDT",
+      "side": "SHORT",
+      "entry": 90.07,
+      "exit": 88.26859999999999,
+      "net_pnl": 0.35346,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795050000000,
+      "exit_time": 1795161600000
     }
   ],
   "last_signal": {
