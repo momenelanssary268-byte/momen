@@ -1,5 +1,5 @@
 {
-  "balance": 18.266183225650206,
+  "balance": 18.05929556019838,
   "positions": [
     {
       "symbol": "CLUSDT",
@@ -12,16 +12,6 @@
       "entry_time": 1795230000000
     },
     {
-      "symbol": "SOXLUSDT",
-      "side": "SHORT",
-      "entry": 32.57,
-      "stop": 32.8957,
-      "target": 31.9186,
-      "quantity": 0.5675285059335942,
-      "entry_fee": 0.011090642062954296,
-      "entry_time": 1795269600000
-    },
-    {
       "symbol": "ENAUSDT",
       "side": "SHORT",
       "entry": 0.09897,
@@ -30,6 +20,16 @@
       "quantity": 184.67363357946343,
       "entry_fee": 0.010966289709215697,
       "entry_time": 1795269600000
+    },
+    {
+      "symbol": "SOXLUSDT",
+      "side": "SHORT",
+      "entry": 32.56,
+      "stop": 32.885600000000004,
+      "target": 31.908800000000003,
+      "quantity": 0.5549796573336601,
+      "entry_fee": 0.010842082585670383,
+      "entry_time": 1795273200000
     }
   ],
   "history": [
@@ -612,6 +612,16 @@
       "reason": "STOP LOSS",
       "entry_time": 1795266000000,
       "exit_time": 1795273200000
+    },
+    {
+      "symbol": "SOXLUSDT",
+      "side": "SHORT",
+      "entry": 32.57,
+      "exit": 32.8957,
+      "net_pnl": -0.19605,
+      "reason": "STOP LOSS",
+      "entry_time": 1795269600000,
+      "exit_time": 1795276800000
     }
   ],
   "last_signal": {
@@ -636,6 +646,6 @@
     "ANTUSDT": 1795204800000,
     "CLUSDT": 1795230000000,
     "NEARUSDT": 1795262400000,
-    "SOXLUSDT": 1795269600000
+    "SOXLUSDT": 1795273200000
   }
 }
