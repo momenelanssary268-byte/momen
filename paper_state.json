@@ -1,5 +1,5 @@
 {
-  "balance": 17.856923094150797,
+  "balance": 17.656818413957744,
   "positions": [
     {
       "symbol": "CLUSDT",
@@ -22,14 +22,14 @@
       "entry_time": 1795269600000
     },
     {
-      "symbol": "SOXLUSDT",
-      "side": "SHORT",
-      "entry": 32.86,
-      "stop": 33.1886,
-      "target": 32.202799999999996,
-      "quantity": 0.5437505684832297,
-      "entry_fee": 0.010720586208215355,
-      "entry_time": 1795276800000
+      "symbol": "EVAAUSDT",
+      "side": "LONG",
+      "entry": 6.3519,
+      "stop": 6.288380999999999,
+      "target": 6.478937999999999,
+      "quantity": 2.7814384460203754,
+      "entry_fee": 0.010600451319166093,
+      "entry_time": 1795291200000
     }
   ],
   "history": [
@@ -632,6 +632,16 @@
       "reason": "STOP LOSS",
       "entry_time": 1795273200000,
       "exit_time": 1795276800000
+    },
+    {
+      "symbol": "SOXLUSDT",
+      "side": "SHORT",
+      "entry": 32.86,
+      "exit": 33.1886,
+      "net_pnl": -0.1895,
+      "reason": "STOP LOSS",
+      "entry_time": 1795276800000,
+      "exit_time": 1795291200000
     }
   ],
   "last_signal": {
@@ -647,7 +657,7 @@
     "HYPEUSDT": 1795140000000,
     "ENAUSDT": 1795269600000,
     "BZUSDT": 1795050000000,
-    "EVAAUSDT": 1795075200000,
+    "EVAAUSDT": 1795291200000,
     "SOLUSDT": 1795104000000,
     "XRPUSDT": 1795107600000,
     "SNDKUSDT": 1795114800000,
