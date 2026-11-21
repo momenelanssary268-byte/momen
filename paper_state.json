@@ -1,5 +1,5 @@
 {
-  "balance": 18.48440343825703,
+  "balance": 18.266183225650206,
   "positions": [
     {
       "symbol": "CLUSDT",
@@ -12,14 +12,24 @@
       "entry_time": 1795230000000
     },
     {
+      "symbol": "SOXLUSDT",
+      "side": "SHORT",
+      "entry": 32.57,
+      "stop": 32.8957,
+      "target": 31.9186,
+      "quantity": 0.5675285059335942,
+      "entry_fee": 0.011090642062954296,
+      "entry_time": 1795269600000
+    },
+    {
       "symbol": "ENAUSDT",
       "side": "SHORT",
-      "entry": 0.09847,
-      "stop": 0.09945470000000001,
-      "target": 0.0965006,
-      "quantity": 187.8287878409684,
-      "entry_fee": 0.011097300443220093,
-      "entry_time": 1795266000000
+      "entry": 0.09897,
+      "stop": 0.0999597,
+      "target": 0.0969906,
+      "quantity": 184.67363357946343,
+      "entry_fee": 0.010966289709215697,
+      "entry_time": 1795269600000
     }
   ],
   "history": [
@@ -592,6 +602,16 @@
       "reason": "STOP LOSS",
       "entry_time": 1795042800000,
       "exit_time": 1795057200000
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": "SHORT",
+      "entry": 0.09847,
+      "exit": 0.09945470000000001,
+      "net_pnl": -0.19616,
+      "reason": "STOP LOSS",
+      "entry_time": 1795266000000,
+      "exit_time": 1795273200000
     }
   ],
   "last_signal": {
@@ -605,7 +625,7 @@
     "QQQUSDT": 1795042800000,
     "DRAMUSDT": 1795021200000,
     "HYPEUSDT": 1795140000000,
-    "ENAUSDT": 1795266000000,
+    "ENAUSDT": 1795269600000,
     "BZUSDT": 1795050000000,
     "EVAAUSDT": 1795075200000,
     "SOLUSDT": 1795104000000,
@@ -615,6 +635,7 @@
     "BTCUSDT": 1795186800000,
     "ANTUSDT": 1795204800000,
     "CLUSDT": 1795230000000,
-    "NEARUSDT": 1795262400000
+    "NEARUSDT": 1795262400000,
+    "SOXLUSDT": 1795269600000
   }
 }
