@@ -1,5 +1,5 @@
 {
-  "balance": 19.485891976630565,
+  "balance": 20.212962941275805,
   "positions": [
     {
       "symbol": "ENAUSDT",
@@ -12,24 +12,24 @@
       "entry_time": 1795042800000
     },
     {
-      "symbol": "ANTUSDT",
+      "symbol": "SPCXUSDT",
       "side": "SHORT",
-      "entry": 88.47,
-      "stop": 89.3547,
-      "target": 86.7006,
-      "quantity": 0.21738296748284003,
-      "entry_fee": 0.011539122679924114,
-      "entry_time": 1795204800000
+      "entry": 128.43,
+      "stop": 129.7143,
+      "target": 125.8614,
+      "quantity": 0.1575740897320127,
+      "entry_fee": 0.012142344206569433,
+      "entry_time": 1795230000000
     },
     {
-      "symbol": "SOXSUSDT",
+      "symbol": "CLUSDT",
       "side": "LONG",
-      "entry": 76.347,
-      "stop": 75.58353,
-      "target": 77.87393999999999,
-      "quantity": 0.25538122691067344,
-      "entry_fee": 0.011698554318569507,
-      "entry_time": 1795226400000
+      "entry": 83.772,
+      "stop": 82.93428,
+      "target": 85.44744,
+      "quantity": 0.24143028697029725,
+      "entry_fee": 0.012135058800045445,
+      "entry_time": 1795230000000
     }
   ],
   "history": [
@@ -502,6 +502,26 @@
       "reason": "TAKE PROFIT",
       "entry_time": 1795219200000,
       "exit_time": 1795230000000
+    },
+    {
+      "symbol": "SOXSUSDT",
+      "side": "LONG",
+      "entry": 76.347,
+      "exit": 77.87393999999999,
+      "net_pnl": 0.37802,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795226400000,
+      "exit_time": 1795230000000
+    },
+    {
+      "symbol": "ANTUSDT",
+      "side": "SHORT",
+      "entry": 88.47,
+      "exit": 86.7006,
+      "net_pnl": 0.37333,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795204800000,
+      "exit_time": 1795230000000
     }
   ],
   "last_signal": {
@@ -509,7 +529,7 @@
     "ZECUSDT": 1794999600000,
     "SKHYUSDT": 1794999600000,
     "BREVUSDT": 1794988800000,
-    "SPCXUSDT": 1795010400000,
+    "SPCXUSDT": 1795230000000,
     "SNXXUSDT": 1795006800000,
     "TQQQUSDT": 1795042800000,
     "QQQUSDT": 1795042800000,
@@ -523,6 +543,7 @@
     "SNDKUSDT": 1795114800000,
     "OPENAIUSDT": 1795118400000,
     "BTCUSDT": 1795186800000,
-    "ANTUSDT": 1795204800000
+    "ANTUSDT": 1795204800000,
+    "CLUSDT": 1795230000000
   }
 }
