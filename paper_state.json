@@ -1,5 +1,5 @@
 {
-  "balance": 20.212962941275805,
+  "balance": 19.986327774122234,
   "positions": [
     {
       "symbol": "ENAUSDT",
@@ -12,16 +12,6 @@
       "entry_time": 1795042800000
     },
     {
-      "symbol": "SPCXUSDT",
-      "side": "SHORT",
-      "entry": 128.43,
-      "stop": 129.7143,
-      "target": 125.8614,
-      "quantity": 0.1575740897320127,
-      "entry_fee": 0.012142344206569433,
-      "entry_time": 1795230000000
-    },
-    {
       "symbol": "CLUSDT",
       "side": "LONG",
       "entry": 83.772,
@@ -30,6 +20,16 @@
       "quantity": 0.24143028697029725,
       "entry_fee": 0.012135058800045445,
       "entry_time": 1795230000000
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": "SHORT",
+      "entry": 2.6778,
+      "stop": 2.704578,
+      "target": 2.624244,
+      "quantity": 7.468192833738219,
+      "entry_fee": 0.011998996062110521,
+      "entry_time": 1795244400000
     }
   ],
   "history": [
@@ -522,6 +522,16 @@
       "reason": "TAKE PROFIT",
       "entry_time": 1795204800000,
       "exit_time": 1795230000000
+    },
+    {
+      "symbol": "SPCXUSDT",
+      "side": "SHORT",
+      "entry": 128.43,
+      "exit": 129.7143,
+      "net_pnl": -0.21464,
+      "reason": "STOP LOSS",
+      "entry_time": 1795230000000,
+      "exit_time": 1795240800000
     }
   ],
   "last_signal": {
@@ -544,6 +554,7 @@
     "OPENAIUSDT": 1795118400000,
     "BTCUSDT": 1795186800000,
     "ANTUSDT": 1795204800000,
-    "CLUSDT": 1795230000000
+    "CLUSDT": 1795230000000,
+    "NEARUSDT": 1795244400000
   }
 }
