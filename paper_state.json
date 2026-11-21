@@ -1,5 +1,5 @@
 {
-  "balance": 19.126542496211744,
+  "balance": 19.485891976630565,
   "positions": [
     {
       "symbol": "ENAUSDT",
@@ -24,12 +24,12 @@
     {
       "symbol": "SOXSUSDT",
       "side": "LONG",
-      "entry": 76.434,
-      "stop": 75.66966,
-      "target": 77.96267999999999,
-      "quantity": 0.2503862850485187,
-      "entry_fee": 0.011482815186839085,
-      "entry_time": 1795219200000
+      "entry": 76.347,
+      "stop": 75.58353,
+      "target": 77.87393999999999,
+      "quantity": 0.25538122691067344,
+      "entry_fee": 0.011698554318569507,
+      "entry_time": 1795226400000
     }
   ],
   "history": [
@@ -492,10 +492,20 @@
       "reason": "STOP LOSS",
       "entry_time": 1795215600000,
       "exit_time": 1795219200000
+    },
+    {
+      "symbol": "SOXSUSDT",
+      "side": "LONG",
+      "entry": 76.434,
+      "exit": 77.96267999999999,
+      "net_pnl": 0.37105,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795219200000,
+      "exit_time": 1795230000000
     }
   ],
   "last_signal": {
-    "SOXSUSDT": 1795219200000,
+    "SOXSUSDT": 1795226400000,
     "ZECUSDT": 1794999600000,
     "SKHYUSDT": 1794999600000,
     "BREVUSDT": 1794988800000,
