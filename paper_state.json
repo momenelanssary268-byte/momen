@@ -1,5 +1,5 @@
 {
-  "balance": 19.540903967886553,
+  "balance": 19.321928598022417,
   "positions": [
     {
       "symbol": "ENAUSDT",
@@ -24,12 +24,12 @@
     {
       "symbol": "NEARUSDT",
       "side": "SHORT",
-      "entry": 2.7282,
-      "stop": 2.755482,
-      "target": 2.673636,
-      "quantity": 7.166862967970114,
-      "entry_fee": 0.01173158132952964,
-      "entry_time": 1795251600000
+      "entry": 2.7522,
+      "stop": 2.779722,
+      "target": 2.697156,
+      "quantity": 7.02475427485346,
+      "entry_fee": 0.011600117229151014,
+      "entry_time": 1795255200000
     }
   ],
   "history": [
@@ -552,6 +552,16 @@
       "reason": "STOP LOSS",
       "entry_time": 1795248000000,
       "exit_time": 1795251600000
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": "SHORT",
+      "entry": 2.7282,
+      "exit": 2.755482,
+      "net_pnl": -0.20738,
+      "reason": "STOP LOSS",
+      "entry_time": 1795251600000,
+      "exit_time": 1795255200000
     }
   ],
   "last_signal": {
@@ -575,6 +585,6 @@
     "BTCUSDT": 1795186800000,
     "ANTUSDT": 1795204800000,
     "CLUSDT": 1795230000000,
-    "NEARUSDT": 1795251600000
+    "NEARUSDT": 1795255200000
   }
 }
