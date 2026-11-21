@@ -1,5 +1,5 @@
 {
-  "balance": 18.05929556019838,
+  "balance": 17.856923094150797,
   "positions": [
     {
       "symbol": "CLUSDT",
@@ -24,12 +24,12 @@
     {
       "symbol": "SOXLUSDT",
       "side": "SHORT",
-      "entry": 32.56,
-      "stop": 32.885600000000004,
-      "target": 31.908800000000003,
-      "quantity": 0.5549796573336601,
-      "entry_fee": 0.010842082585670383,
-      "entry_time": 1795273200000
+      "entry": 32.86,
+      "stop": 33.1886,
+      "target": 32.202799999999996,
+      "quantity": 0.5437505684832297,
+      "entry_fee": 0.010720586208215355,
+      "entry_time": 1795276800000
     }
   ],
   "history": [
@@ -622,6 +622,16 @@
       "reason": "STOP LOSS",
       "entry_time": 1795269600000,
       "exit_time": 1795276800000
+    },
+    {
+      "symbol": "SOXLUSDT",
+      "side": "SHORT",
+      "entry": 32.56,
+      "exit": 32.885600000000004,
+      "net_pnl": -0.19165,
+      "reason": "STOP LOSS",
+      "entry_time": 1795273200000,
+      "exit_time": 1795276800000
     }
   ],
   "last_signal": {
@@ -646,6 +656,6 @@
     "ANTUSDT": 1795204800000,
     "CLUSDT": 1795230000000,
     "NEARUSDT": 1795262400000,
-    "SOXLUSDT": 1795273200000
+    "SOXLUSDT": 1795276800000
   }
 }
