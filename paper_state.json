@@ -1,16 +1,6 @@
 {
-  "balance": 18.891311874569666,
+  "balance": 18.48440343825703,
   "positions": [
-    {
-      "symbol": "ENAUSDT",
-      "side": "SHORT",
-      "entry": 0.11186,
-      "stop": 0.1129786,
-      "target": 0.10962279999999999,
-      "quantity": 164.64236952979877,
-      "entry_fee": 0.011050137273361975,
-      "entry_time": 1795042800000
-    },
     {
       "symbol": "CLUSDT",
       "side": "LONG",
@@ -22,14 +12,14 @@
       "entry_time": 1795230000000
     },
     {
-      "symbol": "NEARUSDT",
+      "symbol": "ENAUSDT",
       "side": "SHORT",
-      "entry": 2.7956,
-      "stop": 2.823556,
-      "target": 2.7396879999999997,
-      "quantity": 6.76157299565374,
-      "entry_fee": 0.011341592079989757,
-      "entry_time": 1795262400000
+      "entry": 0.09847,
+      "stop": 0.09945470000000001,
+      "target": 0.0965006,
+      "quantity": 187.8287878409684,
+      "entry_fee": 0.011097300443220093,
+      "entry_time": 1795266000000
     }
   ],
   "history": [
@@ -582,6 +572,26 @@
       "reason": "STOP LOSS",
       "entry_time": 1795258800000,
       "exit_time": 1795262400000
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": "SHORT",
+      "entry": 2.7956,
+      "exit": 2.823556,
+      "net_pnl": -0.20048,
+      "reason": "STOP LOSS",
+      "entry_time": 1795262400000,
+      "exit_time": 1795266000000
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": "SHORT",
+      "entry": 0.11186,
+      "exit": 0.1129786,
+      "net_pnl": -0.19533,
+      "reason": "STOP LOSS",
+      "entry_time": 1795042800000,
+      "exit_time": 1795057200000
     }
   ],
   "last_signal": {
@@ -595,7 +605,7 @@
     "QQQUSDT": 1795042800000,
     "DRAMUSDT": 1795021200000,
     "HYPEUSDT": 1795140000000,
-    "ENAUSDT": 1795042800000,
+    "ENAUSDT": 1795266000000,
     "BZUSDT": 1795050000000,
     "EVAAUSDT": 1795075200000,
     "SOLUSDT": 1795104000000,
