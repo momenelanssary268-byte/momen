@@ -1,5 +1,5 @@
 {
-  "balance": 17.98855471831918,
+  "balance": 18.33234473426451,
   "positions": [
     {
       "symbol": "CLUSDT",
@@ -12,16 +12,6 @@
       "entry_time": 1795230000000
     },
     {
-      "symbol": "ENAUSDT",
-      "side": "SHORT",
-      "entry": 0.09897,
-      "stop": 0.0999597,
-      "target": 0.0969906,
-      "quantity": 184.67363357946343,
-      "entry_fee": 0.010966289709215697,
-      "entry_time": 1795269600000
-    },
-    {
       "symbol": "OPENAIUSDT",
       "side": "SHORT",
       "entry": 1218.62,
@@ -30,6 +20,16 @@
       "quantity": 0.014770276485629305,
       "entry_fee": 0.01079961259855055,
       "entry_time": 1795302000000
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "side": "SHORT",
+      "entry": 3.3807e-06,
+      "stop": 3.414507e-06,
+      "target": 3.313086e-06,
+      "quantity": 5425903.13979689,
+      "entry_fee": 0.011006010446826808,
+      "entry_time": 1795312800000
     }
   ],
   "history": [
@@ -652,6 +652,16 @@
       "reason": "TAKE PROFIT",
       "entry_time": 1795291200000,
       "exit_time": 1795302000000
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": "SHORT",
+      "entry": 0.09897,
+      "exit": 0.0969906,
+      "net_pnl": 0.3548,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795269600000,
+      "exit_time": 1795316400000
     }
   ],
   "last_signal": {
@@ -676,6 +686,7 @@
     "ANTUSDT": 1795204800000,
     "CLUSDT": 1795230000000,
     "NEARUSDT": 1795262400000,
-    "SOXLUSDT": 1795276800000
+    "SOXLUSDT": 1795276800000,
+    "PEPEUSDT": 1795312800000
   }
 }
