@@ -1,5 +1,5 @@
 {
-  "balance": 18.067172425894185,
+  "balance": 18.056332122438647,
   "positions": [
     {
       "symbol": "CLUSDT",
@@ -20,6 +20,16 @@
       "quantity": 0.014770276485629305,
       "entry_fee": 0.01079961259855055,
       "entry_time": 1795302000000
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry": 0.9318,
+      "stop": 0.941118,
+      "target": 0.913164,
+      "quantity": 19.389538984647018,
+      "entry_fee": 0.010840303455536453,
+      "entry_time": 1795341600000
     }
   ],
   "history": [
@@ -709,7 +719,7 @@
     "BZUSDT": 1795050000000,
     "EVAAUSDT": 1795291200000,
     "SOLUSDT": 1795104000000,
-    "XRPUSDT": 1795107600000,
+    "XRPUSDT": 1795341600000,
     "SNDKUSDT": 1795114800000,
     "OPENAIUSDT": 1795302000000,
     "BTCUSDT": 1795186800000,
