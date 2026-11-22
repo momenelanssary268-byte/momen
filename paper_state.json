@@ -1,5 +1,5 @@
 {
-  "balance": 17.656818413957744,
+  "balance": 17.98855471831918,
   "positions": [
     {
       "symbol": "CLUSDT",
@@ -22,14 +22,14 @@
       "entry_time": 1795269600000
     },
     {
-      "symbol": "EVAAUSDT",
-      "side": "LONG",
-      "entry": 6.3519,
-      "stop": 6.288380999999999,
-      "target": 6.478937999999999,
-      "quantity": 2.7814384460203754,
-      "entry_fee": 0.010600451319166093,
-      "entry_time": 1795291200000
+      "symbol": "OPENAIUSDT",
+      "side": "SHORT",
+      "entry": 1218.62,
+      "stop": 1230.8062,
+      "target": 1194.2476,
+      "quantity": 0.014770276485629305,
+      "entry_fee": 0.01079961259855055,
+      "entry_time": 1795302000000
     }
   ],
   "history": [
@@ -642,6 +642,16 @@
       "reason": "STOP LOSS",
       "entry_time": 1795276800000,
       "exit_time": 1795291200000
+    },
+    {
+      "symbol": "EVAAUSDT",
+      "side": "LONG",
+      "entry": 6.3519,
+      "exit": 6.478937999999999,
+      "net_pnl": 0.34254,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795291200000,
+      "exit_time": 1795302000000
     }
   ],
   "last_signal": {
@@ -661,7 +671,7 @@
     "SOLUSDT": 1795104000000,
     "XRPUSDT": 1795107600000,
     "SNDKUSDT": 1795114800000,
-    "OPENAIUSDT": 1795118400000,
+    "OPENAIUSDT": 1795302000000,
     "BTCUSDT": 1795186800000,
     "ANTUSDT": 1795204800000,
     "CLUSDT": 1795230000000,
