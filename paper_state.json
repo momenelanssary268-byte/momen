@@ -1,5 +1,5 @@
 {
-  "balance": 18.677212803405492,
+  "balance": 18.467915956730533,
   "positions": [
     {
       "symbol": "CLUSDT",
@@ -24,12 +24,12 @@
     {
       "symbol": "PEPEUSDT",
       "side": "SHORT",
-      "entry": 3.3426e-06,
-      "stop": 3.376026e-06,
-      "target": 3.275748e-06,
-      "quantity": 5590984.819877023,
-      "entry_fee": 0.01121305551535256,
-      "entry_time": 1795320000000
+      "entry": 3.3451e-06,
+      "stop": 3.378551e-06,
+      "target": 3.2781979999999997e-06,
+      "quantity": 5524200.579577842,
+      "entry_fee": 0.011087402015247503,
+      "entry_time": 1795330800000
     }
   ],
   "history": [
@@ -672,6 +672,16 @@
       "reason": "TAKE PROFIT",
       "entry_time": 1795312800000,
       "exit_time": 1795323600000
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "side": "SHORT",
+      "entry": 3.3426e-06,
+      "exit": 3.376026e-06,
+      "net_pnl": -0.19821,
+      "reason": "STOP LOSS",
+      "entry_time": 1795320000000,
+      "exit_time": 1795334400000
     }
   ],
   "last_signal": {
@@ -697,6 +707,6 @@
     "CLUSDT": 1795230000000,
     "NEARUSDT": 1795262400000,
     "SOXLUSDT": 1795276800000,
-    "PEPEUSDT": 1795320000000
+    "PEPEUSDT": 1795330800000
   }
 }
