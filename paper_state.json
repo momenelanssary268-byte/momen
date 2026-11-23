@@ -1,5 +1,5 @@
 {
-  "balance": 16.98262045213804,
+  "balance": 16.60026374974206,
   "positions": [
     {
       "symbol": "OPENAIUSDT",
@@ -12,24 +12,24 @@
       "entry_time": 1795302000000
     },
     {
-      "symbol": "ZECUSDT",
-      "side": "SHORT",
-      "entry": 785.63,
-      "stop": 793.4863,
-      "target": 769.9173999999999,
-      "quantity": 0.021877088341645576,
-      "entry_fee": 0.010312378148308208,
-      "entry_time": 1795413600000
+      "symbol": "SKHYNIXUSDT",
+      "side": "LONG",
+      "entry": 812.86,
+      "stop": 804.7314,
+      "target": 829.1172,
+      "quantity": 0.02066817407803283,
+      "entry_fee": 0.010080199188641859,
+      "entry_time": 1795420800000
     },
     {
       "symbol": "BLESSUSDT",
       "side": "LONG",
-      "entry": 0.018173,
-      "stop": 0.01799127,
-      "target": 0.01853646,
-      "quantity": 935.058391119958,
-      "entry_fee": 0.010195689685093798,
-      "entry_time": 1795413600000
+      "entry": 0.018152,
+      "stop": 0.01797048,
+      "target": 0.018515040000000003,
+      "quantity": 915.0633477123497,
+      "entry_fee": 0.009966137932604743,
+      "entry_time": 1795420800000
     }
   ],
   "history": [
@@ -782,6 +782,26 @@
       "reason": "STOP LOSS",
       "entry_time": 1795406400000,
       "exit_time": 1795410000000
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": "SHORT",
+      "entry": 785.63,
+      "exit": 793.4863,
+      "net_pnl": -0.18229,
+      "reason": "STOP LOSS",
+      "entry_time": 1795413600000,
+      "exit_time": 1795420800000
+    },
+    {
+      "symbol": "BLESSUSDT",
+      "side": "LONG",
+      "entry": 0.018173,
+      "exit": 0.01799127,
+      "net_pnl": -0.18002,
+      "reason": "STOP LOSS",
+      "entry_time": 1795413600000,
+      "exit_time": 1795417200000
     }
   ],
   "last_signal": {
@@ -809,6 +829,7 @@
     "SOXLUSDT": 1795276800000,
     "PEPEUSDT": 1795334400000,
     "MUUSDT": 1795399200000,
-    "BLESSUSDT": 1795413600000
+    "BLESSUSDT": 1795420800000,
+    "SKHYNIXUSDT": 1795420800000
   }
 }
