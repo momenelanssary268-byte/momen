@@ -1,5 +1,5 @@
 {
-  "balance": 16.7212483530385,
+  "balance": 16.522021562807524,
   "positions": [
     {
       "symbol": "SKHYNIXUSDT",
@@ -12,14 +12,24 @@
       "entry_time": 1795420800000
     },
     {
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry": 61398.7,
+      "stop": 60784.712999999996,
+      "target": 62626.674,
+      "quantity": 0.0002723388011967432,
+      "entry_fee": 0.010032749011823085,
+      "entry_time": 1795428000000
+    },
+    {
       "symbol": "BLESSUSDT",
       "side": "LONG",
-      "entry": 0.018652,
-      "stop": 0.01846548,
-      "target": 0.01902504,
-      "quantity": 907.2647912719485,
-      "entry_fee": 0.010153381732082628,
-      "entry_time": 1795424400000
+      "entry": 0.019068,
+      "stop": 0.018877320000000003,
+      "target": 0.019449360000000002,
+      "quantity": 866.9991990373395,
+      "entry_fee": 0.009919164436346394,
+      "entry_time": 1795428000000
     }
   ],
   "history": [
@@ -812,6 +822,16 @@
       "reason": "STOP LOSS",
       "entry_time": 1795302000000,
       "exit_time": 1795420800000
+    },
+    {
+      "symbol": "BLESSUSDT",
+      "side": "LONG",
+      "entry": 0.018652,
+      "exit": 0.01846548,
+      "net_pnl": -0.17927,
+      "reason": "STOP LOSS",
+      "entry_time": 1795424400000,
+      "exit_time": 1795428000000
     }
   ],
   "last_signal": {
@@ -832,14 +852,14 @@
     "XRPUSDT": 1795399200000,
     "SNDKUSDT": 1795114800000,
     "OPENAIUSDT": 1795302000000,
-    "BTCUSDT": 1795186800000,
+    "BTCUSDT": 1795428000000,
     "ANTUSDT": 1795204800000,
     "CLUSDT": 1795384800000,
     "NEARUSDT": 1795388400000,
     "SOXLUSDT": 1795276800000,
     "PEPEUSDT": 1795334400000,
     "MUUSDT": 1795399200000,
-    "BLESSUSDT": 1795424400000,
+    "BLESSUSDT": 1795428000000,
     "SKHYNIXUSDT": 1795420800000
   }
 }
