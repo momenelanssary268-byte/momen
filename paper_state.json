@@ -1,5 +1,5 @@
 {
-  "balance": 17.631757925368298,
+  "balance": 17.774114533278638,
   "positions": [
     {
       "symbol": "OPENAIUSDT",
@@ -14,22 +14,22 @@
     {
       "symbol": "XRPUSDT",
       "side": "SHORT",
-      "entry": 0.9318,
-      "stop": 0.941118,
-      "target": 0.913164,
-      "quantity": 19.389538984647018,
-      "entry_fee": 0.010840303455536453,
-      "entry_time": 1795341600000
+      "entry": 0.916,
+      "stop": 0.9251600000000001,
+      "target": 0.89768,
+      "quantity": 19.631526066047645,
+      "entry_fee": 0.010789486725899786,
+      "entry_time": 1795399200000
     },
     {
-      "symbol": "NEARUSDT",
-      "side": "LONG",
-      "entry": 2.983,
-      "stop": 2.95317,
-      "target": 3.04266,
-      "quantity": 5.914295451346666,
-      "entry_fee": 0.010585405998820262,
-      "entry_time": 1795388400000
+      "symbol": "MUUSDT",
+      "side": "SHORT",
+      "entry": 617.05,
+      "stop": 623.2205,
+      "target": 604.709,
+      "quantity": 0.028822275997927516,
+      "entry_fee": 0.010670871242712703,
+      "entry_time": 1795399200000
     }
   ],
   "history": [
@@ -722,6 +722,26 @@
       "reason": "STOP LOSS",
       "entry_time": 1795384800000,
       "exit_time": 1795388400000
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry": 0.9318,
+      "exit": 0.913164,
+      "net_pnl": 0.35072,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795341600000,
+      "exit_time": 1795399200000
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": "LONG",
+      "entry": 2.983,
+      "exit": 2.95317,
+      "net_pnl": -0.1869,
+      "reason": "STOP LOSS",
+      "entry_time": 1795388400000,
+      "exit_time": 1795399200000
     }
   ],
   "last_signal": {
@@ -739,7 +759,7 @@
     "BZUSDT": 1795050000000,
     "EVAAUSDT": 1795291200000,
     "SOLUSDT": 1795104000000,
-    "XRPUSDT": 1795341600000,
+    "XRPUSDT": 1795399200000,
     "SNDKUSDT": 1795114800000,
     "OPENAIUSDT": 1795302000000,
     "BTCUSDT": 1795186800000,
@@ -747,6 +767,7 @@
     "CLUSDT": 1795384800000,
     "NEARUSDT": 1795388400000,
     "SOXLUSDT": 1795276800000,
-    "PEPEUSDT": 1795334400000
+    "PEPEUSDT": 1795334400000,
+    "MUUSDT": 1795399200000
   }
 }
