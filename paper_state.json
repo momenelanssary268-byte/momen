@@ -1,16 +1,6 @@
 {
-  "balance": 16.60026374974206,
+  "balance": 16.7212483530385,
   "positions": [
-    {
-      "symbol": "OPENAIUSDT",
-      "side": "SHORT",
-      "entry": 1218.62,
-      "stop": 1230.8062,
-      "target": 1194.2476,
-      "quantity": 0.014770276485629305,
-      "entry_fee": 0.01079961259855055,
-      "entry_time": 1795302000000
-    },
     {
       "symbol": "SKHYNIXUSDT",
       "side": "LONG",
@@ -24,12 +14,12 @@
     {
       "symbol": "BLESSUSDT",
       "side": "LONG",
-      "entry": 0.018152,
-      "stop": 0.01797048,
-      "target": 0.018515040000000003,
-      "quantity": 915.0633477123497,
-      "entry_fee": 0.009966137932604743,
-      "entry_time": 1795420800000
+      "entry": 0.018652,
+      "stop": 0.01846548,
+      "target": 0.01902504,
+      "quantity": 907.2647912719485,
+      "entry_fee": 0.010153381732082628,
+      "entry_time": 1795424400000
     }
   ],
   "history": [
@@ -802,6 +792,26 @@
       "reason": "STOP LOSS",
       "entry_time": 1795413600000,
       "exit_time": 1795417200000
+    },
+    {
+      "symbol": "BLESSUSDT",
+      "side": "LONG",
+      "entry": 0.018152,
+      "exit": 0.018515040000000003,
+      "net_pnl": 0.32204,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795420800000,
+      "exit_time": 1795424400000
+    },
+    {
+      "symbol": "OPENAIUSDT",
+      "side": "SHORT",
+      "entry": 1218.62,
+      "exit": 1230.8062,
+      "net_pnl": -0.1909,
+      "reason": "STOP LOSS",
+      "entry_time": 1795302000000,
+      "exit_time": 1795420800000
     }
   ],
   "last_signal": {
@@ -829,7 +839,7 @@
     "SOXLUSDT": 1795276800000,
     "PEPEUSDT": 1795334400000,
     "MUUSDT": 1795399200000,
-    "BLESSUSDT": 1795420800000,
+    "BLESSUSDT": 1795424400000,
     "SKHYNIXUSDT": 1795420800000
   }
 }
