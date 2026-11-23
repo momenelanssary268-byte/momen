@@ -1,5 +1,5 @@
 {
-  "balance": 17.831362193765308,
+  "balance": 17.631757925368298,
   "positions": [
     {
       "symbol": "OPENAIUSDT",
@@ -22,14 +22,14 @@
       "entry_time": 1795341600000
     },
     {
-      "symbol": "CLUSDT",
+      "symbol": "NEARUSDT",
       "side": "LONG",
-      "entry": 83.895,
-      "stop": 83.05605,
-      "target": 85.5729,
-      "quantity": 0.21267140394810072,
-      "entry_fee": 0.010705240460535545,
-      "entry_time": 1795384800000
+      "entry": 2.983,
+      "stop": 2.95317,
+      "target": 3.04266,
+      "quantity": 5.914295451346666,
+      "entry_fee": 0.010585405998820262,
+      "entry_time": 1795388400000
     }
   ],
   "history": [
@@ -712,6 +712,16 @@
       "reason": "STOP LOSS",
       "entry_time": 1795230000000,
       "exit_time": 1795388400000
+    },
+    {
+      "symbol": "CLUSDT",
+      "side": "LONG",
+      "entry": 83.895,
+      "exit": 83.05605,
+      "net_pnl": -0.18902,
+      "reason": "STOP LOSS",
+      "entry_time": 1795384800000,
+      "exit_time": 1795388400000
     }
   ],
   "last_signal": {
@@ -735,7 +745,7 @@
     "BTCUSDT": 1795186800000,
     "ANTUSDT": 1795204800000,
     "CLUSDT": 1795384800000,
-    "NEARUSDT": 1795262400000,
+    "NEARUSDT": 1795388400000,
     "SOXLUSDT": 1795276800000,
     "PEPEUSDT": 1795334400000
   }
