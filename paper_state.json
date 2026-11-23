@@ -1,35 +1,35 @@
 {
-  "balance": 16.14939758660271,
+  "balance": 16.58450555170221,
   "positions": [
     {
-      "symbol": "BTCUSDT",
+      "symbol": "XAGUSDT",
       "side": "LONG",
-      "entry": 61398.7,
-      "stop": 60784.712999999996,
-      "target": 62626.674,
-      "quantity": 0.0002723388011967432,
-      "entry_fee": 0.010032749011823085,
-      "entry_time": 1795428000000
+      "entry": 43.23,
+      "stop": 42.7977,
+      "target": 44.0946,
+      "quantity": 0.38106845129936384,
+      "entry_fee": 0.009884153489802898,
+      "entry_time": 1795438800000
     },
     {
       "symbol": "SKHYNIXUSDT",
       "side": "LONG",
-      "entry": 814.7,
-      "stop": 806.553,
-      "target": 830.994,
-      "quantity": 0.020061419965386,
-      "entry_fee": 0.009806423307479984,
-      "entry_time": 1795431600000
+      "entry": 851.39,
+      "stop": 842.8761,
+      "target": 868.4178,
+      "quantity": 0.019134070459659078,
+      "entry_fee": 0.009774333749189484,
+      "entry_time": 1795438800000
     },
     {
       "symbol": "BZUSDT",
       "side": "SHORT",
-      "entry": 88.85,
-      "stop": 89.7385,
-      "target": 87.073,
-      "quantity": 0.1818693645743166,
-      "entry_fee": 0.009695455825456816,
-      "entry_time": 1795431600000
+      "entry": 88.11,
+      "stop": 88.9911,
+      "target": 86.34779999999999,
+      "quantity": 0.18833801190602167,
+      "entry_fee": 0.009956677337423742,
+      "entry_time": 1795438800000
     }
   ],
   "history": [
@@ -852,6 +852,36 @@
       "reason": "STOP LOSS",
       "entry_time": 1795428000000,
       "exit_time": 1795431600000
+    },
+    {
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry": 61398.7,
+      "exit": 62626.674,
+      "net_pnl": 0.32419,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795428000000,
+      "exit_time": 1795438800000
+    },
+    {
+      "symbol": "SKHYNIXUSDT",
+      "side": "LONG",
+      "entry": 814.7,
+      "exit": 806.553,
+      "net_pnl": -0.17315,
+      "reason": "STOP LOSS",
+      "entry_time": 1795431600000,
+      "exit_time": 1795435200000
+    },
+    {
+      "symbol": "BZUSDT",
+      "side": "SHORT",
+      "entry": 88.85,
+      "exit": 87.073,
+      "net_pnl": 0.31368,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795431600000,
+      "exit_time": 1795438800000
     }
   ],
   "last_signal": {
@@ -866,7 +896,7 @@
     "DRAMUSDT": 1795021200000,
     "HYPEUSDT": 1795140000000,
     "ENAUSDT": 1795269600000,
-    "BZUSDT": 1795431600000,
+    "BZUSDT": 1795438800000,
     "EVAAUSDT": 1795291200000,
     "SOLUSDT": 1795104000000,
     "XRPUSDT": 1795399200000,
@@ -880,6 +910,7 @@
     "PEPEUSDT": 1795334400000,
     "MUUSDT": 1795399200000,
     "BLESSUSDT": 1795428000000,
-    "SKHYNIXUSDT": 1795431600000
+    "SKHYNIXUSDT": 1795438800000,
+    "XAGUSDT": 1795438800000
   }
 }
