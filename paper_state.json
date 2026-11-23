@@ -1,5 +1,5 @@
 {
-  "balance": 17.373786373354278,
+  "balance": 16.98262045213804,
   "positions": [
     {
       "symbol": "OPENAIUSDT",
@@ -14,22 +14,22 @@
     {
       "symbol": "ZECUSDT",
       "side": "SHORT",
-      "entry": 787.86,
-      "stop": 795.7386,
-      "target": 772.1028,
-      "quantity": 0.022317914823598694,
-      "entry_fee": 0.010550035423752279,
-      "entry_time": 1795406400000
+      "entry": 785.63,
+      "stop": 793.4863,
+      "target": 769.9173999999999,
+      "quantity": 0.021877088341645576,
+      "entry_fee": 0.010312378148308208,
+      "entry_time": 1795413600000
     },
     {
       "symbol": "BLESSUSDT",
       "side": "LONG",
-      "entry": 0.017792,
-      "stop": 0.017614079999999997,
-      "target": 0.01814784,
-      "quantity": 977.0805363925487,
-      "entry_fee": 0.010430530142097733,
-      "entry_time": 1795406400000
+      "entry": 0.018173,
+      "stop": 0.01799127,
+      "target": 0.01853646,
+      "quantity": 935.058391119958,
+      "entry_fee": 0.010195689685093798,
+      "entry_time": 1795413600000
     }
   ],
   "history": [
@@ -762,11 +762,31 @@
       "reason": "STOP LOSS",
       "entry_time": 1795399200000,
       "exit_time": 1795402800000
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": "SHORT",
+      "entry": 787.86,
+      "exit": 795.7386,
+      "net_pnl": -0.18649,
+      "reason": "STOP LOSS",
+      "entry_time": 1795406400000,
+      "exit_time": 1795410000000
+    },
+    {
+      "symbol": "BLESSUSDT",
+      "side": "LONG",
+      "entry": 0.017792,
+      "exit": 0.017614079999999997,
+      "net_pnl": -0.18417,
+      "reason": "STOP LOSS",
+      "entry_time": 1795406400000,
+      "exit_time": 1795410000000
     }
   ],
   "last_signal": {
     "SOXSUSDT": 1795226400000,
-    "ZECUSDT": 1795406400000,
+    "ZECUSDT": 1795413600000,
     "SKHYUSDT": 1794999600000,
     "BREVUSDT": 1794988800000,
     "SPCXUSDT": 1795230000000,
@@ -789,6 +809,6 @@
     "SOXLUSDT": 1795276800000,
     "PEPEUSDT": 1795334400000,
     "MUUSDT": 1795399200000,
-    "BLESSUSDT": 1795406400000
+    "BLESSUSDT": 1795413600000
   }
 }
