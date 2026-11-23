@@ -1,5 +1,5 @@
 {
-  "balance": 17.641462563357766,
+  "balance": 17.24651185041584,
   "positions": [
     {
       "symbol": "BZUSDT",
@@ -14,22 +14,22 @@
     {
       "symbol": "BTCUSDT",
       "side": "LONG",
-      "entry": 62211.8,
-      "stop": 61589.682,
-      "target": 63456.03600000001,
-      "quantity": 0.00028391159533186575,
-      "entry_fee": 0.010597590831880178,
-      "entry_time": 1795449600000
+      "entry": 61637.9,
+      "stop": 61021.521,
+      "target": 62870.658,
+      "quantity": 0.0002831755208170543,
+      "entry_fee": 0.010472606660741705,
+      "entry_time": 1795453200000
     },
     {
       "symbol": "ETHUSDT",
       "side": "LONG",
-      "entry": 1768.86,
-      "stop": 1751.1714,
-      "target": 1804.2372,
-      "quantity": 0.009979339119905022,
-      "entry_fee": 0.010591232277381117,
-      "entry_time": 1795449600000
+      "entry": 1742.02,
+      "stop": 1724.5998,
+      "target": 1776.8604,
+      "quantity": 0.009906238717120248,
+      "entry_fee": 0.010354119581998687,
+      "entry_time": 1795453200000
     }
   ],
   "history": [
@@ -932,6 +932,26 @@
       "reason": "STOP LOSS",
       "entry_time": 1795442400000,
       "exit_time": 1795446000000
+    },
+    {
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry": 62211.8,
+      "exit": 61589.682,
+      "net_pnl": -0.18712,
+      "reason": "STOP LOSS",
+      "entry_time": 1795449600000,
+      "exit_time": 1795453200000
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry": 1768.86,
+      "exit": 1751.1714,
+      "net_pnl": -0.18701,
+      "reason": "STOP LOSS",
+      "entry_time": 1795449600000,
+      "exit_time": 1795453200000
     }
   ],
   "last_signal": {
@@ -952,7 +972,7 @@
     "XRPUSDT": 1795399200000,
     "SNDKUSDT": 1795114800000,
     "OPENAIUSDT": 1795302000000,
-    "BTCUSDT": 1795449600000,
+    "BTCUSDT": 1795453200000,
     "ANTUSDT": 1795204800000,
     "CLUSDT": 1795442400000,
     "NEARUSDT": 1795388400000,
@@ -962,6 +982,6 @@
     "BLESSUSDT": 1795428000000,
     "SKHYNIXUSDT": 1795438800000,
     "XAGUSDT": 1795438800000,
-    "ETHUSDT": 1795449600000
+    "ETHUSDT": 1795453200000
   }
 }
