@@ -1,5 +1,5 @@
 {
-  "balance": 16.479174424843517,
+  "balance": 16.294706546331817,
   "positions": [
     {
       "symbol": "BZUSDT",
@@ -24,12 +24,12 @@
     {
       "symbol": "SOLUSDT",
       "side": "LONG",
-      "entry": 73.051,
-      "stop": 72.32049,
-      "target": 74.51202,
-      "quantity": 0.2257199472363549,
-      "entry_fee": 0.009893440719337777,
-      "entry_time": 1795460400000
+      "entry": 72.368,
+      "stop": 71.64432,
+      "target": 73.81536,
+      "quantity": 0.225299707603854,
+      "entry_fee": 0.009782693543925424,
+      "entry_time": 1795467600000
     }
   ],
   "history": [
@@ -992,6 +992,16 @@
       "reason": "STOP LOSS",
       "entry_time": 1795456800000,
       "exit_time": 1795460400000
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": "LONG",
+      "entry": 73.051,
+      "exit": 72.32049,
+      "net_pnl": -0.17469,
+      "reason": "STOP LOSS",
+      "entry_time": 1795460400000,
+      "exit_time": 1795467600000
     }
   ],
   "last_signal": {
@@ -1008,7 +1018,7 @@
     "ENAUSDT": 1795269600000,
     "BZUSDT": 1795442400000,
     "EVAAUSDT": 1795291200000,
-    "SOLUSDT": 1795460400000,
+    "SOLUSDT": 1795467600000,
     "XRPUSDT": 1795399200000,
     "SNDKUSDT": 1795114800000,
     "OPENAIUSDT": 1795302000000,
