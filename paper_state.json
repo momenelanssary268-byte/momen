@@ -1,16 +1,6 @@
 {
-  "balance": 16.522021562807524,
+  "balance": 16.14939758660271,
   "positions": [
-    {
-      "symbol": "SKHYNIXUSDT",
-      "side": "LONG",
-      "entry": 812.86,
-      "stop": 804.7314,
-      "target": 829.1172,
-      "quantity": 0.02066817407803283,
-      "entry_fee": 0.010080199188641859,
-      "entry_time": 1795420800000
-    },
     {
       "symbol": "BTCUSDT",
       "side": "LONG",
@@ -22,14 +12,24 @@
       "entry_time": 1795428000000
     },
     {
-      "symbol": "BLESSUSDT",
+      "symbol": "SKHYNIXUSDT",
       "side": "LONG",
-      "entry": 0.019068,
-      "stop": 0.018877320000000003,
-      "target": 0.019449360000000002,
-      "quantity": 866.9991990373395,
-      "entry_fee": 0.009919164436346394,
-      "entry_time": 1795428000000
+      "entry": 814.7,
+      "stop": 806.553,
+      "target": 830.994,
+      "quantity": 0.020061419965386,
+      "entry_fee": 0.009806423307479984,
+      "entry_time": 1795431600000
+    },
+    {
+      "symbol": "BZUSDT",
+      "side": "SHORT",
+      "entry": 88.85,
+      "stop": 89.7385,
+      "target": 87.073,
+      "quantity": 0.1818693645743166,
+      "entry_fee": 0.009695455825456816,
+      "entry_time": 1795431600000
     }
   ],
   "history": [
@@ -832,6 +832,26 @@
       "reason": "STOP LOSS",
       "entry_time": 1795424400000,
       "exit_time": 1795428000000
+    },
+    {
+      "symbol": "SKHYNIXUSDT",
+      "side": "LONG",
+      "entry": 812.86,
+      "exit": 804.7314,
+      "net_pnl": -0.17798,
+      "reason": "STOP LOSS",
+      "entry_time": 1795420800000,
+      "exit_time": 1795435200000
+    },
+    {
+      "symbol": "BLESSUSDT",
+      "side": "LONG",
+      "entry": 0.019068,
+      "exit": 0.018877320000000003,
+      "net_pnl": -0.17514,
+      "reason": "STOP LOSS",
+      "entry_time": 1795428000000,
+      "exit_time": 1795431600000
     }
   ],
   "last_signal": {
@@ -846,7 +866,7 @@
     "DRAMUSDT": 1795021200000,
     "HYPEUSDT": 1795140000000,
     "ENAUSDT": 1795269600000,
-    "BZUSDT": 1795050000000,
+    "BZUSDT": 1795431600000,
     "EVAAUSDT": 1795291200000,
     "SOLUSDT": 1795104000000,
     "XRPUSDT": 1795399200000,
@@ -860,6 +880,6 @@
     "PEPEUSDT": 1795334400000,
     "MUUSDT": 1795399200000,
     "BLESSUSDT": 1795428000000,
-    "SKHYNIXUSDT": 1795420800000
+    "SKHYNIXUSDT": 1795431600000
   }
 }
