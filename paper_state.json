@@ -1,5 +1,5 @@
 {
-  "balance": 17.774114533278638,
+  "balance": 17.373786373354278,
   "positions": [
     {
       "symbol": "OPENAIUSDT",
@@ -12,24 +12,24 @@
       "entry_time": 1795302000000
     },
     {
-      "symbol": "XRPUSDT",
+      "symbol": "ZECUSDT",
       "side": "SHORT",
-      "entry": 0.916,
-      "stop": 0.9251600000000001,
-      "target": 0.89768,
-      "quantity": 19.631526066047645,
-      "entry_fee": 0.010789486725899786,
-      "entry_time": 1795399200000
+      "entry": 787.86,
+      "stop": 795.7386,
+      "target": 772.1028,
+      "quantity": 0.022317914823598694,
+      "entry_fee": 0.010550035423752279,
+      "entry_time": 1795406400000
     },
     {
-      "symbol": "MUUSDT",
-      "side": "SHORT",
-      "entry": 617.05,
-      "stop": 623.2205,
-      "target": 604.709,
-      "quantity": 0.028822275997927516,
-      "entry_fee": 0.010670871242712703,
-      "entry_time": 1795399200000
+      "symbol": "BLESSUSDT",
+      "side": "LONG",
+      "entry": 0.017792,
+      "stop": 0.017614079999999997,
+      "target": 0.01814784,
+      "quantity": 977.0805363925487,
+      "entry_fee": 0.010430530142097733,
+      "entry_time": 1795406400000
     }
   ],
   "history": [
@@ -742,11 +742,31 @@
       "reason": "STOP LOSS",
       "entry_time": 1795388400000,
       "exit_time": 1795399200000
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry": 0.916,
+      "exit": 0.9251600000000001,
+      "net_pnl": -0.19072,
+      "reason": "STOP LOSS",
+      "entry_time": 1795399200000,
+      "exit_time": 1795402800000
+    },
+    {
+      "symbol": "MUUSDT",
+      "side": "SHORT",
+      "entry": 617.05,
+      "exit": 623.2205,
+      "net_pnl": -0.18863,
+      "reason": "STOP LOSS",
+      "entry_time": 1795399200000,
+      "exit_time": 1795402800000
     }
   ],
   "last_signal": {
     "SOXSUSDT": 1795226400000,
-    "ZECUSDT": 1794999600000,
+    "ZECUSDT": 1795406400000,
     "SKHYUSDT": 1794999600000,
     "BREVUSDT": 1794988800000,
     "SPCXUSDT": 1795230000000,
@@ -768,6 +788,7 @@
     "NEARUSDT": 1795388400000,
     "SOXLUSDT": 1795276800000,
     "PEPEUSDT": 1795334400000,
-    "MUUSDT": 1795399200000
+    "MUUSDT": 1795399200000,
+    "BLESSUSDT": 1795406400000
   }
 }
