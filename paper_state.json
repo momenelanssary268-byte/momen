@@ -1,26 +1,6 @@
 {
-  "balance": 17.510698291805948,
+  "balance": 17.66265138646703,
   "positions": [
-    {
-      "symbol": "CLUSDT",
-      "side": "SHORT",
-      "entry": 81.838,
-      "stop": 82.65638,
-      "target": 80.20124,
-      "quantity": 0.2104124832313199,
-      "entry_fee": 0.010331842081610853,
-      "entry_time": 1795442400000
-    },
-    {
-      "symbol": "SNXXUSDT",
-      "side": "LONG",
-      "entry": 2.315,
-      "stop": 2.2918499999999997,
-      "target": 2.3613,
-      "quantity": 7.433868233521848,
-      "entry_fee": 0.010325642976361845,
-      "entry_time": 1795442400000
-    },
     {
       "symbol": "BZUSDT",
       "side": "SHORT",
@@ -911,6 +891,26 @@
       "net_pnl": 0.32213,
       "reason": "TAKE PROFIT",
       "entry_time": 1795438800000,
+      "exit_time": 1795446000000
+    },
+    {
+      "symbol": "CLUSDT",
+      "side": "SHORT",
+      "entry": 81.838,
+      "exit": 80.20124,
+      "net_pnl": 0.33427,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795442400000,
+      "exit_time": 1795446000000
+    },
+    {
+      "symbol": "SNXXUSDT",
+      "side": "LONG",
+      "entry": 2.315,
+      "exit": 2.2918499999999997,
+      "net_pnl": -0.18232,
+      "reason": "STOP LOSS",
+      "entry_time": 1795442400000,
       "exit_time": 1795446000000
     }
   ],
