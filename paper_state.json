@@ -1,5 +1,5 @@
 {
-  "balance": 15.753600310677525,
+  "balance": 15.5772545087998,
   "positions": [
     {
       "symbol": "BZUSDT",
@@ -22,14 +22,14 @@
       "entry_time": 1795460400000
     },
     {
-      "symbol": "SKHYNIXUSDT",
+      "symbol": "QQQUSDT",
       "side": "LONG",
-      "entry": 876.6,
-      "stop": 867.8340000000001,
-      "target": 894.1320000000001,
-      "quantity": 0.017982042146435014,
-      "entry_fee": 0.00945783488733896,
-      "entry_time": 1795492800000
+      "entry": 652.91,
+      "stop": 646.3809,
+      "target": 665.9682,
+      "quantity": 0.023872519141510284,
+      "entry_fee": 0.009351963883610087,
+      "entry_time": 1795496400000
     }
   ],
   "history": [
@@ -1032,6 +1032,16 @@
       "reason": "STOP LOSS",
       "entry_time": 1795485600000,
       "exit_time": 1795496400000
+    },
+    {
+      "symbol": "SKHYNIXUSDT",
+      "side": "LONG",
+      "entry": 876.6,
+      "exit": 867.8340000000001,
+      "net_pnl": -0.16699,
+      "reason": "STOP LOSS",
+      "entry_time": 1795492800000,
+      "exit_time": 1795500000000
     }
   ],
   "last_signal": {
@@ -1042,7 +1052,7 @@
     "SPCXUSDT": 1795230000000,
     "SNXXUSDT": 1795442400000,
     "TQQQUSDT": 1795042800000,
-    "QQQUSDT": 1795042800000,
+    "QQQUSDT": 1795496400000,
     "DRAMUSDT": 1795021200000,
     "HYPEUSDT": 1795140000000,
     "ENAUSDT": 1795269600000,
