@@ -102,7 +102,9 @@ def demo_request(method, path, payload=None, query=None, env=None):
         response = requests.post(assert_demo_url(url), data=body, headers=headers, timeout=20)
     else:
         response = requests.get(assert_demo_url(url), params=query, headers=headers, timeout=20)
-    response.raise_for_status()
+    if response.status_code != 200:
+        snippet = response.text[:300].replace("\n", " ")
+        raise RuntimeError(f"Bybit demo HTTP {response.status_code} on {path}: {snippet}")
     data = response.json()
     if data.get("retCode") != 0:
         raise RuntimeError(f"Bybit demo rejected {path}: {data.get('retCode')} {data.get('retMsg')}")
@@ -205,7 +207,10 @@ def run(state_path=STATE_FILE, report_path=REPORT_FILE, max_coins=MAX_COINS, env
         return report
 
     state = load_demo_state(state_path)
-    report["demo_wallet_equity_usdt"] = wallet_equity(env)
+    try:
+        report["demo_wallet_equity_usdt"] = wallet_equity(env)
+    except (requests.RequestException, RuntimeError) as exc:
+        report["warnings"].append(f"demo wallet check failed ({exc}); continuing")
 
     # Reconcile: exchange-side TP/SL closes positions on its own.
     still_open = []
