@@ -63,3 +63,16 @@ Limitations: fixed slippage, no funding payments, borrow fees, market depth, exc
 ## Tests
 
 The offline suite covers candle validation, no forward-looking indicators, fees, adverse gaps, stop/target ambiguity, repeated runs, invalid-state protection, legacy compatibility, symbol coverage and deterministic backtests. Synthetic fixtures are not trading-performance evidence. A current-data smoke test does not validate a strategy.
+
+## $10 leverage stress test, offline only
+
+```bash
+python leverage_backtest.py data/BTCUSDT.csv --output leverage_report.json
+python leverage_backtest.py data/BTCUSDT.csv --funding-per-8h 0.001
+```
+
+This is a separate, deliberately aggressive stress model, not a change to the hourly simulator. It compares 1x, 2x, 5x, 10x and 20x with a $10 start, one position at a time and all remaining cash as isolated collateral. Each window resets to $10. Reports include final balance, sampled drawdown, trade count, liquidation count/rate, fees, funding and unleveraged buy-and-hold.
+
+Assumptions: 0.06% fee and 0.05% adverse slippage per side, fixed 0.5% maintenance of entry notional, funding cost 0.01% per eight hours charged hourly in either direction with no credits. Liquidation loses all allocated collateral and ends the account. Ambiguous bars assume liquidation happens before stop/target. These assumptions are pessimistic in some ways and incomplete in others. They are NOT Bitget's actual tiered, mark-price liquidation rules or funding history. No exchange execution, minimum order or margin-mode feasibility is established for $10.
+
+A single BTC sample is recorded in LEVERAGE-NOTES.md. It is a demonstration of downside, not a recommendation or a promise. The underlying model is fixed-rule analysis, not AI, and leverage does not increase the frequency of signals.

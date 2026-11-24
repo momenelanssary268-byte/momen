@@ -1,5 +1,6 @@
 import copy
 import json
+import os
 from pathlib import Path
 import tempfile
 import unittest
@@ -233,7 +234,7 @@ class SimulatorTests(unittest.TestCase):
             with patch("sys.argv", ["main.py", "--state", str(state_path), "--report", str(report_path)]), \
                  patch("main.get_symbols", return_value=["ETHUSDT"]), \
                  patch("main.get_candles", return_value=candles()) as get, \
-                 patch("main.time.sleep"), patch("builtins.print"):
+                 patch("main.time.sleep"), patch("builtins.print"), patch.dict(os.environ, {}, clear=True):
                 main.main()
             self.assertEqual({call.args[0] for call in get.call_args_list}, {"BTCUSDT", "ETHUSDT"})
 
