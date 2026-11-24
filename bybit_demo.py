@@ -36,17 +36,20 @@ import time
 from urllib.parse import urlparse
 
 import requests
+import pandas as pd
 
-from main import analyze, get_candles, get_symbols, prepare
+from main import analyze, prepare
 
 DEMO_HOST = "https://api-demo.bybit.com"
 RECV_WINDOW = "5000"
 STATE_FILE = "demo_state.json"
 REPORT_FILE = "demo_report.json"
-MAX_OPEN = 3
-MAX_COINS = 30
-NOTIONAL_CAP_USDT = Decimal("20")      # mirrors the paper account size
-MIN_NOTIONAL_USDT = Decimal("10")      # skip orders too small to matter
+MAX_COINS = 60
+LEVERAGE = Decimal("5")
+RISK_PER_TRADE = Decimal("0.005")
+MAX_PORTFOLIO_RISK = Decimal("0.04")
+MAX_MARGIN_USE = Decimal("0.60")
+MIN_NOTIONAL_USDT = Decimal("10")
 SYMBOL_SUFFIX = "USDT"
 
 
@@ -120,6 +123,58 @@ def round_down(value, step):
 def plain(number):
     """Format a Decimal without scientific notation for the API."""
     return format(number.normalize(), "f")
+
+
+
+def bybit_symbols(limit=MAX_COINS):
+    """Rank Bybit linear USDT contracts by 24h turnover."""
+    response = requests.get(DEMO_HOST + "/v5/market/tickers",
+                            params={"category": "linear"}, timeout=20)
+    response.raise_for_status()
+    payload = response.json()
+    if payload.get("retCode") != 0:
+        raise RuntimeError(f"Bybit tickers failed: {payload.get('retMsg')}")
+    ranked = []
+    for row in payload.get("result", {}).get("list", []):
+        symbol = row.get("symbol", "")
+        try:
+            turnover = Decimal(row.get("turnover24h", "0"))
+            if symbol.endswith(SYMBOL_SUFFIX) and turnover.is_finite() and turnover > 0:
+                ranked.append((symbol, turnover))
+        except Exception:
+            continue
+    return [x[0] for x in sorted(ranked, key=lambda item: item[1], reverse=True)[:limit]]
+
+
+def bybit_candles(symbol, limit=500):
+    """Use Bybit hourly candles for Bybit signals and execution."""
+    response = requests.get(DEMO_HOST + "/v5/market/kline",
+                            params={"category": "linear", "symbol": symbol,
+                                    "interval": "60", "limit": str(limit)}, timeout=20)
+    response.raise_for_status()
+    payload = response.json()
+    if payload.get("retCode") != 0:
+        raise RuntimeError(f"Bybit candles failed: {payload.get('retMsg')}")
+    rows = payload.get("result", {}).get("list", [])
+    now_ms = int(time.time() * 1000)
+    cleaned = []
+    for row in reversed(rows):
+        stamp = int(row[0])
+        if stamp + 3600000 <= now_ms:
+            cleaned.append({"time": stamp, "open": float(row[1]), "high": float(row[2]),
+                            "low": float(row[3]), "close": float(row[4]),
+                            "volume": float(row[5]), "quote": float(row[6])})
+    frame = pd.DataFrame(cleaned)
+    if frame.empty or not frame["time"].diff().dropna().eq(3600000).all():
+        raise ValueError(f"Missing or non-contiguous completed candles for {symbol}")
+    return frame
+
+
+def estimated_position_risk(pos):
+    entry = Decimal(str(pos["reference_price"]))
+    stop = Decimal(str(pos["stop"]))
+    qty = Decimal(str(pos["qty"]))
+    return abs(entry - stop) * qty
 
 
 def instrument_rules(symbol, env=None):
@@ -206,6 +261,11 @@ def run(state_path=STATE_FILE, report_path=REPORT_FILE, max_coins=MAX_COINS, env
 
     state = load_demo_state(state_path)
     report["demo_wallet_equity_usdt"] = wallet_equity(env)
+    if report["demo_wallet_equity_usdt"] is None:
+        raise RuntimeError("Bybit demo wallet equity unavailable; refusing new orders")
+    equity = Decimal(str(report["demo_wallet_equity_usdt"]))
+    if not equity.is_finite() or equity <= 0:
+        raise RuntimeError("Invalid Bybit demo equity; refusing new orders")
 
     # Reconcile: exchange-side TP/SL closes positions on its own.
     still_open = []
@@ -226,9 +286,7 @@ def run(state_path=STATE_FILE, report_path=REPORT_FILE, max_coins=MAX_COINS, env
     state["positions"] = still_open
 
     held = [p["symbol"] for p in state["positions"]]
-    for symbol in list(dict.fromkeys(held + get_symbols(max_coins))):
-        if len(state["positions"]) >= MAX_OPEN and symbol not in held:
-            break
+    for symbol in list(dict.fromkeys(held + bybit_symbols(max_coins))):
         if symbol in held:
             continue
         try:
@@ -238,7 +296,7 @@ def run(state_path=STATE_FILE, report_path=REPORT_FILE, max_coins=MAX_COINS, env
         if rules is None:
             continue
         try:
-            frame = prepare(get_candles(symbol))
+            frame = prepare(bybit_candles(symbol))
         except (requests.RequestException, ValueError, KeyError, TypeError) as exc:
             report["warnings"].append(f"{symbol}: market data unavailable ({type(exc).__name__})")
             continue
@@ -247,11 +305,24 @@ def run(state_path=STATE_FILE, report_path=REPORT_FILE, max_coins=MAX_COINS, env
         if not side or state["last_signal"].get(symbol, -1) >= int(row["time"]):
             continue
         reference = Decimal(str(row["close"]))
-        qty = round_down(NOTIONAL_CAP_USDT / reference, rules["qty_step"])
-        if qty < rules["min_qty"] or NOTIONAL_CAP_USDT < MIN_NOTIONAL_USDT:
-            report["warnings"].append(f"{symbol}: order below exchange minimum; skipped")
-            continue
         stop, target = build_prices(side, reference, row["atr"], rules["tick"])
+        stop_distance = abs(reference - stop)
+        risk_budget = equity * RISK_PER_TRADE
+        qty_by_risk = risk_budget / stop_distance if stop_distance > 0 else Decimal("0")
+        qty_by_notional = equity * LEVERAGE * Decimal("0.20") / reference
+        qty = round_down(min(qty_by_risk, qty_by_notional), rules["qty_step"])
+        notional = qty * reference
+        used_margin = sum((Decimal(str(p["qty"])) * Decimal(str(p["reference_price"])) / LEVERAGE)
+                          for p in state["positions"])
+        portfolio_risk = sum((estimated_position_risk(p) for p in state["positions"]), Decimal("0"))
+        if (qty < rules["min_qty"] or notional < MIN_NOTIONAL_USDT
+                or used_margin + notional / LEVERAGE > equity * MAX_MARGIN_USE
+                or portfolio_risk + qty * stop_distance > equity * MAX_PORTFOLIO_RISK):
+            report["warnings"].append(f"{symbol}: dynamic risk/margin/minimum filter; skipped")
+            continue
+        demo_request("POST", "/v5/position/set-leverage", payload={
+            "category": "linear", "symbol": symbol,
+            "buyLeverage": str(int(LEVERAGE)), "sellLeverage": str(int(LEVERAGE))}, env=env)
         if side == "LONG" and not (stop < reference < target):
             report["warnings"].append(f"{symbol}: invalid stop/target; skipped")
             continue
