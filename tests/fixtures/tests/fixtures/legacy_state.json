@@ -1,0 +1,42 @@
+{
+  "balance": 15.5,
+  "positions": [
+    {
+      "symbol": "AAAUSDT",
+      "side": "LONG",
+      "entry": 100.0,
+      "stop": 99.0,
+      "target": 102.0,
+      "quantity": 0.1,
+      "entry_fee": 0.006,
+      "entry_time": 1700002800000
+    },
+    {
+      "symbol": "BBBUSDT",
+      "side": "LONG",
+      "entry": 100.0,
+      "stop": 99.0,
+      "target": 102.0,
+      "quantity": 0.1,
+      "entry_fee": 0.006,
+      "entry_time": 1700002800000
+    },
+    {
+      "symbol": "CCCUSDT",
+      "side": "LONG",
+      "entry": 100.0,
+      "stop": 99.0,
+      "target": 102.0,
+      "quantity": 0.1,
+      "entry_fee": 0.006,
+      "entry_time": 1700002800000
+    }
+  ],
+  "history": [
+    {
+      "symbol": "EXAMPLEUSDT",
+      "net_pnl": 0.2
+    }
+  ],
+  "last_signal": {}
+}
