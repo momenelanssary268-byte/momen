@@ -1,0 +1,59 @@
+name: Bybit demo executor (virtual funds only)
+
+# Mirrors paper-simulator signals with real order mechanics on Bybit's
+# DEMO TRADING account (api-demo.bybit.com, virtual funds). It cannot reach
+# real money: the code hard-fails on any non-demo host, and Bybit rejects
+# demo keys on the live API. It stays inactive until the repo owner adds
+# the BYBIT_DEMO_API_KEY / BYBIT_DEMO_API_SECRET secrets from demo mode.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: demo-state-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  run-demo:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Download project
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Run offline tests
+        run: python -m unittest discover -s tests -v
+      - name: Run demo executor (skips cleanly without demo keys)
+        env:
+          BYBIT_DEMO_API_KEY: ${{ secrets.BYBIT_DEMO_API_KEY }}
+          BYBIT_DEMO_API_SECRET: ${{ secrets.BYBIT_DEMO_API_SECRET }}
+        run: python bybit_demo.py
+      - name: Upload detailed demo report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: demo-report-${{ github.run_id }}
+          path: demo_report.json
+          retention-days: 30
+          if-no-files-found: ignore
+      - name: Save demo state and report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add demo_state.json demo_report.json
+          git diff --cached --quiet || git commit -m "Update Bybit demo execution state and report"
+          git push origin HEAD:main
