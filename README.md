@@ -60,6 +60,12 @@ The backtester shares indicator, entry, sizing and exit logic with the hourly si
 
 Limitations: fixed slippage, no funding payments, borrow fees, market depth, exchange minimums, margin or liquidation. Missing market data and survivorship bias can change conclusions. Stop/target ordering is a conservative assumption, not intrabar knowledge. Past simulated results are not evidence of future profit. This is research software, not financial advice.
 
+## Bybit demo executor (virtual funds, optional)
+
+`bybit_demo.py` mirrors the paper simulator's signals with real order mechanics on Bybit's **demo trading** account (virtual funds, real prices) so execution can be rehearsed. It is disabled until the repo owner adds `BYBIT_DEMO_API_KEY` and `BYBIT_DEMO_API_SECRET` GitHub secrets created inside Bybit's Demo Trading mode (avatar > API). Demo keys work only on `api-demo.bybit.com`; Bybit rejects them on the live API, and the module hard-fails on any other host. Keys must never be committed or shared in chat.
+
+The executor keeps its own `demo_state.json` / `demo_report.json` and never touches the paper state. Orders are small (about 20 USDT notional, max three open), placed as market orders with exchange-attached take-profit and stop-loss. Symbols not listed on Bybit linear futures (for example stock or commodity tokens) are skipped. Demo fills still differ from the paper model: real fees, real slippage, exchange minimums. This is research software, not financial advice.
+
 ## Tests
 
 The offline suite covers candle validation, no forward-looking indicators, fees, adverse gaps, stop/target ambiguity, repeated runs, invalid-state protection, legacy compatibility, symbol coverage and deterministic backtests. Synthetic fixtures are not trading-performance evidence. A current-data smoke test does not validate a strategy.
