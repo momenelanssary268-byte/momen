@@ -1,0 +1,44 @@
+name: Hourly mean-reversion paper bot (separate from the trend simulator)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: meanrev-paper-state
+  cancel-in-progress: false
+
+jobs:
+  run-meanrev:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - name: Offline tests
+        run: python -m unittest discover -s meanrev -p 'test_*.py' -v
+      - name: Run mean-reversion paper bot
+        run: python meanrev/bot.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: meanrev-report-${{ github.run_id }}
+          path: meanrev/paper_report.json
+          retention-days: 30
+      - name: Save paper state (only meanrev files)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add meanrev/paper_state.json meanrev/paper_report.json
+          git diff --cached --quiet || git commit -m "Update mean-reversion paper state"
+          for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break; sleep 5; done
