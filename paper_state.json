@@ -1,5 +1,5 @@
 {
-  "balance": 16.11230360125218,
+  "balance": 15.931942474739762,
   "positions": [
     {
       "symbol": "BZUSDT",
@@ -24,12 +24,12 @@
     {
       "symbol": "XAGUSDT",
       "side": "LONG",
-      "entry": 43.27,
-      "stop": 42.837300000000006,
-      "target": 44.135400000000004,
-      "quantity": 0.37259017303731656,
-      "entry_fee": 0.009673186072394811,
-      "entry_time": 1795471200000
+      "entry": 43.01,
+      "stop": 42.579899999999995,
+      "target": 43.8702,
+      "quantity": 0.37064653287996163,
+      "entry_fee": 0.009564904427500288,
+      "entry_time": 1795485600000
     }
   ],
   "history": [
@@ -1012,6 +1012,16 @@
       "reason": "STOP LOSS",
       "entry_time": 1795467600000,
       "exit_time": 1795471200000
+    },
+    {
+      "symbol": "XAGUSDT",
+      "side": "LONG",
+      "entry": 43.27,
+      "exit": 42.837300000000006,
+      "net_pnl": -0.1708,
+      "reason": "STOP LOSS",
+      "entry_time": 1795471200000,
+      "exit_time": 1795489200000
     }
   ],
   "last_signal": {
@@ -1041,7 +1051,7 @@
     "MUUSDT": 1795399200000,
     "BLESSUSDT": 1795428000000,
     "SKHYNIXUSDT": 1795438800000,
-    "XAGUSDT": 1795471200000,
+    "XAGUSDT": 1795485600000,
     "ETHUSDT": 1795456800000,
     "XAUUSDT": 1795460400000
   }
