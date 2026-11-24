@@ -1,16 +1,6 @@
 {
-  "balance": 15.5772545087998,
+  "balance": 15.908785712454245,
   "positions": [
-    {
-      "symbol": "BZUSDT",
-      "side": "SHORT",
-      "entry": 87.86,
-      "stop": 88.7386,
-      "target": 86.1028,
-      "quantity": 0.19942193282969364,
-      "entry_fee": 0.01051272661105013,
-      "entry_time": 1795442400000
-    },
     {
       "symbol": "XAUUSDT",
       "side": "LONG",
@@ -1042,6 +1032,21 @@
       "reason": "STOP LOSS",
       "entry_time": 1795492800000,
       "exit_time": 1795500000000
+    },
+    {
+      "symbol": "BZUSDT",
+      "side": "SHORT",
+      "entry": 87.86,
+      "exit": 86.1458514,
+      "quantity": 0.19942193282969364,
+      "gross_pnl": 0.34183882696931367,
+      "entry_fee": 0.01051272661105013,
+      "exit_fee": 0.010307623314868541,
+      "net_pnl": 0.321018477043395,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795442400000,
+      "exit_time": 1795496400000,
+      "accounting_version": 2
     }
   ],
   "last_signal": {
@@ -1074,5 +1079,203 @@
     "XAGUSDT": 1795485600000,
     "ETHUSDT": 1795456800000,
     "XAUUSDT": 1795460400000
+  },
+  "processed_until": {
+    "BZUSDT": 1795503600000,
+    "XAUUSDT": 1795503600000,
+    "QQQUSDT": 1795503600000,
+    "BTCUSDT": 1795503600000,
+    "ETHUSDT": 1795503600000,
+    "SOXLUSDT": 1795503600000,
+    "NVDAUSDT": 1795503600000,
+    "SOXSUSDT": 1795503600000,
+    "SOLUSDT": 1795503600000,
+    "XRPUSDT": 1795503600000,
+    "SNDKUSDT": 1795503600000,
+    "MUUSDT": 1795503600000,
+    "KORUUSDT": 1795503600000,
+    "XAGUSDT": 1795503600000,
+    "SKHYNIXUSDT": 1795503600000,
+    "ZECUSDT": 1795503600000,
+    "ANTUSDT": 1795503600000,
+    "SKHYUSDT": 1795503600000,
+    "SNXXUSDT": 1795503600000,
+    "MSTRUSDT": 1795503600000,
+    "CLUSDT": 1795503600000,
+    "HYPEUSDT": 1795503600000,
+    "SPCXUSDT": 1795503600000,
+    "OPENAIUSDT": 1795503600000,
+    "TQQQUSDT": 1795503600000,
+    "INTCUSDT": 1795503600000,
+    "DRAMUSDT": 1795503600000,
+    "NBISUSDT": 1795503600000,
+    "NEARUSDT": 1795503600000,
+    "CRCLUSDT": 1795503600000,
+    "AMDUSDT": 1795503600000,
+    "ENAUSDT": 1795503600000,
+    "SQQQUSDT": 1795503600000,
+    "SAMSUNGUSDT": 1795503600000,
+    "PEPEUSDT": 1795503600000,
+    "EWYUSDT": 1795503600000,
+    "EVAAUSDT": 1795503600000,
+    "TSLAUSDT": 1795503600000,
+    "MMTUSDT": 1795503600000,
+    "GOOGLUSDT": 1795503600000,
+    "DOGEUSDT": 1795503600000,
+    "ZHIPUUSDT": 1795503600000,
+    "SUIUSDT": 1795503600000,
+    "MRVLUSDT": 1795503600000,
+    "COINUSDT": 1795503600000,
+    "BLESSUSDT": 1795503600000,
+    "ELSAUSDT": 1795503600000,
+    "PROMUSDT": 1795503600000,
+    "PIEVERSEUSDT": 1795503600000,
+    "ZHONGJIUSDT": 1795503600000,
+    "ADAUSDT": 1795503600000,
+    "ARIAUSDT": 1795503600000,
+    "WLDUSDT": 1795503600000,
+    "MINIMAXUSDT": 1795503600000,
+    "CYSUSDT": 1795503600000,
+    "TSMUSDT": 1795503600000,
+    "CRWVUSDT": 1795503600000,
+    "CSOPSK2LHKDUSDT": 1795503600000,
+    "XAUTUSDT": 1795503600000,
+    "SPYUSDT": 1795503600000
+  },
+  "equity_curve": [
+    {
+      "time": 1795446000000,
+      "equity": 15.5772545087998
+    },
+    {
+      "time": 1795449600000,
+      "equity": 15.846474118119886
+    },
+    {
+      "time": 1795453200000,
+      "equity": 15.774682222301196
+    },
+    {
+      "time": 1795456800000,
+      "equity": 15.661011720588272
+    },
+    {
+      "time": 1795460400000,
+      "equity": 15.686936571856132
+    },
+    {
+      "time": 1795464000000,
+      "equity": 15.820549266852026
+    },
+    {
+      "time": 1795467600000,
+      "equity": 15.761393514159312
+    },
+    {
+      "time": 1795471200000,
+      "equity": 15.742405517383945
+    },
+    {
+      "time": 1795474800000,
+      "equity": 15.745081736763085
+    },
+    {
+      "time": 1795478400000,
+      "equity": 15.69390286138356
+    },
+    {
+      "time": 1795482000000,
+      "equity": 15.858027151703864
+    },
+    {
+      "time": 1795485600000,
+      "equity": 15.911547982442592
+    },
+    {
+      "time": 1795489200000,
+      "equity": 15.79817911222136
+    },
+    {
+      "time": 1795492800000,
+      "equity": 15.82264030571267
+    },
+    {
+      "time": 1795496400000,
+      "equity": 15.864523522060828
+    },
+    {
+      "time": 1795500000000,
+      "equity": 15.868405695981123
+    },
+    {
+      "time": 1795503600000,
+      "equity": 15.854369875780948
+    },
+    {
+      "time": 1795507200000,
+      "equity": 15.798250114137048
+    }
+  ],
+  "last_prices": {
+    "BZUSDT": 86.65,
+    "XAUUSDT": 3627.4,
+    "QQQUSDT": 652.32,
+    "BTCUSDT": 60402.9,
+    "ETHUSDT": 1697.0,
+    "SOXLUSDT": 42.69,
+    "NVDAUSDT": 163.65,
+    "SOXSUSDT": 49.835,
+    "SOLUSDT": 71.463,
+    "XRPUSDT": 0.9433,
+    "SNDKUSDT": 87.46,
+    "MUUSDT": 701.28,
+    "KORUUSDT": 6.156,
+    "XAGUSDT": 42.46,
+    "SKHYNIXUSDT": 858.76,
+    "ZECUSDT": 756.35,
+    "ANTUSDT": 85.84,
+    "SKHYUSDT": 121.45,
+    "SNXXUSDT": 2.094,
+    "MSTRUSDT": 82.55,
+    "CLUSDT": 80.216,
+    "HYPEUSDT": 63.869,
+    "SPCXUSDT": 134.53,
+    "OPENAIUSDT": 1269.59,
+    "TQQQUSDT": 49.38,
+    "INTCUSDT": 58.03,
+    "DRAMUSDT": 38.99,
+    "NBISUSDT": 96.85,
+    "NEARUSDT": 3.0052,
+    "CRCLUSDT": 50.72,
+    "AMDUSDT": 450.75,
+    "ENAUSDT": 0.10058,
+    "SQQQUSDT": 45.77,
+    "SAMSUNGUSDT": 140.97,
+    "PEPEUSDT": 3.5299e-06,
+    "EWYUSDT": 135.87,
+    "EVAAUSDT": 2.5155,
+    "TSLAUSDT": 387.44,
+    "MMTUSDT": 0.2701,
+    "GOOGLUSDT": 285.87,
+    "DOGEUSDT": 0.05615,
+    "ZHIPUUSDT": 40.59,
+    "SUIUSDT": 0.6671,
+    "MRVLUSDT": 143.27,
+    "COINUSDT": 107.16,
+    "BLESSUSDT": 0.017842,
+    "ELSAUSDT": 0.09952,
+    "PROMUSDT": 4.8865,
+    "PIEVERSEUSDT": 3.18021,
+    "ZHONGJIUSDT": 67.38,
+    "ADAUSDT": 0.1476,
+    "ARIAUSDT": 0.33258,
+    "WLDUSDT": 0.2413,
+    "MINIMAXUSDT": 12.929,
+    "CYSUSDT": 0.05423,
+    "TSMUSDT": 370.55,
+    "CRWVUSDT": 47.99,
+    "CSOPSK2LHKDUSDT": 13.707,
+    "XAUTUSDT": 3611.43,
+    "SPYUSDT": 724.71
   }
 }
