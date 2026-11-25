@@ -1,6 +1,6 @@
 {
   "balance": 19.981517093239066,
-  "equity": 20.08314086526719,
+  "equity": 20.45366498797008,
   "closed_trades": 6,
   "wins": 2,
   "losses": 4,
@@ -16,13 +16,13 @@
     {
       "symbol": "BTCUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
       "symbol": "ENAUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
@@ -56,15 +56,15 @@
       "reason": "filters not aligned"
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "SNDKUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
-      "symbol": "SNDKUSDT",
+      "symbol": "SOLUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
@@ -76,13 +76,7 @@
     {
       "symbol": "XRPUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "MUUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
@@ -94,14 +88,20 @@
     {
       "symbol": "ANTUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
       "symbol": "XAGUSDT",
-      "side": "SHORT",
-      "score_out_of_5": 5,
-      "reason": "EMA trend + RSI + MACD + Bollinger + volume"
+      "side": "WAIT",
+      "score_out_of_5": 4,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "MUUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 3,
+      "reason": "filters not aligned"
     },
     {
       "symbol": "SNXXUSDT",
@@ -110,15 +110,15 @@
       "reason": "filters not aligned"
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "SKHYUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
-      "symbol": "SKHYUSDT",
+      "symbol": "ZECUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
@@ -134,21 +134,21 @@
       "reason": "filters not aligned"
     },
     {
-      "symbol": "CLUSDT",
+      "symbol": "MSTRUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
       "symbol": "TQQQUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 3,
-      "reason": "filters not aligned"
+      "side": "SHORT",
+      "score_out_of_5": 5,
+      "reason": "EMA trend + RSI + MACD + Bollinger + volume"
     },
     {
-      "symbol": "MSTRUSDT",
+      "symbol": "CLUSDT",
       "side": "WAIT",
-      "score_out_of_5": 4,
+      "score_out_of_5": 3,
       "reason": "filters not aligned"
     },
     {
@@ -160,13 +160,13 @@
     {
       "symbol": "HYPEUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
       "symbol": "NBISUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
@@ -184,25 +184,25 @@
     {
       "symbol": "LISTAUSDT",
       "side": "WAIT",
-      "score_out_of_5": 4,
+      "score_out_of_5": 3,
       "reason": "filters not aligned"
     },
     {
       "symbol": "BZUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "SQQQUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
       "symbol": "OPENAIUSDT",
+      "side": "LONG",
+      "score_out_of_5": 5,
+      "reason": "EMA trend + RSI + MACD + Bollinger + volume"
+    },
+    {
+      "symbol": "SQQQUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
@@ -212,15 +212,15 @@
       "reason": "filters not aligned"
     },
     {
-      "symbol": "DRAMUSDT",
+      "symbol": "CRCLUSDT",
       "side": "WAIT",
       "score_out_of_5": 3,
       "reason": "filters not aligned"
     },
     {
-      "symbol": "CRCLUSDT",
+      "symbol": "DRAMUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
@@ -237,30 +237,12 @@
     },
     {
       "symbol": "SAMSUNGUSDT",
-      "side": "SHORT",
-      "score_out_of_5": 5,
-      "reason": "EMA trend + RSI + MACD + Bollinger + volume"
-    },
-    {
-      "symbol": "PEPEUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 3,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "BLESSUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 0,
-      "reason": "volatility outside filter"
-    },
-    {
-      "symbol": "ZHONGJIUSDT",
       "side": "WAIT",
       "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
-      "symbol": "ZHIPUUSDT",
+      "symbol": "PEPEUSDT",
       "side": "WAIT",
       "score_out_of_5": 3,
       "reason": "filters not aligned"
@@ -274,29 +256,47 @@
     {
       "symbol": "MRVLUSDT",
       "side": "WAIT",
+      "score_out_of_5": 3,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "BLESSUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 3,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "ZHIPUUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 4,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "ZHONGJIUSDT",
+      "side": "WAIT",
       "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
       "symbol": "DOGEUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
-      "symbol": "MINIMAXUSDT",
+      "symbol": "CSOPSK2LHKDUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 4,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "SUIUSDT",
       "side": "WAIT",
       "score_out_of_5": 3,
       "reason": "filters not aligned"
     },
     {
-      "symbol": "CSOPSK2LHKDUSDT",
-      "side": "SHORT",
-      "score_out_of_5": 5,
-      "reason": "EMA trend + RSI + MACD + Bollinger + volume"
-    },
-    {
-      "symbol": "SUIUSDT",
+      "symbol": "MINIMAXUSDT",
       "side": "WAIT",
       "score_out_of_5": 4,
       "reason": "filters not aligned"
@@ -315,15 +315,9 @@
     },
     {
       "symbol": "EWYUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 4,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "COINUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 4,
-      "reason": "filters not aligned"
+      "side": "SHORT",
+      "score_out_of_5": 5,
+      "reason": "EMA trend + RSI + MACD + Bollinger + volume"
     },
     {
       "symbol": "PAXGUSDT",
@@ -332,9 +326,9 @@
       "reason": "filters not aligned"
     },
     {
-      "symbol": "ZHIPUHKDUSDT",
+      "symbol": "COINUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
@@ -350,25 +344,31 @@
       "reason": "filters not aligned"
     },
     {
-      "symbol": "COSTUSDT",
+      "symbol": "ZHIPUHKDUSDT",
       "side": "WAIT",
-      "score_out_of_5": 2,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "CYSUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 3,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "ELSAUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
       "symbol": "CRWVUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 4,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "SPYUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 4,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "TSMUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 3,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "INTWUSDT",
       "side": "WAIT",
       "score_out_of_5": 4,
       "reason": "filters not aligned"
