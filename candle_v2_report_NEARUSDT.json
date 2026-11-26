@@ -1,11 +1,11 @@
 {
-  "balance": 10.194850135000014,
-  "equity": 10.194850135000014,
-  "closed_trades": 3,
-  "wins": 3,
+  "balance": 10.26000018000002,
+  "equity": 10.26000018000002,
+  "closed_trades": 4,
+  "wins": 4,
   "losses": 0,
   "win_rate_pct": 100.0,
-  "net_realized_pnl": 0.19485013500001014,
+  "net_realized_pnl": 0.26000018000001607,
   "profit_factor": null,
   "open_position": null,
   "warnings": [],
@@ -19,5 +19,5 @@
   "start_balance": 10.0,
   "fee_per_side": 0.0006,
   "slippage_per_side": 0.0005,
-  "last_close": 3.0553
+  "last_close": 3.0624
 }
