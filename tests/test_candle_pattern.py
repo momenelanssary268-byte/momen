@@ -77,7 +77,7 @@ class CandlePatternTests(unittest.TestCase):
     def test_open_sets_roi_based_levels(self):
         state = cp.fresh_state()
         self.assertTrue(cp.open_position(state, "KAITOUSDT", "LONG", 100.0,
-                                         cp.MINUTE, leverage=10.0, margin_pct=0.2))
+                                         cp.MINUTE, leverage=10.0, margin_dollars=4.0))
         pos = state["position"]
         entry = 100.0 * (1 + cp.SLIPPAGE)
         self.assertAlmostEqual(pos["entry"], entry)
@@ -88,7 +88,7 @@ class CandlePatternTests(unittest.TestCase):
 
     def test_take_profit_and_stop(self):
         state = cp.fresh_state()
-        cp.open_position(state, "KAITOUSDT", "LONG", 100.0, 0, leverage=10.0, margin_pct=0.2)
+        cp.open_position(state, "KAITOUSDT", "LONG", 100.0, 0, leverage=10.0, margin_dollars=4.0)
         pos = state["position"]
         cp.manage_bar(state, {"time": cp.MINUTE, "open": 100.5,
                               "high": pos["target"] + 0.01, "low": 100.2})
@@ -98,7 +98,7 @@ class CandlePatternTests(unittest.TestCase):
 
     def test_stop_wins_when_both_touched(self):
         state = cp.fresh_state()
-        cp.open_position(state, "KAITOUSDT", "LONG", 100.0, 0, leverage=10.0, margin_pct=0.2)
+        cp.open_position(state, "KAITOUSDT", "LONG", 100.0, 0, leverage=10.0, margin_dollars=4.0)
         pos = state["position"]
         cp.manage_bar(state, {"time": cp.MINUTE, "open": 100.0,
                               "high": pos["target"] + 1, "low": pos["stop"] - 0.01})
@@ -107,7 +107,7 @@ class CandlePatternTests(unittest.TestCase):
 
     def test_gap_through_stop_fills_at_open(self):
         state = cp.fresh_state()
-        cp.open_position(state, "KAITOUSDT", "LONG", 100.0, 0, leverage=10.0, margin_pct=0.2)
+        cp.open_position(state, "KAITOUSDT", "LONG", 100.0, 0, leverage=10.0, margin_dollars=4.0)
         pos = state["position"]
         cp.manage_bar(state, {"time": cp.MINUTE, "open": pos["stop"] - 1,
                               "high": pos["stop"] - 0.5, "low": pos["stop"] - 2})
@@ -119,7 +119,7 @@ class CandlePatternTests(unittest.TestCase):
         entry_bar = (99.5, 100.0, 99.4, 99.55)       # signal bar: 5 red before it
         tp_bar = (99.55, 102.0, 99.5, 101.9)         # target ~1.5% above entry
         frame = frame_from(red_run() + [entry_bar, tp_bar])
-        state, report, _ = cp.run_cycle(cp.fresh_state(), frame, "KAITOUSDT", 10.0, 0.2)
+        state, report, _ = cp.run_cycle(cp.fresh_state(), frame, "KAITOUSDT", 10.0, 4.0)
         self.assertIsNone(state["position"])
         self.assertEqual(len(state["history"]), 1)
         trade = state["history"][0]
@@ -131,10 +131,16 @@ class CandlePatternTests(unittest.TestCase):
     def test_run_cycle_is_idempotent(self):
         bars = red_run() + [(99.5, 100.0, 99.4, 99.55), (99.55, 102.0, 99.5, 101.9)]
         frame = frame_from(bars)
-        first, _, _ = cp.run_cycle(cp.fresh_state(), frame, "KAITOUSDT", 10.0, 0.2)
-        second, report, _ = cp.run_cycle(first, frame, "KAITOUSDT", 10.0, 0.2)
+        first, _, _ = cp.run_cycle(cp.fresh_state(), frame, "KAITOUSDT", 10.0, 4.0)
+        second, report, _ = cp.run_cycle(first, frame, "KAITOUSDT", 10.0, 4.0)
         self.assertEqual(len(second["history"]), 1)
         self.assertEqual(report["closed_trades"], 1)
+
+    def test_margin_capped_at_balance(self):
+        state = cp.fresh_state("KAITOUSDT", 0.5)
+        self.assertTrue(cp.open_position(state, "KAITOUSDT", "LONG", 100.0,
+                                         cp.MINUTE, leverage=10.0, margin_dollars=4.0))
+        self.assertAlmostEqual(state["position"]["margin"], 0.5)
 
     def test_state_symbol_mismatch_rejected(self):
         state = cp.fresh_state("KAITOUSDT")
@@ -155,7 +161,7 @@ class CandlePatternTests(unittest.TestCase):
     def test_state_roundtrip(self):
         state = cp.fresh_state()
         cp.open_position(state, "KAITOUSDT", "SHORT", 50.0, cp.MINUTE,
-                         leverage=10.0, margin_pct=0.2)
+                         leverage=10.0, margin_dollars=4.0)
         with tempfile.TemporaryDirectory() as tmp:
             path = str(Path(tmp) / "state.json")
             cp.save_state(state, path)
