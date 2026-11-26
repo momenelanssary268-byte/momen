@@ -36,20 +36,21 @@ jobs:
           set -e
           for symbol in KAITOUSDT ZECUSDT TRUMPUSDT NEARUSDT PEPEUSDT; do
             python candle_pattern.py --symbol "$symbol" \
-              --state "candle_state_${symbol}.json" \
-              --report "candle_report_${symbol}.json"
+              --start-balance 10 --margin 1 \
+              --state "candle_v2_state_${symbol}.json" \
+              --report "candle_v2_report_${symbol}.json"
             sleep 2
           done
       - name: Upload detailed reports
         uses: actions/upload-artifact@v4
         with:
-          name: candle-reports-${{ github.run_id }}
-          path: candle_report_*.json
+          name: candle-v2-reports-${{ github.run_id }}
+          path: candle_v2_report_*.json
           retention-days: 30
       - name: Save candle paper state and reports
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add candle_state_*.json candle_report_*.json
-          git diff --cached --quiet || git commit -m "Update candle pattern paper state and reports"
+          git add candle_v2_state_*.json candle_v2_report_*.json
+          git diff --cached --quiet || git commit -m "Update candle pattern paper state and reports (v2)"
           git push origin HEAD:main
