@@ -91,6 +91,21 @@ jobs:
               --report "candle_mexc_vC_report_${symbol}.json"
             sleep 2
           done
+      - name: Run candle paper variants D and E per coin (MEXC prices)
+        run: |
+          set -e
+          for symbol in ZECUSDT NEARUSDT TRUMPUSDT PEPEUSDT SUIUSDT; do
+            python candle_pattern.py --symbol "$symbol" --source mexc --leverage 50 --tp-roi 30 --sl-roi 25 \
+              --start-balance 10 --margin 1 \
+              --state "candle_mexc_vD_state_${symbol}.json" \
+              --report "candle_mexc_vD_report_${symbol}.json"
+            sleep 2
+            python candle_pattern.py --symbol "$symbol" --source mexc --leverage 50 --tp-roi 15 --sl-roi 10 \
+              --start-balance 10 --margin 1 \
+              --state "candle_mexc_vE_state_${symbol}.json" \
+              --report "candle_mexc_vE_report_${symbol}.json"
+            sleep 2
+          done
       - name: Upload detailed reports
         uses: actions/upload-artifact@v4
         with:
@@ -104,6 +119,7 @@ jobs:
           git add candle_v2_*.json candle_vA_*.json candle_vB_*.json candle_vC_*.json candle_mexc_*.json
           git diff --cached --quiet || git commit -m "Update candle pattern paper state and reports (v2)"
           git push origin HEAD:main
+
 
 
 
