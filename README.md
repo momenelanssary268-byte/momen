@@ -69,3 +69,9 @@ The executor keeps its own `demo_state.json` / `demo_report.json` and never touc
 ## Tests
 
 The offline suite covers candle validation, no forward-looking indicators, fees, adverse gaps, stop/target ambiguity, repeated runs, invalid-state protection, legacy compatibility, symbol coverage and deterministic backtests. Synthetic fixtures are not trading-performance evidence. A current-data smoke test does not validate a strategy.
+
+## 1-minute candle-pattern paper experiment
+
+`candle_pattern.py` paper-tests a rule from a MEXC AI Strategy screenshot: after 5 consecutive completed red 1-minute candles open a LONG, after 5 consecutive green open a SHORT, with take-profit at +15% ROI and stop-loss at -50% ROI on the paper margin (fixed leverage multiplier, default 10x). It runs on selected symbols (currently KAITOUSDT, ZECUSDT, TRUMPUSDT, NEARUSDT, PEPEUSDT) with a separate paper account per symbol: `candle_state_<SYMBOL>.json` / `candle_report_<SYMBOL>.json`. It never touches the main paper state and never places real orders.
+
+The scheduled workflow runs every 5 minutes. GitHub schedule delays are normal, so the run replays every unseen closed 1-minute bar in order; signals still use only bars that closed before each entry bar. A bar that closes a position cannot also open one at its own (already passed) open price; the earliest re-entry is the next bar. Fees and slippage match the main simulator. If both stop and target are touched in one bar, the stop wins. This is a test of a specific advertised rule, not an endorsement; 5-minute sampling plus 1-minute candles means results include model error the exchange's own product would not have. Not financial advice.
