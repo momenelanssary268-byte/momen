@@ -34,7 +34,7 @@ jobs:
       - name: Run candle pattern paper simulator per coin
         run: |
           set -e
-          for symbol in KAITOUSDT ZECUSDT TRUMPUSDT NEARUSDT PEPEUSDT TIAUSDT SUIUSDT; do
+          for symbol in KAITOUSDT ZECUSDT TRUMPUSDT NEARUSDT PEPEUSDT TIAUSDT SUIUSDT BTCUSDT SOLUSDT ANTUSDT; do
             python candle_pattern.py --symbol "$symbol" \
               --start-balance 10 --margin 1 \
               --state "candle_v2_state_${symbol}.json" \
@@ -54,4 +54,5 @@ jobs:
           git add candle_v2_state_*.json candle_v2_report_*.json
           git diff --cached --quiet || git commit -m "Update candle pattern paper state and reports (v2)"
           git push origin HEAD:main
+
 
