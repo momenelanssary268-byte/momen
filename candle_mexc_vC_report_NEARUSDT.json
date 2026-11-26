@@ -1,13 +1,28 @@
 {
-  "balance": 10.759753085000002,
-  "equity": 10.759753085000002,
+  "balance": 10.757753085000001,
+  "equity": 10.746279042674828,
   "closed_trades": 10,
   "wins": 9,
   "losses": 1,
   "win_rate_pct": 90.0,
   "net_realized_pnl": 0.7597530850000068,
   "profit_factor": 2.4916099318927656,
-  "open_position": null,
+  "open_position": {
+    "symbol": "NEARUSDT",
+    "side": "SHORT",
+    "entry": 3.0904540000000003,
+    "stop": 3.2449767000000005,
+    "target": 3.0440971900000005,
+    "quantity": 3.2357705372738113,
+    "margin": 1.0,
+    "entry_fee": 0.002,
+    "entry_time": 1795717560000,
+    "fee_rate": 0.0002,
+    "slippage_rate": 0.0005,
+    "leverage": 10.0,
+    "strategy_version": 1,
+    "analysis": "5 consecutive green 1m candles"
+  },
   "warnings": [],
   "paper_only": true,
   "source": "mexc",
@@ -20,5 +35,5 @@
   "start_balance": 10.0,
   "fee_per_side": 0.0002,
   "slippage_per_side": 0.0005,
-  "last_close": 3.092
+  "last_close": 3.094
 }
