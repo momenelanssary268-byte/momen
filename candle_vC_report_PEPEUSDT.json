@@ -1,6 +1,6 @@
 {
   "balance": 10.126838045,
-  "equity": 10.087715394135817,
+  "equity": 10.112815710794642,
   "closed_trades": 1,
   "wins": 1,
   "losses": 0,
@@ -25,6 +25,7 @@
   },
   "warnings": [],
   "paper_only": true,
+  "source": "bitget",
   "symbol": "PEPEUSDT",
   "strategy": "5 consecutive 1m candles, fade the run",
   "take_profit_roi_pct": 15.0,
@@ -34,5 +35,5 @@
   "start_balance": 10.0,
   "fee_per_side": 0.0006,
   "slippage_per_side": 0.0005,
-  "last_close": 3.5319e-06
+  "last_close": 3.5408e-06
 }

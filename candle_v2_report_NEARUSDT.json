@@ -1,6 +1,6 @@
 {
   "balance": 10.490000360000032,
-  "equity": 10.269778895383189,
+  "equity": 10.129861225218043,
   "closed_trades": 8,
   "wins": 8,
   "losses": 0,
@@ -25,6 +25,7 @@
   },
   "warnings": [],
   "paper_only": true,
+  "source": "bitget",
   "symbol": "NEARUSDT",
   "strategy": "5 consecutive 1m candles, fade the run",
   "take_profit_roi_pct": 15.0,
@@ -34,5 +35,5 @@
   "start_balance": 10.0,
   "fee_per_side": 0.0006,
   "slippage_per_side": 0.0005,
-  "last_close": 3.0597
+  "last_close": 3.0511
 }

@@ -1,6 +1,6 @@
 {
   "balance": 9.97,
-  "equity": 9.83116122938645,
+  "equity": 9.842546355823117,
   "closed_trades": 0,
   "wins": 0,
   "losses": 0,
@@ -25,6 +25,7 @@
   },
   "warnings": [],
   "paper_only": true,
+  "source": "bitget",
   "symbol": "TRUMPUSDT",
   "strategy": "5 consecutive 1m candles, fade the run",
   "take_profit_roi_pct": 30.0,
@@ -34,5 +35,5 @@
   "start_balance": 10.0,
   "fee_per_side": 0.0006,
   "slippage_per_side": 0.0005,
-  "last_close": 0.8759
+  "last_close": 0.8761
 }
