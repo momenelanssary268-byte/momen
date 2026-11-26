@@ -1,0 +1,22 @@
+{
+  "balance": 20.0,
+  "equity": 20.0,
+  "closed_trades": 0,
+  "wins": 0,
+  "losses": 0,
+  "win_rate_pct": null,
+  "net_realized_pnl": 0,
+  "profit_factor": null,
+  "open_position": null,
+  "warnings": [],
+  "paper_only": true,
+  "symbol": "KAITOUSDT",
+  "strategy": "5 consecutive 1m candles, fade the run",
+  "take_profit_roi_pct": 15.0,
+  "stop_loss_roi_pct": 50.0,
+  "leverage": 50.0,
+  "margin_pct_of_balance": 0.2,
+  "fee_per_side": 0.0006,
+  "slippage_per_side": 0.0005,
+  "last_close": 0.1602
+}

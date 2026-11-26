@@ -1,0 +1,22 @@
+{
+  "balance": 16.000904787922796,
+  "equity": 16.000904787922796,
+  "closed_trades": 4,
+  "wins": 2,
+  "losses": 2,
+  "win_rate_pct": 50.0,
+  "net_realized_pnl": -3.9990952120772016,
+  "profit_factor": 0.09239801494279351,
+  "open_position": null,
+  "warnings": [],
+  "paper_only": true,
+  "symbol": "PEPEUSDT",
+  "strategy": "5 consecutive 1m candles, fade the run",
+  "take_profit_roi_pct": 15.0,
+  "stop_loss_roi_pct": 50.0,
+  "leverage": 50.0,
+  "margin_pct_of_balance": 0.2,
+  "fee_per_side": 0.0006,
+  "slippage_per_side": 0.0005,
+  "last_close": 3.5466e-06
+}

@@ -1,0 +1,22 @@
+{
+  "balance": 17.892398798942367,
+  "equity": 17.892398798942367,
+  "closed_trades": 2,
+  "wins": 1,
+  "losses": 1,
+  "win_rate_pct": 50.0,
+  "net_realized_pnl": -2.107601201057637,
+  "profit_factor": 0.09844522482193009,
+  "open_position": null,
+  "warnings": [],
+  "paper_only": true,
+  "symbol": "NEARUSDT",
+  "strategy": "5 consecutive 1m candles, fade the run",
+  "take_profit_roi_pct": 15.0,
+  "stop_loss_roi_pct": 50.0,
+  "leverage": 50.0,
+  "margin_pct_of_balance": 0.2,
+  "fee_per_side": 0.0006,
+  "slippage_per_side": 0.0005,
+  "last_close": 3.051
+}
