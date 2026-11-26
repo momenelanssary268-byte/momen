@@ -26,6 +26,9 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
 BASE = "https://api.bitget.com"
+MEXC_BASE = "https://contract.mexc.com"
+# Bitget TRUMPUSDT is the OFFICIAL TRUMP token; MEXC lists it as TRUMPOFFICIAL_USDT.
+MEXC_SYMBOL_MAP = {"TRUMPUSDT": "TRUMPOFFICIAL_USDT"}
 MINUTE = 60_000
 START_BALANCE = 20.0
 FEE = 0.0006
@@ -116,6 +119,45 @@ def market_get(path, params):
     if payload.get("code") != "00000" or not isinstance(payload.get("data"), list):
         raise ValueError("Exchange returned an unsuccessful market-data response")
     return payload["data"]
+
+
+def mexc_symbol(symbol):
+    if symbol in MEXC_SYMBOL_MAP:
+        return MEXC_SYMBOL_MAP[symbol]
+    if not symbol.endswith("USDT"):
+        raise ValueError(f"Cannot map {symbol} to a MEXC USDT perpetual")
+    return symbol[:-4] + "_USDT"
+
+
+def mexc_get(path, params):
+    allowed_prefixes = ("/api/v1/contract/kline/", "/api/v1/contract/detail")
+    if not any(path.startswith(p) for p in allowed_prefixes):
+        raise ValueError("Only public read-only market endpoints are allowed")
+    response = SESSION.get(MEXC_BASE + path, params=params, timeout=20)
+    response.raise_for_status()
+    payload = response.json()
+    if not payload.get("success") or payload.get("data") is None:
+        raise ValueError("MEXC returned an unsuccessful market-data response")
+    return payload
+
+
+def get_candles_mexc(symbol, now_ms=None):
+    payload = mexc_get(f"/api/v1/contract/kline/{mexc_symbol(symbol)}",
+                       {"interval": "Min1", "limit": "2000"})
+    d = payload["data"]
+    cols = [d["time"], d["open"], d["high"], d["low"], d["close"], d["vol"], d["amount"]]
+    if len({len(c) for c in cols}) != 1:
+        raise ValueError("MEXC kline arrays have mismatched lengths")
+    rows = [[int(t) * 1000, o, h, l, c, v, a] for t, o, h, l, c, v, a in zip(*cols)]
+    return clean_candles(rows, now_ms)
+
+
+def get_mexc_taker_fee(symbol):
+    payload = mexc_get("/api/v1/contract/detail", {"symbol": mexc_symbol(symbol)})
+    rate = float(payload["data"].get("takerFeeRate", 0.0002))
+    if not 0 <= rate <= 0.01:
+        raise ValueError("Implausible MEXC taker fee rate")
+    return rate
 
 
 def clean_candles(rows, now_ms=None):
@@ -248,7 +290,8 @@ def metrics(state, last_close):
         "open_position": state["position"]}
 
 
-def run_cycle(state, frame, symbol, leverage, margin_dollars, tp_roi=TP_ROI, sl_roi=SL_ROI):
+def run_cycle(state, frame, symbol, leverage, margin_dollars, tp_roi=TP_ROI, sl_roi=SL_ROI,
+              fee=FEE):
     """Replay unseen closed 1-minute bars in order.
 
     Every unseen bar first manages the open paper position, then may open a new
@@ -266,7 +309,7 @@ def run_cycle(state, frame, symbol, leverage, margin_dollars, tp_roi=TP_ROI, sl_
     last_close = float(frame.iloc[-1]["close"])
     processed = state["processed_until"]
     newest = int(frame.iloc[-1]["time"])
-    if processed and newest - processed > CANDLE_LIMIT * MINUTE:
+    if processed and newest - processed > len(frame) * MINUTE:
         warnings.append(f"{symbol}: gap larger than fetched window; some bars replayed from partial history")
     for idx in range(len(frame)):
         bar = frame.iloc[idx]
@@ -281,7 +324,7 @@ def run_cycle(state, frame, symbol, leverage, margin_dollars, tp_roi=TP_ROI, sl_
             side = detect_signal(frame, idx)
             if side:
                 open_position(state, symbol, side, float(bar["open"]), int(bar["time"]),
-                              leverage, margin_dollars, tp_roi=tp_roi, sl_roi=sl_roi)
+                              leverage, margin_dollars, tp_roi=tp_roi, sl_roi=sl_roi, fee=fee)
                 manage_bar(state, bar)  # entry bar is live for the new position
         state["processed_until"] = int(bar["time"])
     report = metrics(state, last_close)
@@ -301,6 +344,8 @@ def main():
                         help="take-profit ROI percent (default 15)")
     parser.add_argument("--sl-roi", type=float, default=SL_ROI * 100,
                         help="stop-loss ROI percent (default 50)")
+    parser.add_argument("--source", choices=["bitget", "mexc"], default="bitget",
+                        help="price data source (default bitget)")
     args = parser.parse_args()
     if not 1 <= args.leverage <= 125:
         parser.error("--leverage must be between 1 and 125")
@@ -315,14 +360,21 @@ def main():
     if not 0 < args.sl_roi <= 1000:
         parser.error("--sl-roi must be in (0, 1000]")
     state = load_state(args.state, args.symbol, args.start_balance)
-    frame = get_candles(args.symbol)
+    if args.source == "mexc":
+        frame = get_candles_mexc(args.symbol)
+        fee = get_mexc_taker_fee(args.symbol)
+    else:
+        frame = get_candles(args.symbol)
+        fee = FEE
     if frame.empty:
         raise RuntimeError("No valid market data; state left untouched")
     updated, report, last_close = run_cycle(state, frame, args.symbol,
                                             args.leverage, args.margin,
-                                            tp_roi=args.tp_roi / 100, sl_roi=args.sl_roi / 100)
+                                            tp_roi=args.tp_roi / 100, sl_roi=args.sl_roi / 100,
+                                            fee=fee)
     report.update({
         "paper_only": True,
+        "source": args.source,
         "symbol": args.symbol,
         "strategy": f"{PATTERN} consecutive 1m candles, fade the run",
         "take_profit_roi_pct": args.tp_roi,
@@ -330,7 +382,7 @@ def main():
         "leverage": args.leverage,
         "margin_dollars_per_trade": args.margin,
         "start_balance": args.start_balance,
-        "fee_per_side": FEE,
+        "fee_per_side": fee,
         "slippage_per_side": SLIPPAGE,
         "last_close": last_close,
     })
