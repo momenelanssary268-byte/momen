@@ -136,6 +136,16 @@ class CandlePatternTests(unittest.TestCase):
         self.assertEqual(len(second["history"]), 1)
         self.assertEqual(report["closed_trades"], 1)
 
+    def test_state_symbol_mismatch_rejected(self):
+        state = cp.fresh_state("KAITOUSDT")
+        with tempfile.TemporaryDirectory() as tmp:
+            path = str(Path(tmp) / "state.json")
+            cp.save_state(state, path)
+            with self.assertRaises(ValueError):
+                cp.load_state(path, "ZECUSDT")
+            loaded = cp.load_state(path, "KAITOUSDT")
+        self.assertEqual(loaded["symbol"], "KAITOUSDT")
+
     def test_validate_state_rejects_bad(self):
         with self.assertRaises(ValueError):
             cp.validate_state({"balance": -1, "history": [], "processed_until": 0})
