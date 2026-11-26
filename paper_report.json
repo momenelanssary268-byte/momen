@@ -1,14 +1,14 @@
 {
-  "balance": 19.904650451854312,
-  "equity": 20.31518067015624,
-  "closed_trades": 17,
-  "wins": 6,
+  "balance": 20.24506475513293,
+  "equity": 20.29264390897958,
+  "closed_trades": 18,
+  "wins": 7,
   "losses": 11,
-  "win_rate_pct": 35.294117647058826,
-  "net_realized_pnl": -0.011401862015041953,
-  "profit_factor": 0.9946483197183846,
+  "win_rate_pct": 38.888888888888886,
+  "net_realized_pnl": 0.319459884970248,
+  "profit_factor": 1.1499445586086694,
   "max_drawdown_pct": 4.069663500333823,
-  "open_positions": 3,
+  "open_positions": 2,
   "legacy_trades_excluded": 101,
   "paper_only": true,
   "warnings": [],
@@ -16,13 +16,13 @@
     {
       "symbol": "BZUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
       "symbol": "AAPLUSDT",
       "side": "WAIT",
-      "score_out_of_5": 4,
+      "score_out_of_5": 3,
       "reason": "filters not aligned"
     },
     {
@@ -62,15 +62,15 @@
       "reason": "filters not aligned"
     },
     {
-      "symbol": "SOXSUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 3,
-      "reason": "filters not aligned"
-    },
-    {
       "symbol": "NVDAUSDT",
       "side": "WAIT",
       "score_out_of_5": 2,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "SOXSUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 3,
       "reason": "filters not aligned"
     },
     {
@@ -82,19 +82,19 @@
     {
       "symbol": "SKHYNIXUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 2,
       "reason": "filters not aligned"
     },
     {
       "symbol": "SNDKUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 2,
       "reason": "filters not aligned"
     },
     {
       "symbol": "SNXXUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 2,
       "reason": "filters not aligned"
     },
     {
@@ -146,21 +146,15 @@
       "reason": "filters not aligned"
     },
     {
-      "symbol": "BIGTIMEUSDT",
+      "symbol": "MMTUSDT",
       "side": "WAIT",
-      "score_out_of_5": 2,
+      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
       "symbol": "QQQUSDT",
       "side": "WAIT",
-      "score_out_of_5": 2,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "MMTUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 4,
+      "score_out_of_5": 3,
       "reason": "filters not aligned"
     },
     {
@@ -176,9 +170,15 @@
       "reason": "filters not aligned"
     },
     {
+      "symbol": "BIGTIMEUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 2,
+      "reason": "filters not aligned"
+    },
+    {
       "symbol": "CLUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
@@ -206,21 +206,21 @@
       "reason": "volatility outside filter"
     },
     {
+      "symbol": "SQQQUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 4,
+      "reason": "filters not aligned"
+    },
+    {
       "symbol": "NEARUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
       "symbol": "CRCLUSDT",
       "side": "WAIT",
       "score_out_of_5": 2,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "SQQQUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
@@ -236,6 +236,12 @@
       "reason": "filters not aligned"
     },
     {
+      "symbol": "EVAAUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 4,
+      "reason": "filters not aligned"
+    },
+    {
       "symbol": "OPENAIUSDT",
       "side": "WAIT",
       "score_out_of_5": 3,
@@ -245,12 +251,6 @@
       "symbol": "GOOGLUSDT",
       "side": "WAIT",
       "score_out_of_5": 2,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "EVAAUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
@@ -278,12 +278,6 @@
       "reason": "filters not aligned"
     },
     {
-      "symbol": "SAMSUNGUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 2,
-      "reason": "filters not aligned"
-    },
-    {
       "symbol": "MRVLUSDT",
       "side": "WAIT",
       "score_out_of_5": 2,
@@ -296,37 +290,19 @@
       "reason": "filters not aligned"
     },
     {
-      "symbol": "ZHIPUUSDT",
+      "symbol": "SAMSUNGUSDT",
       "side": "WAIT",
       "score_out_of_5": 2,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "ZHIPUUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 3,
       "reason": "filters not aligned"
     },
     {
       "symbol": "COINUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 4,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "ZHONGJIUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 4,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "EWYUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 2,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "MINIMAXUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 2,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "PIEVERSEUSDT",
       "side": "WAIT",
       "score_out_of_5": 4,
       "reason": "filters not aligned"
@@ -338,15 +314,39 @@
       "reason": "filters not aligned"
     },
     {
-      "symbol": "CSOPSK2LHKDUSDT",
+      "symbol": "PIEVERSEUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
-      "symbol": "WLDUSDT",
+      "symbol": "MINIMAXUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 2,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "EWYUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 2,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "ZHONGJIUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 4,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "NVDLUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 2,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "CSOPSK2LHKDUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 2,
       "reason": "filters not aligned"
     },
     {
@@ -356,21 +356,21 @@
       "reason": "filters not aligned"
     },
     {
-      "symbol": "NVDLUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 3,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "MSTUUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 3,
-      "reason": "filters not aligned"
-    },
-    {
       "symbol": "SKDDUSDT",
       "side": "WAIT",
       "score_out_of_5": 4,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 3,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "INTWUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 3,
       "reason": "filters not aligned"
     }
   ],
