@@ -1,22 +1,7 @@
 {
-  "balance": 8.478990020000113,
+  "balance": 7.944344970000114,
   "symbol": "PEPEUSDT",
-  "position": {
-    "symbol": "PEPEUSDT",
-    "side": "LONG",
-    "entry": 3.5173578e-06,
-    "stop": 3.4821842219999996e-06,
-    "target": 3.5384619467999996e-06,
-    "quantity": 14215215.75086845,
-    "margin": 1.0,
-    "entry_fee": 0.01,
-    "entry_time": 1795697460000,
-    "fee_rate": 0.0002,
-    "slippage_rate": 0.0005,
-    "leverage": 50.0,
-    "strategy_version": 1,
-    "analysis": "5 consecutive red 1m candles"
-  },
+  "position": null,
   "history": [
     {
       "symbol": "PEPEUSDT",
@@ -663,7 +648,24 @@
       "entry_time": 1795682340000,
       "exit_time": 1795696260000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "side": "LONG",
+      "entry": 3.5173578e-06,
+      "exit": 3.480443129889e-06,
+      "quantity": 14215215.75086845,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": -0.5247499999999992,
+      "entry_fee": 0.01,
+      "exit_fee": 0.00989505,
+      "net_pnl": -0.5446450499999992,
+      "reason": "STOP LOSS",
+      "entry_time": 1795697460000,
+      "exit_time": 1795704720000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795701600000
+  "processed_until": 1795705080000
 }
