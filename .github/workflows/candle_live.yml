@@ -36,6 +36,7 @@ jobs:
         run: gh workflow run candle_live.yml --ref main || true
       - name: Loop every minute (paper only, same candle_pattern.py logic)
         run: |
+          set +e
           B="--start-balance 10 --margin 1"
           M="--source mexc"
           LIST=/tmp/accounts.txt
@@ -62,11 +63,16 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           save() {
             git add candle_v2_*.json candle_vA_*.json candle_vB_*.json candle_vC_*.json candle_mexc_*.json
-            if ! git diff --cached --quiet; then
-              git commit -q -m "Update candle pattern paper state (live loop)"
-              git pull -q --rebase origin main || git rebase --abort
-              git push -q origin HEAD:main || true
+            git diff --cached --quiet && return 0
+            git commit -q -m "Update candle pattern paper state (live loop)"
+            git fetch -q origin main
+            if ! git rebase -q -X theirs origin/main > /dev/null 2>&1; then
+              git rebase --abort > /dev/null 2>&1
+              git reset -q --hard origin/main
+              return 0
             fi
+            git push -q origin HEAD:main || git reset -q --hard origin/main
+            return 0
           }
           END=$(( $(date +%s) + 5*3600 + 40*60 ))
           n=0
