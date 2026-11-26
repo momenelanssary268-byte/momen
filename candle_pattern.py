@@ -167,7 +167,7 @@ def detect_signal(frame, idx):
 
 
 def open_position(state, symbol, side, raw_price, entry_time, leverage, margin_dollars,
-                  fee=FEE, slippage=SLIPPAGE):
+                  fee=FEE, slippage=SLIPPAGE, tp_roi=TP_ROI, sl_roi=SL_ROI):
     if state["position"] is not None or state["balance"] <= 0:
         return False
     direction = 1 if side == "LONG" else -1
@@ -176,8 +176,8 @@ def open_position(state, symbol, side, raw_price, entry_time, leverage, margin_d
     notional = margin * leverage
     quantity = notional / entry
     entry_fee = notional * fee
-    stop = entry - direction * entry * (SL_ROI / leverage)
-    target = entry + direction * entry * (TP_ROI / leverage)
+    stop = entry - direction * entry * (sl_roi / leverage)
+    target = entry + direction * entry * (tp_roi / leverage)
     if stop <= 0 or margin <= 0 or state["balance"] - entry_fee < 0:
         return False
     state["balance"] -= entry_fee
@@ -248,7 +248,7 @@ def metrics(state, last_close):
         "open_position": state["position"]}
 
 
-def run_cycle(state, frame, symbol, leverage, margin_dollars):
+def run_cycle(state, frame, symbol, leverage, margin_dollars, tp_roi=TP_ROI, sl_roi=SL_ROI):
     """Replay unseen closed 1-minute bars in order.
 
     Every unseen bar first manages the open paper position, then may open a new
@@ -281,7 +281,7 @@ def run_cycle(state, frame, symbol, leverage, margin_dollars):
             side = detect_signal(frame, idx)
             if side:
                 open_position(state, symbol, side, float(bar["open"]), int(bar["time"]),
-                              leverage, margin_dollars)
+                              leverage, margin_dollars, tp_roi=tp_roi, sl_roi=sl_roi)
                 manage_bar(state, bar)  # entry bar is live for the new position
         state["processed_until"] = int(bar["time"])
     report = metrics(state, last_close)
@@ -297,6 +297,10 @@ def main():
     parser.add_argument("--leverage", type=float, default=LEVERAGE)
     parser.add_argument("--margin", type=float, default=MARGIN_DOLLARS)
     parser.add_argument("--start-balance", type=float, default=START_BALANCE)
+    parser.add_argument("--tp-roi", type=float, default=TP_ROI * 100,
+                        help="take-profit ROI percent (default 15)")
+    parser.add_argument("--sl-roi", type=float, default=SL_ROI * 100,
+                        help="stop-loss ROI percent (default 50)")
     args = parser.parse_args()
     if not 1 <= args.leverage <= 125:
         parser.error("--leverage must be between 1 and 125")
@@ -306,18 +310,23 @@ def main():
         parser.error("--start-balance must be in (0, 10000]")
     if not re.fullmatch(r"[A-Z0-9]{2,30}", args.symbol):
         parser.error("--symbol must be an uppercase futures symbol like KAITOUSDT")
+    if not 0 < args.tp_roi <= 1000:
+        parser.error("--tp-roi must be in (0, 1000]")
+    if not 0 < args.sl_roi <= 1000:
+        parser.error("--sl-roi must be in (0, 1000]")
     state = load_state(args.state, args.symbol, args.start_balance)
     frame = get_candles(args.symbol)
     if frame.empty:
         raise RuntimeError("No valid market data; state left untouched")
     updated, report, last_close = run_cycle(state, frame, args.symbol,
-                                            args.leverage, args.margin)
+                                            args.leverage, args.margin,
+                                            tp_roi=args.tp_roi / 100, sl_roi=args.sl_roi / 100)
     report.update({
         "paper_only": True,
         "symbol": args.symbol,
         "strategy": f"{PATTERN} consecutive 1m candles, fade the run",
-        "take_profit_roi_pct": TP_ROI * 100,
-        "stop_loss_roi_pct": SL_ROI * 100,
+        "take_profit_roi_pct": args.tp_roi,
+        "stop_loss_roi_pct": args.sl_roi,
         "leverage": args.leverage,
         "margin_dollars_per_trade": args.margin,
         "start_balance": args.start_balance,
@@ -346,3 +355,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
