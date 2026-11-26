@@ -4,7 +4,7 @@ Strategy under test (from the user's MEXC AI Strategy screenshot):
   - Open LONG after 5 consecutive completed red 1-minute candles (close < open).
   - Open SHORT after 5 consecutive completed green 1-minute candles (close > open).
   - Take profit at +15% ROI, stop loss at -50% ROI, where ROI is measured on the
-    paper margin with a fixed leverage multiplier (default 10x, configurable).
+    paper margin with a fixed leverage multiplier (default 50x, configurable).
 
 This module never places real orders. It is not an AI model and does not promise profit.
 """
@@ -36,7 +36,7 @@ PATTERN = 5
 TP_ROI = 0.15
 SL_ROI = 0.50
 LEVERAGE = 50.0
-MARGIN_PCT = 0.20
+MARGIN_DOLLARS = 4.0
 CANDLE_LIMIT = 200
 STRATEGY_VERSION = 1
 
@@ -50,8 +50,8 @@ def finite(value):
     return isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value)
 
 
-def fresh_state(symbol=SYMBOL):
-    return {"balance": START_BALANCE, "symbol": symbol, "position": None,
+def fresh_state(symbol=SYMBOL, start_balance=START_BALANCE):
+    return {"balance": start_balance, "symbol": symbol, "position": None,
             "history": [], "processed_until": 0}
 
 
@@ -79,9 +79,9 @@ def validate_state(state):
     return state
 
 
-def load_state(path=STATE_FILE, symbol=SYMBOL):
+def load_state(path=STATE_FILE, symbol=SYMBOL, start_balance=START_BALANCE):
     if not Path(path).exists():
-        return fresh_state(symbol)
+        return fresh_state(symbol, start_balance)
     with open(path, encoding="utf-8") as handle:
         state = validate_state(json.load(handle))
     if state["symbol"] != symbol:
@@ -166,13 +166,13 @@ def detect_signal(frame, idx):
     return None
 
 
-def open_position(state, symbol, side, raw_price, entry_time, leverage, margin_pct,
+def open_position(state, symbol, side, raw_price, entry_time, leverage, margin_dollars,
                   fee=FEE, slippage=SLIPPAGE):
     if state["position"] is not None or state["balance"] <= 0:
         return False
     direction = 1 if side == "LONG" else -1
     entry = raw_price * (1 + direction * slippage)
-    margin = state["balance"] * margin_pct
+    margin = min(margin_dollars, state["balance"])
     notional = margin * leverage
     quantity = notional / entry
     entry_fee = notional * fee
@@ -248,7 +248,7 @@ def metrics(state, last_close):
         "open_position": state["position"]}
 
 
-def run_cycle(state, frame, symbol, leverage, margin_pct):
+def run_cycle(state, frame, symbol, leverage, margin_dollars):
     """Replay unseen closed 1-minute bars in order.
 
     Every unseen bar first manages the open paper position, then may open a new
@@ -281,7 +281,7 @@ def run_cycle(state, frame, symbol, leverage, margin_pct):
             side = detect_signal(frame, idx)
             if side:
                 open_position(state, symbol, side, float(bar["open"]), int(bar["time"]),
-                              leverage, margin_pct)
+                              leverage, margin_dollars)
                 manage_bar(state, bar)  # entry bar is live for the new position
         state["processed_until"] = int(bar["time"])
     report = metrics(state, last_close)
@@ -295,20 +295,23 @@ def main():
     parser.add_argument("--report", default="candle_report.json")
     parser.add_argument("--symbol", default=SYMBOL)
     parser.add_argument("--leverage", type=float, default=LEVERAGE)
-    parser.add_argument("--margin-pct", type=float, default=MARGIN_PCT)
+    parser.add_argument("--margin", type=float, default=MARGIN_DOLLARS)
+    parser.add_argument("--start-balance", type=float, default=START_BALANCE)
     args = parser.parse_args()
     if not 1 <= args.leverage <= 125:
         parser.error("--leverage must be between 1 and 125")
-    if not 0 < args.margin_pct <= 1:
-        parser.error("--margin-pct must be in (0, 1]")
+    if not 0 < args.margin <= args.start_balance:
+        parser.error("--margin must be in (0, --start-balance]")
+    if not 0 < args.start_balance <= 10000:
+        parser.error("--start-balance must be in (0, 10000]")
     if not re.fullmatch(r"[A-Z0-9]{2,30}", args.symbol):
         parser.error("--symbol must be an uppercase futures symbol like KAITOUSDT")
-    state = load_state(args.state, args.symbol)
+    state = load_state(args.state, args.symbol, args.start_balance)
     frame = get_candles(args.symbol)
     if frame.empty:
         raise RuntimeError("No valid market data; state left untouched")
     updated, report, last_close = run_cycle(state, frame, args.symbol,
-                                            args.leverage, args.margin_pct)
+                                            args.leverage, args.margin)
     report.update({
         "paper_only": True,
         "symbol": args.symbol,
@@ -316,7 +319,8 @@ def main():
         "take_profit_roi_pct": TP_ROI * 100,
         "stop_loss_roi_pct": SL_ROI * 100,
         "leverage": args.leverage,
-        "margin_pct_of_balance": args.margin_pct,
+        "margin_dollars_per_trade": args.margin,
+        "start_balance": args.start_balance,
         "fee_per_side": FEE,
         "slippage_per_side": SLIPPAGE,
         "last_close": last_close,
