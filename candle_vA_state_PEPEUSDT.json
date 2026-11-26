@@ -1,5 +1,5 @@
 {
-  "balance": 8.509699910000057,
+  "balance": 7.5698397300000755,
   "symbol": "PEPEUSDT",
   "position": null,
   "history": [
@@ -240,7 +240,75 @@
       "entry_time": 1795703400000,
       "exit_time": 1795703400000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "side": "LONG",
+      "entry": 3.4309146e-06,
+      "exit": 3.4120531469865003e-06,
+      "quantity": 14573373.525531646,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": -0.2748749999999967,
+      "entry_fee": 0.03,
+      "exit_fee": 0.029835074999999996,
+      "net_pnl": -0.3347100749999967,
+      "reason": "STOP LOSS",
+      "entry_time": 1795705500000,
+      "exit_time": 1795705620000,
+      "accounting_version": 1
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "side": "LONG",
+      "entry": 3.4063022999999998e-06,
+      "exit": 3.38757615310575e-06,
+      "quantity": 14678673.704327418,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": -0.2748749999999947,
+      "entry_fee": 0.03,
+      "exit_fee": 0.029835075,
+      "net_pnl": -0.3347100749999947,
+      "reason": "STOP LOSS",
+      "entry_time": 1795705680000,
+      "exit_time": 1795705680000,
+      "accounting_version": 1
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "side": "LONG",
+      "entry": 3.3843913499999995e-06,
+      "exit": 3.3928472517879748e-06,
+      "quantity": 14773705.174491717,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": 0.12492500000000425,
+      "entry_fee": 0.03,
+      "exit_fee": 0.030074955,
+      "net_pnl": 0.06485004500000426,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795705740000,
+      "exit_time": 1795705740000,
+      "accounting_version": 1
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "side": "SHORT",
+      "entry": 3.4527727500000003e-06,
+      "exit": 3.471771632056875e-06,
+      "quantity": 14481115.213852402,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": -0.27512499999999385,
+      "entry_fee": 0.03,
+      "exit_fee": 0.030165074999999996,
+      "net_pnl": -0.33529007499999386,
+      "reason": "STOP LOSS",
+      "entry_time": 1795708260000,
+      "exit_time": 1795708440000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795705020000
+  "processed_until": 1795708560000
 }

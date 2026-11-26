@@ -1,5 +1,5 @@
 {
-  "balance": 8.586169805000022,
+  "balance": 8.046749745000024,
   "symbol": "ZECUSDT",
   "position": null,
   "history": [
@@ -155,7 +155,75 @@
       "entry_time": 1795702620000,
       "exit_time": 1795703160000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": "LONG",
+      "entry": 678.2789700000001,
+      "exit": 674.5501313624251,
+      "quantity": 0.07371598149357335,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": -0.2748749999999996,
+      "entry_fee": 0.03,
+      "exit_fee": 0.029835074999999996,
+      "net_pnl": -0.3347100749999996,
+      "reason": "STOP LOSS",
+      "entry_time": 1795705380000,
+      "exit_time": 1795705380000,
+      "accounting_version": 1
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": "LONG",
+      "entry": 676.1979299999999,
+      "exit": 672.480531879825,
+      "quantity": 0.07394284688212518,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": -0.2748749999999962,
+      "entry_fee": 0.03,
+      "exit_fee": 0.029835075,
+      "net_pnl": -0.33471007499999617,
+      "reason": "STOP LOSS",
+      "entry_time": 1795705440000,
+      "exit_time": 1795705440000,
+      "accounting_version": 1
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": "LONG",
+      "entry": 673.19643,
+      "exit": 674.878411280355,
+      "quantity": 0.0742725269651237,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": 0.12492499999999923,
+      "entry_fee": 0.03,
+      "exit_fee": 0.030074955,
+      "net_pnl": 0.06485004499999923,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795705500000,
+      "exit_time": 1795705500000,
+      "accounting_version": 1
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": "SHORT",
+      "entry": 678.3906350000001,
+      "exit": 676.6936408265476,
+      "quantity": 0.07370384763639903,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": 0.12507499999999858,
+      "entry_fee": 0.03,
+      "exit_fee": 0.029924954999999996,
+      "net_pnl": 0.06515004499999857,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795706040000,
+      "exit_time": 1795706100000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795705020000
+  "processed_until": 1795708500000
 }

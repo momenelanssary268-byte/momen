@@ -1,5 +1,5 @@
 {
-  "balance": 8.959999790000008,
+  "balance": 8.375564640000013,
   "symbol": "TIAUSDT",
   "position": null,
   "history": [
@@ -70,7 +70,24 @@
       "entry_time": 1795687740000,
       "exit_time": 1795697100000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "TIAUSDT",
+      "side": "LONG",
+      "entry": 0.33676829999999996,
+      "exit": 0.3332339166915,
+      "quantity": 148.47003117573715,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": -0.5247499999999967,
+      "entry_fee": 0.03,
+      "exit_fee": 0.029685149999999993,
+      "net_pnl": -0.5844351499999967,
+      "reason": "STOP LOSS",
+      "entry_time": 1795705440000,
+      "exit_time": 1795705680000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795704960000
+  "processed_until": 1795708500000
 }

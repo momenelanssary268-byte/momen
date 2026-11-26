@@ -1,7 +1,25 @@
 {
-  "balance": 10.0,
+  "balance": 10.064850045,
   "symbol": "KAITOUSDT",
   "position": null,
-  "history": [],
-  "processed_until": 1795704960000
+  "history": [
+    {
+      "symbol": "KAITOUSDT",
+      "side": "LONG",
+      "entry": 0.1554777,
+      "exit": 0.15586616103345,
+      "quantity": 321.58952698682833,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": 0.1249249999999998,
+      "entry_fee": 0.03,
+      "exit_fee": 0.030074954999999997,
+      "net_pnl": 0.0648500449999998,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795705620000,
+      "exit_time": 1795706760000,
+      "accounting_version": 1
+    }
+  ],
+  "processed_until": 1795708500000
 }
