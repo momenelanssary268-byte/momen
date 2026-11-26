@@ -1,0 +1,81 @@
+name: Candle paper simulator (live loop)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 * * * *"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: candle-live
+  cancel-in-progress: false
+
+jobs:
+  live:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - name: Download project
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Queue the next loop run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run candle_live.yml --ref main || true
+      - name: Loop every minute (paper only, same candle_pattern.py logic)
+        run: |
+          B="--start-balance 10 --margin 1"
+          M="--source mexc"
+          LIST=/tmp/accounts.txt
+          : > $LIST
+          for s in KAITOUSDT ZECUSDT TRUMPUSDT NEARUSDT PEPEUSDT TIAUSDT SUIUSDT BTCUSDT SOLUSDT ANTUSDT; do
+            echo "--symbol $s $B --state candle_v2_state_$s.json --report candle_v2_report_$s.json" >> $LIST
+          done
+          for s in ZECUSDT NEARUSDT TRUMPUSDT PEPEUSDT SUIUSDT; do
+            echo "--symbol $s --leverage 50 --tp-roi 15 --sl-roi 25 $B --state candle_vA_state_$s.json --report candle_vA_report_$s.json" >> $LIST
+            echo "--symbol $s --leverage 50 --tp-roi 30 --sl-roi 50 $B --state candle_vB_state_$s.json --report candle_vB_report_$s.json" >> $LIST
+            echo "--symbol $s --leverage 10 --tp-roi 15 --sl-roi 50 $B --state candle_vC_state_$s.json --report candle_vC_report_$s.json" >> $LIST
+          done
+          for s in KAITOUSDT ZECUSDT TRUMPUSDT NEARUSDT PEPEUSDT TIAUSDT SUIUSDT BTCUSDT SOLUSDT; do
+            echo "--symbol $s $M $B --state candle_mexc_state_$s.json --report candle_mexc_report_$s.json" >> $LIST
+          done
+          for s in ZECUSDT NEARUSDT TRUMPUSDT PEPEUSDT SUIUSDT; do
+            echo "--symbol $s $M --leverage 50 --tp-roi 15 --sl-roi 25 $B --state candle_mexc_vA_state_$s.json --report candle_mexc_vA_report_$s.json" >> $LIST
+            echo "--symbol $s $M --leverage 50 --tp-roi 30 --sl-roi 50 $B --state candle_mexc_vB_state_$s.json --report candle_mexc_vB_report_$s.json" >> $LIST
+            echo "--symbol $s $M --leverage 10 --tp-roi 15 --sl-roi 50 $B --state candle_mexc_vC_state_$s.json --report candle_mexc_vC_report_$s.json" >> $LIST
+            echo "--symbol $s $M --leverage 50 --tp-roi 30 --sl-roi 25 $B --state candle_mexc_vD_state_$s.json --report candle_mexc_vD_report_$s.json" >> $LIST
+            echo "--symbol $s $M --leverage 50 --tp-roi 15 --sl-roi 10 $B --state candle_mexc_vE_state_$s.json --report candle_mexc_vE_report_$s.json" >> $LIST
+          done
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          save() {
+            git add candle_v2_*.json candle_vA_*.json candle_vB_*.json candle_vC_*.json candle_mexc_*.json
+            if ! git diff --cached --quiet; then
+              git commit -q -m "Update candle pattern paper state (live loop)"
+              git pull -q --rebase origin main || git rebase --abort
+              git push -q origin HEAD:main || true
+            fi
+          }
+          END=$(( $(date +%s) + 5*3600 + 40*60 ))
+          n=0
+          while [ $(date +%s) -lt $END ]; do
+            start=$(date +%s)
+            xargs -P 8 -L 1 -a $LIST sh -c 'python candle_pattern.py "$@" > /dev/null 2>&1 || true' sh
+            n=$((n+1))
+            if [ $((n % 5)) -eq 0 ]; then save; fi
+            left=$(( 60 - ($(date +%s) - start) ))
+            [ $left -gt 0 ] && sleep $left
+          done
+          save
