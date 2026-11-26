@@ -1,5 +1,5 @@
 {
-  "balance": 8.503004730000026,
+  "balance": 8.113719715000038,
   "symbol": "PEPEUSDT",
   "position": null,
   "history": [
@@ -121,7 +121,75 @@
       "entry_time": 1795688940000,
       "exit_time": 1795689540000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "side": "SHORT",
+      "entry": 3.5581200500000004e-06,
+      "exit": 3.5492194126949253e-06,
+      "quantity": 14052364.534468137,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": 0.12507500000000182,
+      "entry_fee": 0.03,
+      "exit_fee": 0.029924954999999996,
+      "net_pnl": 0.06515004500000182,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795693800000,
+      "exit_time": 1795694100000,
+      "accounting_version": 1
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "side": "SHORT",
+      "entry": 3.5534224e-06,
+      "exit": 3.5445335138664e-06,
+      "quantity": 14070941.861569848,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": 0.1250750000000018,
+      "entry_fee": 0.03,
+      "exit_fee": 0.029924954999999996,
+      "net_pnl": 0.0651500450000018,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795694700000,
+      "exit_time": 1795694880000,
+      "accounting_version": 1
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "side": "LONG",
+      "entry": 3.5446714499999997e-06,
+      "exit": 3.50747012313225e-06,
+      "quantity": 14105679.667434342,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": -0.5247499999999983,
+      "entry_fee": 0.03,
+      "exit_fee": 0.02968515,
+      "net_pnl": -0.5844351499999983,
+      "reason": "STOP LOSS",
+      "entry_time": 1795695000000,
+      "exit_time": 1795696320000,
+      "accounting_version": 1
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "side": "LONG",
+      "entry": 3.5123552999999997e-06,
+      "exit": 3.52113091971705e-06,
+      "quantity": 14235461.885077516,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": 0.12492500000000327,
+      "entry_fee": 0.03,
+      "exit_fee": 0.030074955,
+      "net_pnl": 0.06485004500000327,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795696380000,
+      "exit_time": 1795696560000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795693080000
+  "processed_until": 1795696980000
 }
