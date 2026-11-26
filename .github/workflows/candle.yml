@@ -41,18 +41,39 @@ jobs:
               --report "candle_v2_report_${symbol}.json"
             sleep 2
           done
+      - name: Run candle paper variants per coin
+        run: |
+          set -e
+          for symbol in ZECUSDT NEARUSDT TRUMPUSDT PEPEUSDT SUIUSDT; do
+            python candle_pattern.py --symbol "$symbol" --leverage 50 --tp-roi 15 --sl-roi 25 \
+              --start-balance 10 --margin 1 \
+              --state "candle_vA_state_${symbol}.json" \
+              --report "candle_vA_report_${symbol}.json"
+            sleep 2
+            python candle_pattern.py --symbol "$symbol" --leverage 50 --tp-roi 30 --sl-roi 50 \
+              --start-balance 10 --margin 1 \
+              --state "candle_vB_state_${symbol}.json" \
+              --report "candle_vB_report_${symbol}.json"
+            sleep 2
+            python candle_pattern.py --symbol "$symbol" --leverage 10 --tp-roi 15 --sl-roi 50 \
+              --start-balance 10 --margin 1 \
+              --state "candle_vC_state_${symbol}.json" \
+              --report "candle_vC_report_${symbol}.json"
+            sleep 2
+          done
       - name: Upload detailed reports
         uses: actions/upload-artifact@v4
         with:
           name: candle-v2-reports-${{ github.run_id }}
-          path: candle_v2_report_*.json
+          path: candle_v*_report_*.json
           retention-days: 30
       - name: Save candle paper state and reports
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add candle_v2_state_*.json candle_v2_report_*.json
+          git add candle_v2_state_*.json candle_v2_report_*.json candle_vA_state_*.json candle_vA_report_*.json candle_vB_state_*.json candle_vB_report_*.json candle_vC_state_*.json candle_vC_report_*.json
           git diff --cached --quiet || git commit -m "Update candle pattern paper state and reports (v2)"
           git push origin HEAD:main
+
 
 
