@@ -15,6 +15,7 @@ import copy
 import json
 import math
 import os
+import re
 from pathlib import Path
 import tempfile
 import time
@@ -49,8 +50,9 @@ def finite(value):
     return isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value)
 
 
-def fresh_state():
-    return {"balance": START_BALANCE, "position": None, "history": [], "processed_until": 0}
+def fresh_state(symbol=SYMBOL):
+    return {"balance": START_BALANCE, "symbol": symbol, "position": None,
+            "history": [], "processed_until": 0}
 
 
 def validate_state(state):
@@ -63,9 +65,11 @@ def validate_state(state):
         raise ValueError("Invalid state history")
     if not isinstance(state.get("processed_until"), int) or state["processed_until"] < 0:
         raise ValueError("Invalid processed_until")
+    if not isinstance(state.get("symbol"), str) or not state["symbol"]:
+        raise ValueError("Invalid state symbol")
     pos = state.get("position")
     if pos is not None:
-        if pos.get("side") not in ("LONG", "SHORT") or pos.get("symbol") != SYMBOL:
+        if pos.get("side") not in ("LONG", "SHORT") or pos.get("symbol") != state["symbol"]:
             raise ValueError("Invalid position identity")
         for key in ("entry", "stop", "target", "quantity", "margin", "entry_time"):
             if not finite(pos.get(key)) or pos[key] <= 0:
@@ -75,11 +79,14 @@ def validate_state(state):
     return state
 
 
-def load_state(path=STATE_FILE):
+def load_state(path=STATE_FILE, symbol=SYMBOL):
     if not Path(path).exists():
-        return fresh_state()
+        return fresh_state(symbol)
     with open(path, encoding="utf-8") as handle:
-        return validate_state(json.load(handle))
+        state = validate_state(json.load(handle))
+    if state["symbol"] != symbol:
+        raise ValueError(f"State file belongs to {state['symbol']}, not {symbol}")
+    return state
 
 
 def save_state(state, path=STATE_FILE):
@@ -294,9 +301,9 @@ def main():
         parser.error("--leverage must be between 1 and 125")
     if not 0 < args.margin_pct <= 1:
         parser.error("--margin-pct must be in (0, 1]")
-    if args.symbol != SYMBOL:
-        parser.error("state validation is tied to the configured symbol")
-    state = load_state(args.state)
+    if not re.fullmatch(r"[A-Z0-9]{2,30}", args.symbol):
+        parser.error("--symbol must be an uppercase futures symbol like KAITOUSDT")
+    state = load_state(args.state, args.symbol)
     frame = get_candles(args.symbol)
     if frame.empty:
         raise RuntimeError("No valid market data; state left untouched")
