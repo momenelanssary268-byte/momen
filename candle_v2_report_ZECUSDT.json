@@ -1,0 +1,23 @@
+{
+  "balance": 10.065150045000008,
+  "equity": 10.065150045000008,
+  "closed_trades": 1,
+  "wins": 1,
+  "losses": 0,
+  "win_rate_pct": 100.0,
+  "net_realized_pnl": 0.06515004500000673,
+  "profit_factor": null,
+  "open_position": null,
+  "warnings": [],
+  "paper_only": true,
+  "symbol": "ZECUSDT",
+  "strategy": "5 consecutive 1m candles, fade the run",
+  "take_profit_roi_pct": 15.0,
+  "stop_loss_roi_pct": 50.0,
+  "leverage": 50.0,
+  "margin_dollars_per_trade": 1.0,
+  "start_balance": 10.0,
+  "fee_per_side": 0.0006,
+  "slippage_per_side": 0.0005,
+  "last_close": 755.71
+}
