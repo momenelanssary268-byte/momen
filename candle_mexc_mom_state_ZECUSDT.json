@@ -1,7 +1,22 @@
 {
- "balance": 20,
- "symbol": "ZECUSDT",
- "position": null,
- "history": [],
- "processed_until": 1795799631032
+  "balance": 20.0,
+  "symbol": "ZECUSDT",
+  "position": {
+    "symbol": "ZECUSDT",
+    "side": "SHORT",
+    "entry": 743.7079600000001,
+    "stop": 758.5821192000001,
+    "target": 728.8338008000001,
+    "quantity": 0.13446138185746995,
+    "margin": 10.0,
+    "entry_fee": 0.0,
+    "entry_time": 1795799760000,
+    "fee_rate": 0.0,
+    "slippage_rate": 0.0005,
+    "leverage": 10.0,
+    "strategy_version": 1,
+    "analysis": "price -0.144% over the last 5m"
+  },
+  "history": [],
+  "processed_until": 1795799940000
 }
