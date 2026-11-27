@@ -1,7 +1,22 @@
 {
-  "balance": 7.984134880000066,
+  "balance": 7.9541348800000655,
   "symbol": "BTCUSDT",
-  "position": null,
+  "position": {
+    "symbol": "BTCUSDT",
+    "side": "LONG",
+    "entry": 59667.11865,
+    "stop": 59070.44746349999,
+    "target": 59846.12000595,
+    "quantity": 0.0008379824789813276,
+    "margin": 1.0,
+    "entry_fee": 0.03,
+    "entry_time": 1795800360000,
+    "fee_rate": 0.0006,
+    "slippage_rate": 0.0005,
+    "leverage": 50.0,
+    "strategy_version": 1,
+    "analysis": "5 consecutive red 1m candles"
+  },
   "history": [
     {
       "symbol": "BTCUSDT",
@@ -327,5 +342,5 @@
       "accounting_version": 1
     }
   ],
-  "processed_until": 1795800240000
+  "processed_until": 1795800540000
 }

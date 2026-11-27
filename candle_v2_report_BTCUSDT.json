@@ -1,13 +1,28 @@
 {
-  "balance": 7.984134880000066,
-  "equity": 7.984134880000066,
+  "balance": 7.9541348800000655,
+  "equity": 7.942555093416895,
   "closed_trades": 19,
   "wins": 14,
   "losses": 5,
   "win_rate_pct": 73.6842105263158,
   "net_realized_pnl": -2.015865119999943,
   "profit_factor": 0.31094861908335136,
-  "open_position": null,
+  "open_position": {
+    "symbol": "BTCUSDT",
+    "side": "LONG",
+    "entry": 59667.11865,
+    "stop": 59070.44746349999,
+    "target": 59846.12000595,
+    "quantity": 0.0008379824789813276,
+    "margin": 1.0,
+    "entry_fee": 0.03,
+    "entry_time": 1795800360000,
+    "fee_rate": 0.0006,
+    "slippage_rate": 0.0005,
+    "leverage": 50.0,
+    "strategy_version": 1,
+    "analysis": "5 consecutive red 1m candles"
+  },
   "warnings": [],
   "paper_only": true,
   "source": "bitget",
@@ -20,5 +35,5 @@
   "start_balance": 10.0,
   "fee_per_side": 0.0006,
   "slippage_per_side": 0.0005,
-  "last_close": 59821.0
+  "last_close": 59653.3
 }
