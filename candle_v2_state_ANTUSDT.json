@@ -1,7 +1,22 @@
 {
-  "balance": 9.024135090000048,
+  "balance": 8.994135090000048,
   "symbol": "ANTUSDT",
-  "position": null,
+  "position": {
+    "symbol": "ANTUSDT",
+    "side": "LONG",
+    "entry": 86.893425,
+    "stop": 86.02449075,
+    "target": 87.15410527499999,
+    "quantity": 0.5754175301525979,
+    "margin": 1.0,
+    "entry_fee": 0.03,
+    "entry_time": 1795771860000,
+    "fee_rate": 0.0006,
+    "slippage_rate": 0.0005,
+    "leverage": 50.0,
+    "strategy_version": 1,
+    "analysis": "5 consecutive red 1m candles"
+  },
   "history": [
     {
       "symbol": "ANTUSDT",
@@ -259,5 +274,5 @@
       "accounting_version": 1
     }
   ],
-  "processed_until": 1795771560000
+  "processed_until": 1795771860000
 }
