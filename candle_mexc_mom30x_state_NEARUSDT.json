@@ -1,22 +1,7 @@
 {
-  "balance": 19.39994000000007,
+  "balance": 21.188570200000072,
   "symbol": "NEARUSDT",
-  "position": {
-    "symbol": "NEARUSDT",
-    "side": "LONG",
-    "entry": 3.0125055,
-    "stop": 2.99242213,
-    "target": 3.03258887,
-    "quantity": 99.58488042594445,
-    "margin": 10.0,
-    "entry_fee": 0.060000000000000005,
-    "entry_time": 1795801980000,
-    "fee_rate": 0.0002,
-    "slippage_rate": 0.0005,
-    "leverage": 30.0,
-    "strategy_version": 1,
-    "analysis": "price +0.333% over the last 5m"
-  },
+  "position": null,
   "history": [
     {
       "symbol": "NEARUSDT",
@@ -51,7 +36,24 @@
       "entry_time": 1795801260000,
       "exit_time": 1795801920000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": "LONG",
+      "entry": 3.0125055,
+      "exit": 3.031072575565,
+      "quantity": 99.58488042594445,
+      "margin": 10.0,
+      "leverage": 30.0,
+      "gross_pnl": 1.8490000000000035,
+      "entry_fee": 0.060000000000000005,
+      "exit_fee": 0.0603698,
+      "net_pnl": 1.7286302000000036,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795801980000,
+      "exit_time": 1795802340000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795802040000
+  "processed_until": 1795802340000
 }
