@@ -1,13 +1,28 @@
 {
   "balance": 7.548825000000155,
-  "equity": 7.548825000000155,
+  "equity": 7.4470495153441085,
   "closed_trades": 48,
   "wins": 35,
   "losses": 13,
   "win_rate_pct": 72.91666666666667,
   "net_realized_pnl": -2.451174999999848,
   "profit_factor": 0.6409192455594419,
-  "open_position": null,
+  "open_position": {
+    "symbol": "SOLUSDT",
+    "side": "LONG",
+    "entry": 71.625795,
+    "stop": 70.90953705,
+    "target": 71.84067238499999,
+    "quantity": 0.6980725309925007,
+    "margin": 1.0,
+    "entry_fee": 0.0,
+    "entry_time": 1795817460000,
+    "fee_rate": 0.0,
+    "slippage_rate": 0.0005,
+    "leverage": 50.0,
+    "strategy_version": 1,
+    "analysis": "5 consecutive red 1m candles"
+  },
   "warnings": [],
   "paper_only": true,
   "source": "mexc",
@@ -20,5 +35,5 @@
   "start_balance": 10.0,
   "fee_per_side": 0.0,
   "slippage_per_side": 0.0005,
-  "last_close": 71.62
+  "last_close": 71.48
 }

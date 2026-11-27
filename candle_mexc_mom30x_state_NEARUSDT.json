@@ -1,21 +1,21 @@
 {
-  "balance": 16.588569800000098,
+  "balance": 14.319999600000125,
   "symbol": "NEARUSDT",
   "position": {
     "symbol": "NEARUSDT",
-    "side": "LONG",
-    "entry": 3.0525255,
-    "stop": 3.03217533,
-    "target": 3.0728756699999997,
-    "quantity": 98.2792772738508,
+    "side": "SHORT",
+    "entry": 3.0274855,
+    "stop": 3.0476687366666666,
+    "target": 3.0073022633333335,
+    "quantity": 99.09213438016467,
     "margin": 10.0,
     "entry_fee": 0.060000000000000005,
-    "entry_time": 1795807080000,
+    "entry_time": 1795817640000,
     "fee_rate": 0.0002,
     "slippage_rate": 0.0005,
     "leverage": 30.0,
     "strategy_version": 1,
-    "analysis": "price +0.395% over the last 5m"
+    "analysis": "price -0.362% over the last 5m"
   },
   "history": [
     {
@@ -102,7 +102,24 @@
       "entry_time": 1795803060000,
       "exit_time": 1795807020000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": "LONG",
+      "entry": 3.0525255,
+      "exit": 3.030659242335,
+      "quantity": 98.2792772738508,
+      "margin": 10.0,
+      "leverage": 30.0,
+      "gross_pnl": -2.148999999999973,
+      "entry_fee": 0.060000000000000005,
+      "exit_fee": 0.05957020000000001,
+      "net_pnl": -2.268570199999973,
+      "reason": "STOP LOSS",
+      "entry_time": 1795807080000,
+      "exit_time": 1795817580000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795817340000
+  "processed_until": 1795817640000
 }
