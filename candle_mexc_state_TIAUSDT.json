@@ -1,7 +1,22 @@
 {
   "balance": 7.324225000000131,
   "symbol": "TIAUSDT",
-  "position": null,
+  "position": {
+    "symbol": "TIAUSDT",
+    "side": "SHORT",
+    "entry": 0.34372805,
+    "stop": 0.3471653305,
+    "target": 0.34269686585000003,
+    "quantity": 145.4638339815444,
+    "margin": 1.0,
+    "entry_fee": 0.0,
+    "entry_time": 1795775580000,
+    "fee_rate": 0.0,
+    "slippage_rate": 0.0005,
+    "leverage": 50.0,
+    "strategy_version": 1,
+    "analysis": "5 consecutive green 1m candles"
+  },
   "history": [
     {
       "symbol": "TIAUSDT",
@@ -701,5 +716,5 @@
       "accounting_version": 1
     }
   ],
-  "processed_until": 1795775460000
+  "processed_until": 1795775760000
 }
