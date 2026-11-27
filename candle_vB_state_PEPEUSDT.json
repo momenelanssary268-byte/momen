@@ -1,21 +1,21 @@
 {
-  "balance": 3.9293688000000904,
+  "balance": 4.144053890000094,
   "symbol": "PEPEUSDT",
   "position": {
     "symbol": "PEPEUSDT",
-    "side": "LONG",
-    "entry": 3.4636309499999996e-06,
-    "stop": 3.4289946404999995e-06,
-    "target": 3.4844127356999996e-06,
-    "quantity": 14435718.10097147,
+    "side": "SHORT",
+    "entry": 3.4882550000000004e-06,
+    "stop": 3.5231375500000003e-06,
+    "target": 3.4673254700000005e-06,
+    "quantity": 14333814.471705765,
     "margin": 1.0,
     "entry_fee": 0.03,
-    "entry_time": 1795801260000,
+    "entry_time": 1795801980000,
     "fee_rate": 0.0006,
     "slippage_rate": 0.0005,
     "leverage": 50.0,
     "strategy_version": 1,
-    "analysis": "5 consecutive red 1m candles"
+    "analysis": "5 consecutive green 1m candles"
   },
   "history": [
     {
@@ -425,7 +425,24 @@
       "entry_time": 1795794180000,
       "exit_time": 1795801140000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "side": "LONG",
+      "entry": 3.4636309499999996e-06,
+      "exit": 3.48267052933215e-06,
+      "quantity": 14435718.10097147,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": 0.27485000000000376,
+      "entry_fee": 0.03,
+      "exit_fee": 0.030164910000000003,
+      "net_pnl": 0.21468509000000377,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795801260000,
+      "exit_time": 1795801860000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795801740000
+  "processed_until": 1795802040000
 }
