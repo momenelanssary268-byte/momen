@@ -1,28 +1,13 @@
 {
-  "balance": 4.012639640000181,
-  "equity": 3.923417900254609,
-  "closed_trades": 56,
-  "wins": 32,
+  "balance": 4.107789685000187,
+  "equity": 4.107789685000187,
+  "closed_trades": 57,
+  "wins": 33,
   "losses": 24,
-  "win_rate_pct": 57.142857142857146,
-  "net_realized_pnl": -5.957360359999815,
-  "profit_factor": 0.25887455419778915,
-  "open_position": {
-    "symbol": "ZECUSDT",
-    "side": "SHORT",
-    "entry": 747.556035,
-    "stop": 751.293815175,
-    "target": 745.313366895,
-    "quantity": 0.06688461822129495,
-    "margin": 1.0,
-    "entry_fee": 0.03,
-    "entry_time": 1795807020000,
-    "fee_rate": 0.0006,
-    "slippage_rate": 0.0005,
-    "leverage": 50.0,
-    "strategy_version": 1,
-    "analysis": "5 consecutive green 1m candles"
-  },
+  "win_rate_pct": 57.89473684210526,
+  "net_realized_pnl": -5.892210314999809,
+  "profit_factor": 0.2669795458764636,
+  "open_position": null,
   "warnings": [],
   "paper_only": true,
   "source": "bitget",
@@ -35,5 +20,5 @@
   "start_balance": 10.0,
   "fee_per_side": 0.0006,
   "slippage_per_side": 0.0005,
-  "last_close": 748.89
+  "last_close": 745.49
 }
