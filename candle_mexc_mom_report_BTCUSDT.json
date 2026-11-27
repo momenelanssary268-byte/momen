@@ -1,27 +1,27 @@
 {
-  "balance": 18.920604949999998,
-  "equity": 19.500152683644693,
-  "closed_trades": 1,
-  "wins": 0,
+  "balance": 19.85120000000001,
+  "equity": 20.430483979550644,
+  "closed_trades": 2,
+  "wins": 1,
   "losses": 1,
-  "win_rate_pct": 0.0,
-  "net_realized_pnl": -1.0693950499999976,
-  "profit_factor": 0.0,
+  "win_rate_pct": 50.0,
+  "net_realized_pnl": -0.1387999999999855,
+  "profit_factor": 0.8702069922616662,
   "open_position": {
     "symbol": "BTCUSDT",
     "side": "SHORT",
-    "entry": 61104.932250000005,
-    "stop": 61715.98157250001,
-    "target": 60493.8829275,
-    "quantity": 0.0016365291035896697,
+    "entry": 60367.80100000001,
+    "stop": 60971.47901000001,
+    "target": 59764.12299,
+    "quantity": 0.001656512219154711,
     "margin": 10.0,
     "entry_fee": 0.01,
-    "entry_time": 1795789860000,
+    "entry_time": 1795790340000,
     "fee_rate": 0.0001,
     "slippage_rate": 0.0005,
     "leverage": 10.0,
     "strategy_version": 1,
-    "analysis": "price -0.328% over the last 5m"
+    "analysis": "price -0.900% over the last 5m"
   },
   "warnings": [],
   "paper_only": true,
@@ -35,5 +35,5 @@
   "start_balance": 20.0,
   "fee_per_side": 0.0001,
   "slippage_per_side": 0.0005,
-  "last_close": 60750.8
+  "last_close": 60018.1
 }
