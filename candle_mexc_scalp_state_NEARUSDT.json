@@ -1,7 +1,22 @@
 {
-  "balance": 19.419280050000033,
+  "balance": 18.87948502500003,
   "symbol": "NEARUSDT",
-  "position": null,
+  "position": {
+    "symbol": "NEARUSDT",
+    "side": "LONG",
+    "entry": 3.0385185,
+    "stop": 3.03092220375,
+    "target": 3.04611479625,
+    "quantity": 32.91077543217196,
+    "margin": 10.0,
+    "entry_fee": 0.02,
+    "entry_time": 1795802640000,
+    "fee_rate": 0.0002,
+    "slippage_rate": 0.0005,
+    "leverage": 10.0,
+    "strategy_version": 1,
+    "analysis": "price +0.231% over the last 5m"
+  },
   "history": [
     {
       "symbol": "NEARUSDT",
@@ -206,7 +221,58 @@
       "entry_time": 1795802100000,
       "exit_time": 1795802340000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": "LONG",
+      "entry": 3.0505245,
+      "exit": 3.041376739655625,
+      "quantity": 32.78124794604994,
+      "margin": 10.0,
+      "leverage": 10.0,
+      "gross_pnl": -0.2998750000000011,
+      "entry_fee": 0.02,
+      "exit_fee": 0.019940025,
+      "net_pnl": -0.33981502500000116,
+      "reason": "STOP LOSS",
+      "entry_time": 1795802400000,
+      "exit_time": 1795802400000,
+      "accounting_version": 1
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": "LONG",
+      "entry": 3.0365175,
+      "exit": 3.042586739353125,
+      "quantity": 32.93246292833814,
+      "margin": 10.0,
+      "leverage": 10.0,
+      "gross_pnl": 0.19987499999999928,
+      "entry_fee": 0.02,
+      "exit_fee": 0.020039975,
+      "net_pnl": 0.15983502499999927,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795802460000,
+      "exit_time": 1795802460000,
+      "accounting_version": 1
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": "LONG",
+      "entry": 3.045522,
+      "exit": 3.0363892409025,
+      "quantity": 32.835093622702445,
+      "margin": 10.0,
+      "leverage": 10.0,
+      "gross_pnl": -0.29987500000000356,
+      "entry_fee": 0.02,
+      "exit_fee": 0.019940025,
+      "net_pnl": -0.3398150250000036,
+      "reason": "STOP LOSS",
+      "entry_time": 1795802520000,
+      "exit_time": 1795802580000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795802340000
+  "processed_until": 1795802640000
 }

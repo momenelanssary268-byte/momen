@@ -1,7 +1,22 @@
 {
-  "balance": 19.09937500000009,
+  "balance": 18.699500000000103,
   "symbol": "ZECUSDT",
-  "position": null,
+  "position": {
+    "symbol": "ZECUSDT",
+    "side": "SHORT",
+    "entry": 744.537545,
+    "stop": 746.3988888625,
+    "target": 742.6762011375,
+    "quantity": 0.1343115611449789,
+    "margin": 10.0,
+    "entry_fee": 0.0,
+    "entry_time": 1795802640000,
+    "fee_rate": 0.0,
+    "slippage_rate": 0.0005,
+    "leverage": 10.0,
+    "strategy_version": 1,
+    "analysis": "price -0.142% over the last 5m"
+  },
   "history": [
     {
       "symbol": "ZECUSDT",
@@ -393,7 +408,58 @@
       "entry_time": 1795802280000,
       "exit_time": 1795802340000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": "LONG",
+      "entry": 748.3739999999999,
+      "exit": 746.1298134675,
+      "quantity": 0.13362302805816345,
+      "margin": 10.0,
+      "leverage": 10.0,
+      "gross_pnl": -0.29987499999999373,
+      "entry_fee": 0.0,
+      "exit_fee": 0.0,
+      "net_pnl": -0.29987499999999373,
+      "reason": "STOP LOSS",
+      "entry_time": 1795802400000,
+      "exit_time": 1795802400000,
+      "accounting_version": 1
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": "LONG",
+      "entry": 745.602615,
+      "exit": 747.0928882267314,
+      "quantity": 0.13411970128350476,
+      "margin": 10.0,
+      "leverage": 10.0,
+      "gross_pnl": 0.199875000000013,
+      "entry_fee": 0.0,
+      "exit_fee": 0.0,
+      "net_pnl": 0.199875000000013,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795802460000,
+      "exit_time": 1795802460000,
+      "accounting_version": 1
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": "LONG",
+      "entry": 747.563595,
+      "exit": 745.3218386694937,
+      "quantity": 0.13376788365409903,
+      "margin": 10.0,
+      "leverage": 10.0,
+      "gross_pnl": -0.29987500000000555,
+      "entry_fee": 0.0,
+      "exit_fee": 0.0,
+      "net_pnl": -0.29987500000000555,
+      "reason": "STOP LOSS",
+      "entry_time": 1795802520000,
+      "exit_time": 1795802520000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795802340000
+  "processed_until": 1795802640000
 }

@@ -1,5 +1,5 @@
 {
-  "balance": 5.837854415000106,
+  "balance": 5.902704460000109,
   "symbol": "ANTUSDT",
   "position": null,
   "history": [
@@ -444,7 +444,24 @@
       "entry_time": 1795799520000,
       "exit_time": 1795800240000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "ANTUSDT",
+      "side": "LONG",
+      "entry": 91.375665,
+      "exit": 91.6039670990025,
+      "quantity": 0.547191640137448,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": 0.1249250000000028,
+      "entry_fee": 0.03,
+      "exit_fee": 0.030074955,
+      "net_pnl": 0.0648500450000028,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795802460000,
+      "exit_time": 1795802580000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795802340000
+  "processed_until": 1795802640000
 }
