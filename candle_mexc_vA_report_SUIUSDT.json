@@ -1,27 +1,27 @@
 {
-  "balance": 8.144540045000161,
-  "equity": 8.177578031936772,
-  "closed_trades": 51,
-  "wins": 33,
+  "balance": 8.249640060000168,
+  "equity": 8.253771279168438,
+  "closed_trades": 52,
+  "wins": 34,
   "losses": 18,
-  "win_rate_pct": 64.70588235294117,
-  "net_realized_pnl": -1.845459954999851,
-  "profit_factor": 0.6524793425275167,
+  "win_rate_pct": 65.38461538461539,
+  "net_realized_pnl": -1.740359939999845,
+  "profit_factor": 0.6722708455694631,
   "open_position": {
     "symbol": "SUIUSDT",
-    "side": "SHORT",
-    "entry": 0.6890553,
-    "stop": 0.6925005765000001,
-    "target": 0.6869881341,
-    "quantity": 72.56311648716728,
+    "side": "LONG",
+    "entry": 0.68684325,
+    "stop": 0.6834090337500001,
+    "target": 0.6889037797500001,
+    "quantity": 72.79681353787782,
     "margin": 1.0,
     "entry_fee": 0.01,
-    "entry_time": 1795767540000,
+    "entry_time": 1795768260000,
     "fee_rate": 0.0002,
     "slippage_rate": 0.0005,
     "leverage": 50.0,
     "strategy_version": 1,
-    "analysis": "5 consecutive green 1m candles"
+    "analysis": "5 consecutive red 1m candles"
   },
   "warnings": [],
   "paper_only": true,
@@ -35,5 +35,5 @@
   "start_balance": 10.0,
   "fee_per_side": 0.0002,
   "slippage_per_side": 0.0005,
-  "last_close": 0.6886
+  "last_close": 0.6869
 }
