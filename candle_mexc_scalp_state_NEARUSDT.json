@@ -1,22 +1,7 @@
 {
-  "balance": 19.61963000000002,
+  "balance": 19.119794975000016,
   "symbol": "NEARUSDT",
-  "position": {
-    "symbol": "NEARUSDT",
-    "side": "SHORT",
-    "entry": 3.0154915,
-    "stop": 3.02303022875,
-    "target": 3.00795277125,
-    "quantity": 33.162089828474066,
-    "margin": 10.0,
-    "entry_fee": 0.02,
-    "entry_time": 1795800840000,
-    "fee_rate": 0.0002,
-    "slippage_rate": 0.0005,
-    "leverage": 10.0,
-    "strategy_version": 1,
-    "analysis": "price -0.462% over the last 5m"
-  },
+  "position": null,
   "history": [
     {
       "symbol": "NEARUSDT",
@@ -85,7 +70,58 @@
       "entry_time": 1795800660000,
       "exit_time": 1795800780000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": "SHORT",
+      "entry": 3.0154915,
+      "exit": 3.024541743864375,
+      "quantity": 33.162089828474066,
+      "margin": 10.0,
+      "leverage": 10.0,
+      "gross_pnl": -0.3001250000000047,
+      "entry_fee": 0.02,
+      "exit_fee": 0.020060025000000002,
+      "net_pnl": -0.3401850250000047,
+      "reason": "STOP LOSS",
+      "entry_time": 1795800840000,
+      "exit_time": 1795800900000,
+      "accounting_version": 1
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": "LONG",
+      "entry": 3.0235109999999996,
+      "exit": 3.01444424638875,
+      "quantity": 33.07413136581941,
+      "margin": 10.0,
+      "leverage": 10.0,
+      "gross_pnl": -0.2998749999999883,
+      "entry_fee": 0.02,
+      "exit_fee": 0.019940025000000004,
+      "net_pnl": -0.33981502499998834,
+      "reason": "STOP LOSS",
+      "entry_time": 1795800960000,
+      "exit_time": 1795800960000,
+      "accounting_version": 1
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": "SHORT",
+      "entry": 3.008495,
+      "exit": 3.00247424938125,
+      "quantity": 33.23921096761005,
+      "margin": 10.0,
+      "leverage": 10.0,
+      "gross_pnl": 0.20012499999999125,
+      "entry_fee": 0.02,
+      "exit_fee": 0.019959975,
+      "net_pnl": 0.16016502499999127,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795801080000,
+      "exit_time": 1795801140000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795800840000
+  "processed_until": 1795801140000
 }
