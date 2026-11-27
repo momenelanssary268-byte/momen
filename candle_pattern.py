@@ -42,6 +42,8 @@ LEVERAGE = 50.0
 MARGIN_DOLLARS = 4.0
 CANDLE_LIMIT = 200
 STRATEGY_VERSION = 1
+MOM_WINDOW = 5
+MOM_THRESHOLD_PCT = 0.1
 
 SESSION = requests.Session()
 SESSION.mount("https://", HTTPAdapter(max_retries=Retry(
@@ -208,8 +210,29 @@ def detect_signal(frame, idx):
     return None
 
 
+def detect_signal_momentum(frame, idx, window, threshold_pct):
+    """Momentum in the completed bars ending just before bar idx.
+
+    Returns ("LONG", analysis) when the last completed close is up at least
+    threshold_pct percent versus the close `window` bars earlier, ("SHORT",
+    analysis) when down at least that much, otherwise (None, None).
+    Uses only bars strictly before idx: no look-ahead.
+    """
+    if idx < window + 1:
+        return None, None
+    recent = float(frame.iloc[idx - 1]["close"])
+    past = float(frame.iloc[idx - 1 - window]["close"])
+    change_pct = (recent - past) / past * 100
+    analysis = f"price {change_pct:+.3f}% over the last {window}m"
+    if change_pct >= threshold_pct:
+        return "LONG", analysis
+    if change_pct <= -threshold_pct:
+        return "SHORT", analysis
+    return None, None
+
+
 def open_position(state, symbol, side, raw_price, entry_time, leverage, margin_dollars,
-                  fee=FEE, slippage=SLIPPAGE, tp_roi=TP_ROI, sl_roi=SL_ROI):
+                  fee=FEE, slippage=SLIPPAGE, tp_roi=TP_ROI, sl_roi=SL_ROI, analysis=None):
     if state["position"] is not None or state["balance"] <= 0:
         return False
     direction = 1 if side == "LONG" else -1
@@ -228,7 +251,8 @@ def open_position(state, symbol, side, raw_price, entry_time, leverage, margin_d
         "entry_fee": entry_fee, "entry_time": int(entry_time),
         "fee_rate": fee, "slippage_rate": slippage, "leverage": leverage,
         "strategy_version": STRATEGY_VERSION,
-        "analysis": f"{PATTERN} consecutive {'red' if side == 'LONG' else 'green'} 1m candles"}
+        "analysis": analysis if analysis is not None else
+            f"{PATTERN} consecutive {'red' if side == 'LONG' else 'green'} 1m candles"}
     return True
 
 
@@ -291,7 +315,8 @@ def metrics(state, last_close):
 
 
 def run_cycle(state, frame, symbol, leverage, margin_dollars, tp_roi=TP_ROI, sl_roi=SL_ROI,
-              fee=FEE):
+              fee=FEE, strategy="candles", mom_window=MOM_WINDOW,
+              mom_threshold_pct=MOM_THRESHOLD_PCT):
     """Replay unseen closed 1-minute bars in order.
 
     Every unseen bar first manages the open paper position, then may open a new
@@ -301,7 +326,8 @@ def run_cycle(state, frame, symbol, leverage, margin_dollars, tp_roi=TP_ROI, sl_
     """
     state = copy.deepcopy(state)
     warnings = []
-    if len(frame) < PATTERN + 1:
+    min_bars = mom_window + 2 if strategy == "momentum" else PATTERN + 1
+    if len(frame) < min_bars:
         warnings.append(f"{symbol}: insufficient candle history")
         return state, {"warnings": warnings}, frame["close"].iloc[-1] if len(frame) else None
     if not frame["time"].diff().dropna().eq(MINUTE).all():
@@ -321,10 +347,15 @@ def run_cycle(state, frame, symbol, leverage, margin_dollars, tp_roi=TP_ROI, sl_
             # Enter only when the bot was flat at this bar's open. A bar that
             # just closed a position already passed its open price, so the
             # earliest honest re-entry is the next bar.
-            side = detect_signal(frame, idx)
+            if strategy == "momentum":
+                side, analysis = detect_signal_momentum(frame, idx, mom_window,
+                                                        mom_threshold_pct)
+            else:
+                side, analysis = detect_signal(frame, idx), None
             if side:
                 open_position(state, symbol, side, float(bar["open"]), int(bar["time"]),
-                              leverage, margin_dollars, tp_roi=tp_roi, sl_roi=sl_roi, fee=fee)
+                              leverage, margin_dollars, tp_roi=tp_roi, sl_roi=sl_roi,
+                              fee=fee, analysis=analysis)
                 manage_bar(state, bar)  # entry bar is live for the new position
         state["processed_until"] = int(bar["time"])
     report = metrics(state, last_close)
@@ -346,6 +377,12 @@ def main():
                         help="stop-loss ROI percent (default 50)")
     parser.add_argument("--source", choices=["bitget", "mexc"], default="bitget",
                         help="price data source (default bitget)")
+    parser.add_argument("--strategy", choices=["candles", "momentum"], default="candles",
+                        help="entry rule (default candles)")
+    parser.add_argument("--mom-window", type=int, default=MOM_WINDOW,
+                        help="momentum lookback in minutes (default 5)")
+    parser.add_argument("--mom-threshold", type=float, default=MOM_THRESHOLD_PCT,
+                        help="momentum trigger percent over the window (default 0.1)")
     args = parser.parse_args()
     if not 1 <= args.leverage <= 125:
         parser.error("--leverage must be between 1 and 125")
@@ -359,6 +396,10 @@ def main():
         parser.error("--tp-roi must be in (0, 1000]")
     if not 0 < args.sl_roi <= 1000:
         parser.error("--sl-roi must be in (0, 1000]")
+    if not 1 <= args.mom_window <= 60:
+        parser.error("--mom-window must be in [1, 60]")
+    if not 0 < args.mom_threshold <= 10:
+        parser.error("--mom-threshold must be in (0, 10]")
     state = load_state(args.state, args.symbol, args.start_balance)
     if args.source == "mexc":
         frame = get_candles_mexc(args.symbol)
@@ -371,12 +412,16 @@ def main():
     updated, report, last_close = run_cycle(state, frame, args.symbol,
                                             args.leverage, args.margin,
                                             tp_roi=args.tp_roi / 100, sl_roi=args.sl_roi / 100,
-                                            fee=fee)
+                                            fee=fee, strategy=args.strategy,
+                                            mom_window=args.mom_window,
+                                            mom_threshold_pct=args.mom_threshold)
     report.update({
         "paper_only": True,
         "source": args.source,
         "symbol": args.symbol,
-        "strategy": f"{PATTERN} consecutive 1m candles, fade the run",
+        "strategy": (f"momentum {args.mom_threshold}% over {args.mom_window}m, ride the move"
+                     if args.strategy == "momentum"
+                     else f"{PATTERN} consecutive 1m candles, fade the run"),
         "take_profit_roi_pct": args.tp_roi,
         "stop_loss_roi_pct": args.sl_roi,
         "leverage": args.leverage,
