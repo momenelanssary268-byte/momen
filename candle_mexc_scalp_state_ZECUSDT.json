@@ -1,21 +1,21 @@
 {
-  "balance": 19.10012500000009,
+  "balance": 18.70000000000009,
   "symbol": "ZECUSDT",
   "position": {
     "symbol": "ZECUSDT",
     "side": "SHORT",
-    "entry": 731.93385,
-    "stop": 733.763684625,
-    "target": 730.104015375,
-    "quantity": 0.13662436844531783,
+    "entry": 730.904365,
+    "stop": 732.7316259125,
+    "target": 729.0771040875,
+    "quantity": 0.13681680502756335,
     "margin": 10.0,
     "entry_fee": 0.0,
-    "entry_time": 1795801080000,
+    "entry_time": 1795801440000,
     "fee_rate": 0.0,
     "slippage_rate": 0.0005,
     "leverage": 10.0,
     "strategy_version": 1,
-    "analysis": "price -0.164% over the last 5m"
+    "analysis": "price -0.145% over the last 5m"
   },
   "history": [
     {
@@ -238,7 +238,58 @@
       "entry_time": 1795800960000,
       "exit_time": 1795800960000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": "SHORT",
+      "entry": 731.93385,
+      "exit": 730.4690673826875,
+      "quantity": 0.13662436844531783,
+      "margin": 10.0,
+      "leverage": 10.0,
+      "gross_pnl": 0.2001249999999992,
+      "entry_fee": 0.0,
+      "exit_fee": 0.0,
+      "net_pnl": 0.2001249999999992,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795801080000,
+      "exit_time": 1795801200000,
+      "accounting_version": 1
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": "SHORT",
+      "entry": 727.8958700000001,
+      "exit": 730.0804674798376,
+      "quantity": 0.13738228793632254,
+      "margin": 10.0,
+      "leverage": 10.0,
+      "gross_pnl": -0.30012500000000286,
+      "entry_fee": 0.0,
+      "exit_fee": 0.0,
+      "net_pnl": -0.30012500000000286,
+      "reason": "STOP LOSS",
+      "entry_time": 1795801260000,
+      "exit_time": 1795801320000,
+      "accounting_version": 1
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": "SHORT",
+      "entry": 729.7149600000001,
+      "exit": 731.9050170237001,
+      "quantity": 0.13703981072280605,
+      "margin": 10.0,
+      "leverage": 10.0,
+      "gross_pnl": -0.300124999999997,
+      "entry_fee": 0.0,
+      "exit_fee": 0.0,
+      "net_pnl": -0.300124999999997,
+      "reason": "STOP LOSS",
+      "entry_time": 1795801380000,
+      "exit_time": 1795801380000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795801140000
+  "processed_until": 1795801440000
 }

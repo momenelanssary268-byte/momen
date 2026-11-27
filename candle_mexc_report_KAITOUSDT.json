@@ -1,13 +1,28 @@
 {
   "balance": 9.650600000000045,
-  "equity": 9.650600000000045,
+  "equity": 9.722213677697283,
   "closed_trades": 18,
   "wins": 14,
   "losses": 4,
   "win_rate_pct": 77.77777777777777,
   "net_realized_pnl": -0.3493999999999563,
   "profit_factor": 0.8336190476190672,
-  "open_position": null,
+  "open_position": {
+    "symbol": "KAITOUSDT",
+    "side": "LONG",
+    "entry": 0.1552776,
+    "stop": 0.15372482399999998,
+    "target": 0.1557434328,
+    "quantity": 322.0039464803681,
+    "margin": 1.0,
+    "entry_fee": 0.0,
+    "entry_time": 1795801260000,
+    "fee_rate": 0.0,
+    "slippage_rate": 0.0005,
+    "leverage": 50.0,
+    "strategy_version": 1,
+    "analysis": "5 consecutive red 1m candles"
+  },
   "warnings": [],
   "paper_only": true,
   "source": "mexc",
@@ -20,5 +35,5 @@
   "start_balance": 10.0,
   "fee_per_side": 0.0,
   "slippage_per_side": 0.0005,
-  "last_close": 0.1553
+  "last_close": 0.1555
 }
