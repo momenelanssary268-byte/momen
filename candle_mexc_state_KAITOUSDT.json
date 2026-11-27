@@ -1,7 +1,22 @@
 {
   "balance": 9.92520000000003,
   "symbol": "KAITOUSDT",
-  "position": null,
+  "position": {
+    "symbol": "KAITOUSDT",
+    "side": "SHORT",
+    "entry": 0.15672160000000002,
+    "stop": 0.15828881600000003,
+    "target": 0.1562514352,
+    "quantity": 319.0370695551857,
+    "margin": 1.0,
+    "entry_fee": 0.0,
+    "entry_time": 1795741980000,
+    "fee_rate": 0.0,
+    "slippage_rate": 0.0005,
+    "leverage": 50.0,
+    "strategy_version": 1,
+    "analysis": "5 consecutive green 1m candles"
+  },
   "history": [
     {
       "symbol": "KAITOUSDT",
@@ -259,5 +274,5 @@
       "accounting_version": 1
     }
   ],
-  "processed_until": 1795741860000
+  "processed_until": 1795742160000
 }
