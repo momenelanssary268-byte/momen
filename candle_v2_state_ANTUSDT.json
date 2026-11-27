@@ -1,22 +1,7 @@
 {
-  "balance": 8.928985045000042,
+  "balance": 9.024135090000048,
   "symbol": "ANTUSDT",
-  "position": {
-    "symbol": "ANTUSDT",
-    "side": "SHORT",
-    "entry": 89.025465,
-    "stop": 89.91571965,
-    "target": 88.758388605,
-    "quantity": 0.5616370551953871,
-    "margin": 1.0,
-    "entry_fee": 0.03,
-    "entry_time": 1795767120000,
-    "fee_rate": 0.0006,
-    "slippage_rate": 0.0005,
-    "leverage": 50.0,
-    "strategy_version": 1,
-    "analysis": "5 consecutive green 1m candles"
-  },
+  "position": null,
   "history": [
     {
       "symbol": "ANTUSDT",
@@ -255,7 +240,24 @@
       "entry_time": 1795765740000,
       "exit_time": 1795767060000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "ANTUSDT",
+      "side": "SHORT",
+      "entry": 89.025465,
+      "exit": 88.80276779930249,
+      "quantity": 0.5616370551953871,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": 0.1250750000000058,
+      "entry_fee": 0.03,
+      "exit_fee": 0.029924954999999996,
+      "net_pnl": 0.06515004500000579,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795767120000,
+      "exit_time": 1795767420000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795767360000
+  "processed_until": 1795767660000
 }
