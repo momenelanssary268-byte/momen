@@ -1,13 +1,28 @@
 {
-  "balance": 10.886315750000074,
-  "equity": 10.886315750000074,
+  "balance": 10.856315750000075,
+  "equity": 10.837079108251903,
   "closed_trades": 19,
   "wins": 15,
   "losses": 4,
   "win_rate_pct": 78.94736842105263,
   "net_realized_pnl": 0.8863157500000639,
   "profit_factor": 1.3791334889765223,
-  "open_position": null,
+  "open_position": {
+    "symbol": "TRUMPUSDT",
+    "side": "LONG",
+    "entry": 0.8694345,
+    "stop": 0.860740155,
+    "target": 0.874651107,
+    "quantity": 57.50864498705768,
+    "margin": 1.0,
+    "entry_fee": 0.03,
+    "entry_time": 1795808820000,
+    "fee_rate": 0.0006,
+    "slippage_rate": 0.0005,
+    "leverage": 50.0,
+    "strategy_version": 1,
+    "analysis": "5 consecutive red 1m candles"
+  },
   "warnings": [],
   "paper_only": true,
   "source": "bitget",
@@ -20,5 +35,5 @@
   "start_balance": 10.0,
   "fee_per_side": 0.0006,
   "slippage_per_side": 0.0005,
-  "last_close": 0.8712
+  "last_close": 0.8691
 }
