@@ -1,7 +1,22 @@
 {
-  "balance": 7.080159960000168,
+  "balance": 7.0701599600001686,
   "symbol": "NEARUSDT",
-  "position": null,
+  "position": {
+    "symbol": "NEARUSDT",
+    "side": "LONG",
+    "entry": 3.0945465,
+    "stop": 3.0790737674999997,
+    "target": 3.1038301395,
+    "quantity": 16.157456351035606,
+    "margin": 1.0,
+    "entry_fee": 0.01,
+    "entry_time": 1795780140000,
+    "fee_rate": 0.0002,
+    "slippage_rate": 0.0005,
+    "leverage": 50.0,
+    "strategy_version": 1,
+    "analysis": "5 consecutive red 1m candles"
+  },
   "history": [
     {
       "symbol": "NEARUSDT",
@@ -956,5 +971,5 @@
       "accounting_version": 1
     }
   ],
-  "processed_until": 1795779540000
+  "processed_until": 1795780200000
 }

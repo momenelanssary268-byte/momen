@@ -1,7 +1,22 @@
 {
   "balance": 20.0,
   "symbol": "SOLUSDT",
-  "position": null,
+  "position": {
+    "symbol": "SOLUSDT",
+    "side": "SHORT",
+    "entry": 73.133415,
+    "stop": 74.5960833,
+    "target": 71.6707467,
+    "quantity": 1.3673640154777402,
+    "margin": 10.0,
+    "entry_fee": 0.0,
+    "entry_time": 1795779900000,
+    "fee_rate": 0.0,
+    "slippage_rate": 0.0005,
+    "leverage": 10.0,
+    "strategy_version": 1,
+    "analysis": "price -0.123% over the last 5m"
+  },
   "history": [],
-  "processed_until": 1795779840000
+  "processed_until": 1795780200000
 }
