@@ -1,22 +1,7 @@
 {
-  "balance": 7.829840000000145,
+  "balance": 7.944740015000148,
   "symbol": "SUIUSDT",
-  "position": {
-    "symbol": "SUIUSDT",
-    "side": "LONG",
-    "entry": 0.6851423999999999,
-    "stop": 0.681716688,
-    "target": 0.6871978271999999,
-    "quantity": 72.97752992662548,
-    "margin": 1.0,
-    "entry_fee": 0.01,
-    "entry_time": 1795756500000,
-    "fee_rate": 0.0002,
-    "slippage_rate": 0.0005,
-    "leverage": 50.0,
-    "strategy_version": 1,
-    "analysis": "5 consecutive red 1m candles"
-  },
+  "position": null,
   "history": [
     {
       "symbol": "SUIUSDT",
@@ -833,7 +818,24 @@
       "entry_time": 1795754040000,
       "exit_time": 1795755960000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": "LONG",
+      "entry": 0.6851423999999999,
+      "exit": 0.6868542282864,
+      "quantity": 72.97752992662548,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": 0.12492500000000302,
+      "entry_fee": 0.01,
+      "exit_fee": 0.010024985000000002,
+      "net_pnl": 0.10490001500000302,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795756500000,
+      "exit_time": 1795757400000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795757160000
+  "processed_until": 1795757460000
 }
