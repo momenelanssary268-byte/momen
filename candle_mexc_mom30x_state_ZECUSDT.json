@@ -1,21 +1,21 @@
 {
-  "balance": 22.50000000000032,
+  "balance": 24.35100000000032,
   "symbol": "ZECUSDT",
   "position": {
     "symbol": "ZECUSDT",
     "side": "SHORT",
-    "entry": 742.5685300000001,
-    "stop": 747.5189868666668,
-    "target": 737.6180731333335,
-    "quantity": 0.4040031160491005,
+    "entry": 737.6010150000001,
+    "stop": 742.5183551000001,
+    "target": 732.6836749,
+    "quantity": 0.406723952244019,
     "margin": 10.0,
     "entry_fee": 0.0,
-    "entry_time": 1795809120000,
+    "entry_time": 1795812720000,
     "fee_rate": 0.0,
     "slippage_rate": 0.0005,
     "leverage": 30.0,
     "strategy_version": 1,
-    "analysis": "price -0.278% over the last 5m"
+    "analysis": "price -0.324% over the last 5m"
   },
   "history": [
     {
@@ -187,7 +187,24 @@
       "entry_time": 1795806240000,
       "exit_time": 1795809060000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": "SHORT",
+      "entry": 742.5685300000001,
+      "exit": 737.9868821699001,
+      "quantity": 0.4040031160491005,
+      "margin": 10.0,
+      "leverage": 30.0,
+      "gross_pnl": 1.8509999999999982,
+      "entry_fee": 0.0,
+      "exit_fee": 0.0,
+      "net_pnl": 1.8509999999999982,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795809120000,
+      "exit_time": 1795812660000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795812540000
+  "processed_until": 1795812840000
 }
