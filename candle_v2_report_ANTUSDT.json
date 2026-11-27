@@ -1,13 +1,28 @@
 {
-  "balance": 8.504549985000063,
-  "equity": 8.504549985000063,
+  "balance": 8.474549985000063,
+  "equity": 8.536537500496951,
   "closed_trades": 17,
   "wins": 13,
   "losses": 4,
   "win_rate_pct": 76.47058823529412,
   "net_realized_pnl": -1.4954500149999483,
   "profit_factor": 0.36091896087549996,
-  "open_position": null,
+  "open_position": {
+    "symbol": "ANTUSDT",
+    "side": "SHORT",
+    "entry": 86.20687500000001,
+    "stop": 87.06894375000002,
+    "target": 85.948254375,
+    "quantity": 0.5800001450000362,
+    "margin": 1.0,
+    "entry_fee": 0.03,
+    "entry_time": 1795775160000,
+    "fee_rate": 0.0006,
+    "slippage_rate": 0.0005,
+    "leverage": 50.0,
+    "strategy_version": 1,
+    "analysis": "5 consecutive green 1m candles"
+  },
   "warnings": [],
   "paper_only": true,
   "source": "bitget",
@@ -20,5 +35,5 @@
   "start_balance": 10.0,
   "fee_per_side": 0.0006,
   "slippage_per_side": 0.0005,
-  "last_close": 85.68
+  "last_close": 86.1
 }
