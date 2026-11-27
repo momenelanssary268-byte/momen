@@ -1,12 +1,12 @@
 {
-  "balance": 8.114849715000027,
-  "equity": 8.114849715000027,
-  "closed_trades": 11,
-  "wins": 7,
+  "balance": 8.179999760000033,
+  "equity": 8.179999760000033,
+  "closed_trades": 12,
+  "wins": 8,
   "losses": 4,
-  "win_rate_pct": 63.63636363636363,
-  "net_realized_pnl": -1.8851502849999804,
-  "profit_factor": 0.19438042665459446,
+  "win_rate_pct": 66.66666666666667,
+  "net_realized_pnl": -1.820000239999975,
+  "profit_factor": 0.22222231908829967,
   "open_position": null,
   "warnings": [],
   "paper_only": true,
@@ -20,5 +20,5 @@
   "start_balance": 10.0,
   "fee_per_side": 0.0006,
   "slippage_per_side": 0.0005,
-  "last_close": 0.6721
+  "last_close": 0.6778
 }
