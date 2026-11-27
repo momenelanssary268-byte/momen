@@ -1,5 +1,5 @@
 {
-  "balance": 6.125174950000232,
+  "balance": 6.230274965000236,
   "symbol": "SUIUSDT",
   "position": null,
   "history": [
@@ -1277,7 +1277,24 @@
       "entry_time": 1795789620000,
       "exit_time": 1795789680000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": "SHORT",
+      "entry": 0.6718639000000001,
+      "exit": 0.67018323245415,
+      "quantity": 74.41983413605047,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": 0.12507500000000418,
+      "entry_fee": 0.01,
+      "exit_fee": 0.009974985,
+      "net_pnl": 0.10510001500000418,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795793820000,
+      "exit_time": 1795794060000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795793760000
+  "processed_until": 1795794060000
 }

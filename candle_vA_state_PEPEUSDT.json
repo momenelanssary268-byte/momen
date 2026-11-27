@@ -1,5 +1,5 @@
 {
-  "balance": 5.053669715000137,
+  "balance": 5.118819760000139,
   "symbol": "PEPEUSDT",
   "position": null,
   "history": [
@@ -801,7 +801,24 @@
       "entry_time": 1795789140000,
       "exit_time": 1795789320000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "side": "SHORT",
+      "entry": 3.5232375000000005e-06,
+      "exit": 3.5144241213937504e-06,
+      "quantity": 14191492.909575352,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": 0.12507500000000182,
+      "entry_fee": 0.03,
+      "exit_fee": 0.029924954999999996,
+      "net_pnl": 0.06515004500000182,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795793880000,
+      "exit_time": 1795794000000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795793700000
+  "processed_until": 1795794000000
 }
