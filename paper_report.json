@@ -1,6 +1,6 @@
 {
   "balance": 20.04141955740858,
-  "equity": 20.23755211559495,
+  "equity": 20.31431217085989,
   "closed_trades": 19,
   "wins": 7,
   "losses": 12,
@@ -34,13 +34,13 @@
     {
       "symbol": "BTCUSDT",
       "side": "WAIT",
-      "score_out_of_5": 4,
+      "score_out_of_5": 2,
       "reason": "filters not aligned"
     },
     {
       "symbol": "ETHUSDT",
       "side": "WAIT",
-      "score_out_of_5": 4,
+      "score_out_of_5": 3,
       "reason": "filters not aligned"
     },
     {
@@ -52,25 +52,25 @@
     {
       "symbol": "XAUUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 2,
       "reason": "filters not aligned"
     },
     {
       "symbol": "ZECUSDT",
       "side": "WAIT",
-      "score_out_of_5": 4,
+      "score_out_of_5": 2,
       "reason": "filters not aligned"
     },
     {
       "symbol": "SKHYNIXUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 2,
       "reason": "filters not aligned"
     },
     {
       "symbol": "SOLUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 2,
       "reason": "filters not aligned"
     },
     {
@@ -81,9 +81,9 @@
     },
     {
       "symbol": "XRPUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 3,
-      "reason": "filters not aligned"
+      "side": "LONG",
+      "score_out_of_5": 5,
+      "reason": "EMA trend + RSI + MACD + Bollinger + volume"
     },
     {
       "symbol": "SOXSUSDT",
@@ -94,17 +94,11 @@
     {
       "symbol": "XAGUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 2,
       "reason": "filters not aligned"
     },
     {
       "symbol": "KORUUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 3,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "INITUSDT",
       "side": "WAIT",
       "score_out_of_5": 3,
       "reason": "filters not aligned"
@@ -116,15 +110,21 @@
       "reason": "filters not aligned"
     },
     {
-      "symbol": "SQQQUSDT",
+      "symbol": "INITUSDT",
       "side": "WAIT",
-      "score_out_of_5": 2,
+      "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
       "symbol": "SKHYUSDT",
       "side": "WAIT",
       "score_out_of_5": 3,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "SQQQUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 2,
       "reason": "filters not aligned"
     },
     {
@@ -146,12 +146,6 @@
       "reason": "volatility outside filter"
     },
     {
-      "symbol": "MMTUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 4,
-      "reason": "filters not aligned"
-    },
-    {
       "symbol": "SSVUSDT",
       "side": "WAIT",
       "score_out_of_5": 3,
@@ -159,6 +153,18 @@
     },
     {
       "symbol": "MUUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 2,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "ANTUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 3,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "MMTUSDT",
       "side": "WAIT",
       "score_out_of_5": 3,
       "reason": "filters not aligned"
@@ -170,15 +176,9 @@
       "reason": "filters not aligned"
     },
     {
-      "symbol": "ANTUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 3,
-      "reason": "filters not aligned"
-    },
-    {
       "symbol": "NEARUSDT",
       "side": "WAIT",
-      "score_out_of_5": 4,
+      "score_out_of_5": 3,
       "reason": "filters not aligned"
     },
     {
@@ -190,23 +190,11 @@
     {
       "symbol": "MSTRUSDT",
       "side": "WAIT",
-      "score_out_of_5": 4,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "QQQUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 3,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "INTWUSDT",
-      "side": "WAIT",
       "score_out_of_5": 2,
       "reason": "filters not aligned"
     },
     {
-      "symbol": "COINUSDT",
+      "symbol": "QQQUSDT",
       "side": "WAIT",
       "score_out_of_5": 2,
       "reason": "filters not aligned"
@@ -214,35 +202,11 @@
     {
       "symbol": "ENAUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "LITEUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 2,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "XMRUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 3,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "PEPEUSDT",
-      "side": "WAIT",
       "score_out_of_5": 4,
       "reason": "filters not aligned"
     },
     {
-      "symbol": "SNXXUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 3,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "SKDDUSDT",
+      "symbol": "INTWUSDT",
       "side": "WAIT",
       "score_out_of_5": 2,
       "reason": "filters not aligned"
@@ -254,7 +218,73 @@
       "reason": "volatility outside filter"
     },
     {
+      "symbol": "XMRUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 3,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "COINUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 3,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "SNXXUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 3,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 4,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "LITEUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 2,
+      "reason": "filters not aligned"
+    },
+    {
       "symbol": "TQQQUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 2,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "SKDDUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 2,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "ZHIPUUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 3,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 3,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "BIGTIMEUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 4,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 3,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "SEIUSDT",
       "side": "WAIT",
       "score_out_of_5": 3,
       "reason": "filters not aligned"
@@ -272,45 +302,9 @@
       "reason": "EMA trend + RSI + MACD + Bollinger + volume"
     },
     {
-      "symbol": "BIGTIMEUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 3,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "DOGEUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 4,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "ZHIPUUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 3,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "ADAUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 3,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "SEIUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 3,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "ELSAUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 3,
-      "reason": "filters not aligned"
-    },
-    {
       "symbol": "AMDUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 2,
       "reason": "filters not aligned"
     },
     {
@@ -322,13 +316,31 @@
     {
       "symbol": "SUIUSDT",
       "side": "WAIT",
-      "score_out_of_5": 4,
+      "score_out_of_5": 3,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "ZHONGJIUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 3,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "HAEDALUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 3,
       "reason": "filters not aligned"
     },
     {
       "symbol": "NBISUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 2,
+      "reason": "filters not aligned"
+    },
+    {
+      "symbol": "MSTUUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 2,
       "reason": "filters not aligned"
     },
     {
@@ -338,33 +350,27 @@
       "reason": "filters not aligned"
     },
     {
+      "symbol": "MINIMAXUSDT",
+      "side": "WAIT",
+      "score_out_of_5": 3,
+      "reason": "filters not aligned"
+    },
+    {
       "symbol": "CRWVUSDT",
       "side": "WAIT",
       "score_out_of_5": 2,
       "reason": "filters not aligned"
     },
     {
-      "symbol": "MSTUUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 4,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "SKUUUSDT",
+      "symbol": "DRAMUSDT",
       "side": "WAIT",
       "score_out_of_5": 2,
       "reason": "filters not aligned"
     },
     {
-      "symbol": "NATGASUSDT",
+      "symbol": "PAXGUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "DRAMUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 2,
       "reason": "filters not aligned"
     },
     {
@@ -374,15 +380,9 @@
       "reason": "filters not aligned"
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "ELSAUSDT",
       "side": "WAIT",
-      "score_out_of_5": 3,
-      "reason": "filters not aligned"
-    },
-    {
-      "symbol": "ZHONGJIUSDT",
-      "side": "WAIT",
-      "score_out_of_5": 3,
+      "score_out_of_5": 4,
       "reason": "filters not aligned"
     }
   ],
