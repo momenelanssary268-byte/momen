@@ -1,5 +1,5 @@
 {
-  "balance": 7.250200000000183,
+  "balance": 7.125150000000188,
   "symbol": "ZECUSDT",
   "position": null,
   "history": [
@@ -1328,7 +1328,24 @@
       "entry_time": 1795745400000,
       "exit_time": 1795745400000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": "SHORT",
+      "entry": 739.55004,
+      "exit": 741.3996546500399,
+      "quantity": 0.06760867729788779,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": -0.1250499999999959,
+      "entry_fee": 0.0,
+      "exit_fee": 0.0,
+      "net_pnl": -0.1250499999999959,
+      "reason": "STOP LOSS",
+      "entry_time": 1795746360000,
+      "exit_time": 1795746360000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795746060000
+  "processed_until": 1795746360000
 }

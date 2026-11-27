@@ -1,13 +1,28 @@
 {
-  "balance": 5.019689790000182,
-  "equity": 5.019689790000182,
+  "balance": 5.009689790000182,
+  "equity": 4.783582933881047,
   "closed_trades": 64,
   "wins": 46,
   "losses": 18,
   "win_rate_pct": 71.875,
   "net_realized_pnl": -4.980310209999828,
   "profit_factor": 0.492359905335723,
-  "open_position": null,
+  "open_position": {
+    "symbol": "PEPEUSDT",
+    "side": "SHORT",
+    "entry": 3.5804089000000006e-06,
+    "stop": 3.6162129890000006e-06,
+    "target": 3.5696676733000007e-06,
+    "quantity": 13964885.40736227,
+    "margin": 1.0,
+    "entry_fee": 0.01,
+    "entry_time": 1795746360000,
+    "fee_rate": 0.0002,
+    "slippage_rate": 0.0005,
+    "leverage": 50.0,
+    "strategy_version": 1,
+    "analysis": "5 consecutive green 1m candles"
+  },
   "warnings": [],
   "paper_only": true,
   "source": "mexc",
@@ -20,5 +35,5 @@
   "start_balance": 10.0,
   "fee_per_side": 0.0002,
   "slippage_per_side": 0.0005,
-  "last_close": 3.5616e-06
+  "last_close": 3.5966e-06
 }
