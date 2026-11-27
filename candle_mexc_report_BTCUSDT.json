@@ -1,28 +1,13 @@
 {
-  "balance": 7.93944245500006,
-  "equity": 8.042895344480138,
-  "closed_trades": 33,
-  "wins": 24,
+  "balance": 8.059354962500061,
+  "equity": 8.059354962500061,
+  "closed_trades": 34,
+  "wins": 25,
   "losses": 9,
-  "win_rate_pct": 72.72727272727273,
-  "net_realized_pnl": -2.0555575449999193,
-  "profit_factor": 0.5731733948453246,
-  "open_position": {
-    "symbol": "BTCUSDT",
-    "side": "LONG",
-    "entry": 61546.05765,
-    "stop": 60930.5970735,
-    "target": 61730.69582295,
-    "quantity": 0.0008123997199680912,
-    "margin": 1.0,
-    "entry_fee": 0.005,
-    "entry_time": 1795750620000,
-    "fee_rate": 0.0001,
-    "slippage_rate": 0.0005,
-    "leverage": 50.0,
-    "strategy_version": 1,
-    "analysis": "5 consecutive red 1m candles"
-  },
+  "win_rate_pct": 73.52941176470588,
+  "net_realized_pnl": -1.9406450374999182,
+  "profit_factor": 0.5970344225189812,
+  "open_position": null,
   "warnings": [],
   "paper_only": true,
   "source": "mexc",
@@ -35,5 +20,5 @@
   "start_balance": 10.0,
   "fee_per_side": 0.0001,
   "slippage_per_side": 0.0005,
-  "last_close": 61673.4
+  "last_close": 61678.9
 }
