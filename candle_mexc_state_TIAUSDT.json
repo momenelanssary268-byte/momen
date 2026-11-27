@@ -1,21 +1,21 @@
 {
-  "balance": 4.948975000000153,
+  "balance": 5.073900000000162,
   "symbol": "TIAUSDT",
   "position": {
     "symbol": "TIAUSDT",
-    "side": "LONG",
-    "entry": 0.3377688,
-    "stop": 0.334391112,
-    "target": 0.3387821064,
-    "quantity": 148.03025027770477,
+    "side": "SHORT",
+    "entry": 0.3394302,
+    "stop": 0.34282450200000003,
+    "target": 0.3384119094,
+    "quantity": 147.30569053666997,
     "margin": 1.0,
     "entry_fee": 0.0,
-    "entry_time": 1795803180000,
+    "entry_time": 1795805640000,
     "fee_rate": 0.0,
     "slippage_rate": 0.0005,
     "leverage": 50.0,
     "strategy_version": 1,
-    "analysis": "5 consecutive red 1m candles"
+    "analysis": "5 consecutive green 1m candles"
   },
   "history": [
     {
@@ -833,7 +833,24 @@
       "entry_time": 1795801920000,
       "exit_time": 1795802340000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "TIAUSDT",
+      "side": "LONG",
+      "entry": 0.3377688,
+      "exit": 0.33861271534680004,
+      "quantity": 148.03025027770477,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": 0.12492500000000913,
+      "entry_fee": 0.0,
+      "exit_fee": 0.0,
+      "net_pnl": 0.12492500000000913,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795803180000,
+      "exit_time": 1795805460000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795805340000
+  "processed_until": 1795805640000
 }
