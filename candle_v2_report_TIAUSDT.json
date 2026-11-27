@@ -1,28 +1,13 @@
 {
-  "balance": 7.760114745000051,
-  "equity": 7.73512723875318,
-  "closed_trades": 16,
-  "wins": 11,
+  "balance": 7.854964790000053,
+  "equity": 7.854964790000053,
+  "closed_trades": 17,
+  "wins": 12,
   "losses": 5,
-  "win_rate_pct": 68.75,
-  "net_realized_pnl": -2.209885254999958,
-  "profit_factor": 0.24433790176447817,
-  "open_position": {
-    "symbol": "TIAUSDT",
-    "side": "LONG",
-    "entry": 0.34077029999999997,
-    "stop": 0.337362597,
-    "target": 0.34179261089999996,
-    "quantity": 146.7264019194161,
-    "margin": 1.0,
-    "entry_fee": 0.03,
-    "entry_time": 1795817700000,
-    "fee_rate": 0.0006,
-    "slippage_rate": 0.0005,
-    "leverage": 50.0,
-    "strategy_version": 1,
-    "analysis": "5 consecutive red 1m candles"
-  },
+  "win_rate_pct": 70.58823529411765,
+  "net_realized_pnl": -2.1450352099999557,
+  "profit_factor": 0.26651313505520874,
+  "open_position": null,
   "warnings": [],
   "paper_only": true,
   "source": "bitget",
@@ -35,5 +20,5 @@
   "start_balance": 10.0,
   "fee_per_side": 0.0006,
   "slippage_per_side": 0.0005,
-  "last_close": 0.3406
+  "last_close": 0.3416
 }
