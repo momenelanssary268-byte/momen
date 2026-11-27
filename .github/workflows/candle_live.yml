@@ -59,6 +59,7 @@ jobs:
             echo "--symbol $s $M --leverage 50 --tp-roi 30 --sl-roi 25 $B --state candle_mexc_vD_state_$s.json --report candle_mexc_vD_report_$s.json" >> $LIST
             echo "--symbol $s $M --leverage 50 --tp-roi 15 --sl-roi 10 $B --state candle_mexc_vE_state_$s.json --report candle_mexc_vE_report_$s.json" >> $LIST
           done
+          echo "--symbol BTCUSDT $M --strategy momentum --mom-window 5 --mom-threshold 0.1 --leverage 10 --tp-roi 10 --sl-roi 10 --start-balance 20 --margin 10 --state candle_mexc_mom_state_BTCUSDT.json --report candle_mexc_mom_report_BTCUSDT.json" >> $LIST
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           save() {
