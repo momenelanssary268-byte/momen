@@ -1,22 +1,7 @@
 {
-  "balance": 6.1504500000002515,
+  "balance": 6.425600000000255,
   "symbol": "ZECUSDT",
-  "position": {
-    "symbol": "ZECUSDT",
-    "side": "SHORT",
-    "entry": 759.1302450000001,
-    "stop": 762.9258962250001,
-    "target": 754.5754635300001,
-    "quantity": 0.06586485037228361,
-    "margin": 1.0,
-    "entry_fee": 0.0,
-    "entry_time": 1795830960000,
-    "fee_rate": 0.0,
-    "slippage_rate": 0.0005,
-    "leverage": 50.0,
-    "strategy_version": 1,
-    "analysis": "5 consecutive green 1m candles"
-  },
+  "position": null,
   "history": [
     {
       "symbol": "ZECUSDT",
@@ -1547,7 +1532,24 @@
       "entry_time": 1795829340000,
       "exit_time": 1795829580000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": "SHORT",
+      "entry": 759.1302450000001,
+      "exit": 754.952751261765,
+      "quantity": 0.06586485037228361,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": 0.2751500000000038,
+      "entry_fee": 0.0,
+      "exit_fee": 0.0,
+      "net_pnl": 0.2751500000000038,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795830960000,
+      "exit_time": 1795831860000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795831740000
+  "processed_until": 1795832040000
 }
