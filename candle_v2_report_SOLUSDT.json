@@ -1,28 +1,13 @@
 {
-  "balance": 5.938154505000109,
-  "equity": 6.009685412234103,
-  "closed_trades": 28,
-  "wins": 19,
+  "balance": 6.0330045500001175,
+  "equity": 6.0330045500001175,
+  "closed_trades": 29,
+  "wins": 20,
   "losses": 9,
-  "win_rate_pct": 67.85714285714286,
-  "net_realized_pnl": -4.031845494999894,
-  "profit_factor": 0.23446403075811922,
-  "open_position": {
-    "symbol": "SOLUSDT",
-    "side": "LONG",
-    "entry": 72.0069855,
-    "stop": 71.286915645,
-    "target": 72.2230064565,
-    "quantity": 0.6943770754019414,
-    "margin": 1.0,
-    "entry_fee": 0.03,
-    "entry_time": 1795829280000,
-    "fee_rate": 0.0006,
-    "slippage_rate": 0.0005,
-    "leverage": 50.0,
-    "strategy_version": 1,
-    "analysis": "5 consecutive red 1m candles"
-  },
+  "win_rate_pct": 68.96551724137932,
+  "net_realized_pnl": -3.966995449999886,
+  "profit_factor": 0.24677726104336412,
+  "open_position": null,
   "warnings": [],
   "paper_only": true,
   "source": "bitget",
@@ -35,5 +20,5 @@
   "start_balance": 10.0,
   "fee_per_side": 0.0006,
   "slippage_per_side": 0.0005,
-  "last_close": 72.11
+  "last_close": 72.201
 }

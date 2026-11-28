@@ -1,22 +1,7 @@
 {
-  "balance": 5.938154505000109,
+  "balance": 6.0330045500001175,
   "symbol": "SOLUSDT",
-  "position": {
-    "symbol": "SOLUSDT",
-    "side": "LONG",
-    "entry": 72.0069855,
-    "stop": 71.286915645,
-    "target": 72.2230064565,
-    "quantity": 0.6943770754019414,
-    "margin": 1.0,
-    "entry_fee": 0.03,
-    "entry_time": 1795829280000,
-    "fee_rate": 0.0006,
-    "slippage_rate": 0.0005,
-    "leverage": 50.0,
-    "strategy_version": 1,
-    "analysis": "5 consecutive red 1m candles"
-  },
+  "position": null,
   "history": [
     {
       "symbol": "SOLUSDT",
@@ -493,7 +478,24 @@
       "entry_time": 1795827540000,
       "exit_time": 1795828500000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": "LONG",
+      "entry": 72.0069855,
+      "exit": 72.18689495327176,
+      "quantity": 0.6943770754019414,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": 0.12492500000000818,
+      "entry_fee": 0.03,
+      "exit_fee": 0.030074955,
+      "net_pnl": 0.06485004500000818,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795829280000,
+      "exit_time": 1795830720000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795830540000
+  "processed_until": 1795830840000
 }
