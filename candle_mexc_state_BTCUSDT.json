@@ -1,21 +1,21 @@
 {
-  "balance": 7.254744940000077,
+  "balance": 7.369657447500082,
   "symbol": "BTCUSDT",
   "position": {
     "symbol": "BTCUSDT",
-    "side": "LONG",
-    "entry": 59905.037549999994,
-    "stop": 59305.98717449999,
-    "target": 60084.75266265,
-    "quantity": 0.0008346543470282827,
+    "side": "SHORT",
+    "entry": 60020.07495,
+    "stop": 60620.2756995,
+    "target": 59840.01472515,
+    "quantity": 0.0008330546078400057,
     "margin": 1.0,
     "entry_fee": 0.005,
-    "entry_time": 1795827540000,
+    "entry_time": 1795828260000,
     "fee_rate": 0.0001,
     "slippage_rate": 0.0005,
     "leverage": 50.0,
     "strategy_version": 1,
-    "analysis": "5 consecutive red 1m candles"
+    "analysis": "5 consecutive green 1m candles"
   },
   "history": [
     {
@@ -765,7 +765,24 @@
       "entry_time": 1795811460000,
       "exit_time": 1795817580000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry": 59905.037549999994,
+      "exit": 60054.710286318674,
+      "quantity": 0.0008346543470282827,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": 0.12492500000000428,
+      "entry_fee": 0.005,
+      "exit_fee": 0.005012492500000001,
+      "net_pnl": 0.11491250750000427,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795827540000,
+      "exit_time": 1795828200000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795828140000
+  "processed_until": 1795828440000
 }
