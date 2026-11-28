@@ -1,21 +1,21 @@
 {
-  "balance": 9.437065630000106,
+  "balance": 8.851500480000107,
   "symbol": "TRUMPUSDT",
   "position": {
     "symbol": "TRUMPUSDT",
-    "side": "SHORT",
-    "entry": 0.7606195,
-    "stop": 0.768225695,
-    "target": 0.756055783,
-    "quantity": 65.73589028416968,
+    "side": "LONG",
+    "entry": 0.7584790499999999,
+    "stop": 0.7508942594999999,
+    "target": 0.7630299242999999,
+    "quantity": 65.9213988837266,
     "margin": 1.0,
     "entry_fee": 0.03,
-    "entry_time": 1795861500000,
+    "entry_time": 1795862940000,
     "fee_rate": 0.0006,
     "slippage_rate": 0.0005,
     "leverage": 50.0,
     "strategy_version": 1,
-    "analysis": "5 consecutive green 1m candles"
+    "analysis": "5 consecutive red 1m candles"
   },
   "history": [
     {
@@ -544,7 +544,24 @@
       "entry_time": 1795858620000,
       "exit_time": 1795859940000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "TRUMPUSDT",
+      "side": "SHORT",
+      "entry": 0.7606195,
+      "exit": 0.7686098078475,
+      "quantity": 65.73589028416968,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": -0.5252499999999993,
+      "entry_fee": 0.03,
+      "exit_fee": 0.030315149999999996,
+      "net_pnl": -0.5855651499999993,
+      "reason": "STOP LOSS",
+      "entry_time": 1795861500000,
+      "exit_time": 1795862700000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795862640000
+  "processed_until": 1795862940000
 }
