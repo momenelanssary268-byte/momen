@@ -69,6 +69,7 @@ jobs:
           echo "--symbol NEARUSDT $M --strategy momentum --mom-window 5 --mom-threshold 0.1 --leverage 30 --tp-roi 20 --sl-roi 20 --start-balance 20 --margin 10 --state candle_mexc_mom30x_state_NEARUSDT.json --report candle_mexc_mom30x_report_NEARUSDT.json" >> $LIST
           echo "--symbol ZECUSDT $M --strategy momentum --mom-window 5 --mom-threshold 0.1 --leverage 20 --tp-roi 20 --sl-roi 20 --start-balance 20 --margin 10 --state candle_mexc_mom20x_state_ZECUSDT.json --report candle_mexc_mom20x_report_ZECUSDT.json" >> $LIST
           echo "--symbol ZECUSDT $M --strategy momentum --mom-window 5 --mom-threshold 0.1 --leverage 30 --tp-roi 20 --sl-roi 20 --start-balance 20 --margin 10 --state candle_mexc_mom30x_state_ZECUSDT.json --report candle_mexc_mom30x_report_ZECUSDT.json" >> $LIST
+          echo "--symbol ZECUSDT $M --strategy momentum --mom-window 5 --mom-threshold 0.1 --leverage 20 --tp-roi 5 --sl-roi 10 --start-balance 20 --margin 10 --state candle_mexc_mom20xtp5_state_ZECUSDT.json --report candle_mexc_mom20xtp5_report_ZECUSDT.json" >> $LIST
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           save() {
