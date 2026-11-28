@@ -1,6 +1,6 @@
 {
   "balance": 4.701850000000287,
-  "equity": 4.6862401767755095,
+  "equity": 4.644710437677655,
   "closed_trades": 124,
   "wins": 72,
   "losses": 52,
@@ -33,7 +33,7 @@
   "leverage": 50.0,
   "margin_dollars_per_trade": 1.0,
   "start_balance": 10.0,
-  "fee_per_side": 0.0,
+  "fee_per_side": 0.0002,
   "slippage_per_side": 0.0005,
-  "last_close": 746.22
+  "last_close": 745.6
 }
