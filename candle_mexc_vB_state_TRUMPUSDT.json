@@ -1,5 +1,5 @@
 {
-  "balance": 10.575250000000006,
+  "balance": 10.05050000000001,
   "symbol": "TRUMPUSDT",
   "position": null,
   "history": [
@@ -87,7 +87,24 @@
       "entry_time": 1795843560000,
       "exit_time": 1795843560000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "TRUMPUSDT",
+      "side": "LONG",
+      "entry": 0.7733865,
+      "exit": 0.7652698086825,
+      "quantity": 64.65072767626536,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": -0.5247499999999952,
+      "entry_fee": 0.0,
+      "exit_fee": 0.0,
+      "net_pnl": -0.5247499999999952,
+      "reason": "STOP LOSS",
+      "entry_time": 1795845720000,
+      "exit_time": 1795845840000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795845540000
+  "processed_until": 1795845840000
 }
