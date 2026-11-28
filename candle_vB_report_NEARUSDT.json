@@ -1,28 +1,13 @@
 {
-  "balance": 6.939870060000078,
-  "equity": 7.118423167552271,
-  "closed_trades": 38,
-  "wins": 24,
+  "balance": 7.184555150000081,
+  "equity": 7.184555150000081,
+  "closed_trades": 39,
+  "wins": 25,
   "losses": 14,
-  "win_rate_pct": 63.1578947368421,
-  "net_realized_pnl": -3.030129939999916,
-  "profit_factor": 0.6299698049991609,
-  "open_position": {
-    "symbol": "NEARUSDT",
-    "side": "LONG",
-    "entry": 3.0215099999999997,
-    "stop": 2.9912948999999998,
-    "target": 3.03963906,
-    "quantity": 16.54801738203746,
-    "margin": 1.0,
-    "entry_fee": 0.03,
-    "entry_time": 1795849740000,
-    "fee_rate": 0.0006,
-    "slippage_rate": 0.0005,
-    "leverage": 50.0,
-    "strategy_version": 1,
-    "analysis": "5 consecutive red 1m candles"
-  },
+  "win_rate_pct": 64.1025641025641,
+  "net_realized_pnl": -2.8154448499999125,
+  "profit_factor": 0.6561864911774693,
+  "open_position": null,
   "warnings": [],
   "paper_only": true,
   "source": "bitget",
@@ -35,5 +20,5 @@
   "start_balance": 10.0,
   "fee_per_side": 0.0006,
   "slippage_per_side": 0.0005,
-  "last_close": 3.0323
+  "last_close": 3.0382
 }

@@ -1,7 +1,22 @@
 {
   "balance": 10.870000000000005,
   "symbol": "TRUMPUSDT",
-  "position": null,
+  "position": {
+    "symbol": "TRUMPUSDT",
+    "side": "SHORT",
+    "entry": 0.7886055000000001,
+    "stop": 0.828035775,
+    "target": 0.7767764175,
+    "quantity": 12.680611535171893,
+    "margin": 1.0,
+    "entry_fee": 0.0,
+    "entry_time": 1795849800000,
+    "fee_rate": 0.0,
+    "slippage_rate": 0.0005,
+    "leverage": 10.0,
+    "strategy_version": 1,
+    "analysis": "5 consecutive green 1m candles"
+  },
   "history": [
     {
       "symbol": "TRUMPUSDT",
@@ -106,5 +121,5 @@
       "accounting_version": 1
     }
   ],
-  "processed_until": 1795849740000
+  "processed_until": 1795850040000
 }
