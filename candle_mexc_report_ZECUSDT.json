@@ -1,28 +1,13 @@
 {
-  "balance": 6.0253250000002225,
-  "equity": 6.018337378194086,
-  "closed_trades": 93,
-  "wins": 69,
+  "balance": 6.15025000000023,
+  "equity": 6.15025000000023,
+  "closed_trades": 94,
+  "wins": 70,
   "losses": 24,
-  "win_rate_pct": 74.19354838709677,
-  "net_realized_pnl": -3.9746749999997677,
-  "profit_factor": 0.6845621205507877,
-  "open_position": {
-    "symbol": "ZECUSDT",
-    "side": "LONG",
-    "entry": 750.004815,
-    "stop": 742.50476685,
-    "target": 752.254829445,
-    "quantity": 0.0666662386694144,
-    "margin": 1.0,
-    "entry_fee": 0.0,
-    "entry_time": 1795829340000,
-    "fee_rate": 0.0,
-    "slippage_rate": 0.0005,
-    "leverage": 50.0,
-    "strategy_version": 1,
-    "analysis": "5 consecutive red 1m candles"
-  },
+  "win_rate_pct": 74.46808510638297,
+  "net_realized_pnl": -3.84974999999976,
+  "profit_factor": 0.6944764096662996,
+  "open_position": null,
   "warnings": [],
   "paper_only": true,
   "source": "mexc",
@@ -35,5 +20,5 @@
   "start_balance": 10.0,
   "fee_per_side": 0.0,
   "slippage_per_side": 0.0005,
-  "last_close": 749.9
+  "last_close": 757.45
 }
