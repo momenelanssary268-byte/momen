@@ -1,13 +1,28 @@
 {
-  "balance": 7.15936976000007,
-  "equity": 7.15936976000007,
+  "balance": 7.12936976000007,
+  "equity": 6.990647587176599,
   "closed_trades": 24,
   "wins": 14,
   "losses": 10,
   "win_rate_pct": 58.333333333333336,
   "net_realized_pnl": -2.8406302399999372,
   "profit_factor": 0.5144223057036912,
-  "open_position": null,
+  "open_position": {
+    "symbol": "SUIUSDT",
+    "side": "LONG",
+    "entry": 0.65942955,
+    "stop": 0.6528352545,
+    "target": 0.6633861273,
+    "quantity": 75.8231110510592,
+    "margin": 1.0,
+    "entry_fee": 0.03,
+    "entry_time": 1795873200000,
+    "fee_rate": 0.0006,
+    "slippage_rate": 0.0005,
+    "leverage": 50.0,
+    "strategy_version": 1,
+    "analysis": "5 consecutive red 1m candles"
+  },
   "warnings": [],
   "paper_only": true,
   "source": "bitget",
@@ -20,5 +35,5 @@
   "start_balance": 10.0,
   "fee_per_side": 0.0006,
   "slippage_per_side": 0.0005,
-  "last_close": 0.6591
+  "last_close": 0.6576
 }
