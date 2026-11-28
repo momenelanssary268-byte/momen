@@ -1,7 +1,22 @@
 {
   "balance": 6.700950000000288,
   "symbol": "ZECUSDT",
-  "position": null,
+  "position": {
+    "symbol": "ZECUSDT",
+    "side": "LONG",
+    "entry": 720.750195,
+    "stop": 717.1464440249999,
+    "target": 725.0746961699999,
+    "quantity": 0.06937216298637283,
+    "margin": 1.0,
+    "entry_fee": 0.0,
+    "entry_time": 1795868700000,
+    "fee_rate": 0.0,
+    "slippage_rate": 0.0005,
+    "leverage": 50.0,
+    "strategy_version": 1,
+    "analysis": "5 consecutive red 1m candles"
+  },
   "history": [
     {
       "symbol": "ZECUSDT",
@@ -1704,5 +1719,5 @@
       "accounting_version": 1
     }
   ],
-  "processed_until": 1795868640000
+  "processed_until": 1795868940000
 }
