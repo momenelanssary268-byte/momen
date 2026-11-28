@@ -1,22 +1,7 @@
 {
-  "balance": 9.450414895000003,
+  "balance": 9.545564940000002,
   "symbol": "KAITOUSDT",
-  "position": {
-    "symbol": "KAITOUSDT",
-    "side": "SHORT",
-    "entry": 0.151924,
-    "stop": 0.15344324,
-    "target": 0.151468228,
-    "quantity": 329.11192438324423,
-    "margin": 1.0,
-    "entry_fee": 0.03,
-    "entry_time": 1795850040000,
-    "fee_rate": 0.0006,
-    "slippage_rate": 0.0005,
-    "leverage": 50.0,
-    "strategy_version": 1,
-    "analysis": "5 consecutive green 1m candles"
-  },
+  "position": null,
   "history": [
     {
       "symbol": "KAITOUSDT",
@@ -51,7 +36,24 @@
       "entry_time": 1795790100000,
       "exit_time": 1795790520000,
       "accounting_version": 1
+    },
+    {
+      "symbol": "KAITOUSDT",
+      "side": "SHORT",
+      "entry": 0.151924,
+      "exit": 0.151543962114,
+      "quantity": 329.11192438324423,
+      "margin": 1.0,
+      "leverage": 50.0,
+      "gross_pnl": 0.12507499999999847,
+      "entry_fee": 0.03,
+      "exit_fee": 0.029924954999999996,
+      "net_pnl": 0.06515004499999846,
+      "reason": "TAKE PROFIT",
+      "entry_time": 1795850040000,
+      "exit_time": 1795851180000,
+      "accounting_version": 1
     }
   ],
-  "processed_until": 1795850940000
+  "processed_until": 1795851240000
 }

@@ -1,28 +1,13 @@
 {
-  "balance": 9.450414895000003,
-  "equity": 9.4583135811852,
-  "closed_trades": 2,
-  "wins": 1,
+  "balance": 9.545564940000002,
+  "equity": 9.545564940000002,
+  "closed_trades": 3,
+  "wins": 2,
   "losses": 1,
-  "win_rate_pct": 50.0,
-  "net_realized_pnl": -0.5195851049999981,
-  "profit_factor": 0.1109619176738429,
-  "open_position": {
-    "symbol": "KAITOUSDT",
-    "side": "SHORT",
-    "entry": 0.151924,
-    "stop": 0.15344324,
-    "target": 0.151468228,
-    "quantity": 329.11192438324423,
-    "margin": 1.0,
-    "entry_fee": 0.03,
-    "entry_time": 1795850040000,
-    "fee_rate": 0.0006,
-    "slippage_rate": 0.0005,
-    "leverage": 50.0,
-    "strategy_version": 1,
-    "analysis": "5 consecutive green 1m candles"
-  },
+  "win_rate_pct": 66.66666666666667,
+  "net_realized_pnl": -0.45443505999999967,
+  "profit_factor": 0.2224371514957626,
+  "open_position": null,
   "warnings": [],
   "paper_only": true,
   "source": "bitget",
@@ -35,5 +20,5 @@
   "start_balance": 10.0,
   "fee_per_side": 0.0006,
   "slippage_per_side": 0.0005,
-  "last_close": 0.1519
+  "last_close": 0.1514
 }
